@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.port": 5501,
+  "editor.snippets.codeActions.enabled": false,
+  "editor.snippetSuggestions": "top",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 160
+}

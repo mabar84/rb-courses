@@ -1,9 +1,86 @@
 .promo {
     margin-bottom: 100px;
+
+    display: grid;
+    column-gap: 60px;
+    row-gap: 40px;
+    grid-template-columns: 1fr 366px;
+    grid-template-areas:
+        "categories promo-banner"
+        "text-content promo-banner"
+        "time-description promo-banner"
+        "text-description promo-banner";
     @include for-1000-px {
         margin-bottom: 60px;
     }
     @include for-640-px {
         margin-bottom: 40px;
+    }
+
+    .text-content {
+        grid-area: text-content;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 140.02%;
+        color: #000000;
+    }
+    .time-description {
+        grid-area: time-description;
+
+        display: flex;
+        gap: 30px;
+        .item {
+            min-width: 160px;
+        }
+        .text {
+            margin-bottom: 8px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #ad475c;
+        }
+        .subtext {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+        }
+    }
+    .text-description {
+        grid-area: text-description;
+        display: flex;
+        gap: 26px;
+        .item {
+            display: flex;
+            align-items: center;
+            &:nth-child(1) {
+                width: 180px;
+            }
+            &:nth-child(2) {
+                width: 200px;
+            }
+            &:nth-child(3) {
+                width: 260px;
+            }
+        }
+        .image {
+            margin-right: 14px;
+            width: 38px;
+            height: 38px;
+        }
+        .text {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 130%;
+            color: #000000;
+        }
     }
 }

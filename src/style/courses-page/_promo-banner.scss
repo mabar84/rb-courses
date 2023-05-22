@@ -1,6 +1,15 @@
 .promo-banner {
+    grid-area: promo-banner;
     width: 286px;
     padding: 18px 30px;
+    border: 1px solid #b2aaaa;
+
+    &-wrapper {
+        border-bottom: 1px solid #b2aaaa;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     .image {
         margin-right: 10px;
         width: 33px;
@@ -13,9 +22,6 @@
         font-weight: 600;
         font-size: 30px;
         line-height: 36px;
-
-        /* Black */
-
         color: #000000;
     }
     .subnumber {
@@ -24,23 +30,82 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
-
-        /* Gray */
-
         color: #b2aaaa;
     }
     .all-reviews {
+        margin-top: 10px;
+        margin-bottom: 18px;
         font-family: "Inter";
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
-        /* identical to box height */
-
         text-decoration-line: underline;
-
-        /* Gray */
-
         color: #b2aaaa;
+    }
+    .old-price {
+        margin-top: 18px;
+        text-align: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #b2aaaa;
+        text-decoration-line: line-through;
+    }
+    .price {
+        text-align: center;
+        margin-bottom: 8px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: #000000;
+    }
+    .price-per-mounth {
+        text-align: center;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ad475c;
+        margin-bottom: 10px;
+    }
+    &-discount {
+        margin-top: 18px;
+        margin-bottom: 36px;
+        display: flex;
+        justify-content: space-between;
+        .item {
+            display: flex;
+            align-items: center;
+            & img {
+                margin-right: 10px;
+                width: 28px;
+                height: 28px;
+            }
+            .text {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+            .text {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                color: #ad475c;
+            }
+        }
+    }
+    .button {
+        width: 100%;
     }
 }

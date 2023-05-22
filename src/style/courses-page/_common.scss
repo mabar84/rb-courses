@@ -19,6 +19,8 @@
         border-bottom: 3px solid #ad475c;
     }
     .categories {
+        margin: 0;
+        grid-area: categories;
         display: flex;
         gap: 24px;
         justify-content: start;
