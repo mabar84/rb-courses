@@ -1,0 +1,9 @@
+.promo {
+    margin-bottom: 100px;
+    @include for-1000-px {
+        margin-bottom: 60px;
+    }
+    @include for-640-px {
+        margin-bottom: 40px;
+    }
+}

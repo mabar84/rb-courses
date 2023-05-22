@@ -3139,7 +3139,6 @@ select {
   white-space: nowrap;
   color: #ad475c;
   width: 550px;
-  background: red;
   overflow: hidden;
 }
 .courses-page .title-h1 {
@@ -3151,4 +3150,91 @@ select {
   line-height: 35px;
   color: #000000;
   border-bottom: 3px solid #ad475c;
+}
+.courses-page .categories {
+  display: flex;
+  gap: 24px;
+  justify-content: start;
+}
+.courses-page .categories-item {
+  padding: 14px 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #b2aaaa;
+  border: 1px solid #b2aaaa;
+}
+.courses-page .button {
+  padding: 14px 24px;
+  color: #ffffff;
+  background: #ad475c;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #ad475c;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ffffff;
+}
+.courses-page .button:hover {
+  background: #ffffff;
+  color: #ad475c;
+}
+
+.promo-banner {
+  width: 286px;
+  padding: 18px 30px;
+}
+.promo-banner .image {
+  margin-right: 10px;
+  width: 33px;
+  height: 32px;
+}
+.promo-banner .number {
+  margin-right: 6px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  /* Black */
+  color: #000000;
+}
+.promo-banner .subnumber {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* Gray */
+  color: #b2aaaa;
+}
+.promo-banner .all-reviews {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  text-decoration-line: underline;
+  /* Gray */
+  color: #b2aaaa;
+}
+
+.promo {
+  margin-bottom: 100px;
+}
+@media (max-width: 1000px) {
+  .promo {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 640px) {
+  .promo {
+    margin-bottom: 40px;
+  }
 }

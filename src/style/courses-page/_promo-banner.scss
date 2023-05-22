@@ -1,0 +1,46 @@
+.promo-banner {
+    width: 286px;
+    padding: 18px 30px;
+    .image {
+        margin-right: 10px;
+        width: 33px;
+        height: 32px;
+    }
+    .number {
+        margin-right: 6px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+
+        /* Black */
+
+        color: #000000;
+    }
+    .subnumber {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+
+        /* Gray */
+
+        color: #b2aaaa;
+    }
+    .all-reviews {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        text-decoration-line: underline;
+
+        /* Gray */
+
+        color: #b2aaaa;
+    }
+}

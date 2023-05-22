@@ -5,7 +5,6 @@
             white-space: nowrap;
             color: #ad475c;
             width: 550px;
-            background: red;
             overflow: hidden;
         }
     }
@@ -18,5 +17,38 @@
         line-height: 35px;
         color: #000000;
         border-bottom: 3px solid #ad475c;
+    }
+    .categories {
+        display: flex;
+        gap: 24px;
+        justify-content: start;
+        &-item {
+            padding: 14px 24px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #b2aaaa;
+            border: 1px solid #b2aaaa;
+        }
+    }
+    .button {
+        padding: 14px 24px;
+        color: #ffffff;
+        background: #ad475c;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        border: 1px solid #ad475c;
+        cursor: pointer;
+        transition: 0.3s;
+        color: #ffffff;
+        &:hover {
+            background: #ffffff;
+            color: #ad475c;
+        }
     }
 }
