@@ -1,0 +1,29 @@
+{
+  "name": "d2html_template",
+  "version": "1.1.0",
+  "description": "gulp template used by Andrii Hmytron",
+  "main": "gulpfile.js",
+  "author": "Andrii Hmytron",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "delete": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^6.0.0",
+    "sass": "^1.37.5"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

@@ -1,0 +1,35 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_30_817" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="9" y="9" width="46" height="46">
+<path d="M9 32C9 44.7025 19.2975 55 32 55C44.7025 55 55 44.7025 55 32C55 19.2975 44.7025 9 32 9C19.2975 9 9 19.2975 9 32ZM46.9002 32C46.9002 40.2291 40.2291 46.9002 32 46.9002C23.7709 46.9002 17.0998 40.2291 17.0998 32C17.0998 23.7709 23.7709 17.0998 32 17.0998C40.2291 17.0998 46.9002 23.7709 46.9002 32Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_30_817)">
+<rect width="52" height="52" transform="matrix(-1 0 0 1 58 6)" fill="url(#paint0_angular_30_817)"/>
+<circle r="4" transform="matrix(-1 0 0 1 32 51)" fill="#AD475C"/>
+</g>
+<defs>
+<radialGradient id="paint0_angular_30_817" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(26 26) rotate(90) scale(26)">
+<stop stop-color="#AD475C"/>
+<stop offset="1" stop-color="white"/>
+</radialGradient>
+</defs>
+</svg>
+
+
+<div class="loader loader--style1" title="0">
+  <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+  <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+    s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+    c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+  <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+    C22.32,8.481,24.301,9.057,26.013,10.047z">
+    <animateTransform attributeType="xml"
+      attributeName="transform"
+      type="rotate"
+      from="0 20 20"
+      to="360 20 20"
+      dur="0.5s"
+      repeatCount="indefinite"/>
+    </path>
+  </svg>
+</div>

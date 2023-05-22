@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./__head.html', {'title': 'RB Test'})
+
+<body>
+	@@include('./_header.html')
+    <main class="main">
+        <section class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__list-item">
+                        <a class="breadcrumb__list-link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumb__list-item">
+                        <a class="breadcrumb__list-link" href="#">Тест</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="test__top">
+            <div class="container">
+                <h1 class="title">
+                    Тест на выбор профессии
+                </h1>
+            </div>
+        </section>
+        <div class="test__content">
+            <div class="container">
+                <div class="test__box">
+                    <div class="test__heading">
+                        <label class="test__question" for="test">Как хорошо вы знаете русский язык?</label>
+                        <div class="test__question-count-wrap">
+                            <div class="test__question-count">
+                                <span class="test__question-count-first"> 1 </span>
+                                <span class="test__question-count-last"> 10 </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="test__list">
+                        <div class="test-item">
+                            <input type="checkbox" name="type1">
+                            <label for="type1">Я не допускаю ни одной ошибки</label>
+                        </div>
+                        <div class="test-item">
+                            <input type="checkbox" name="type1">
+                            <label for="type1">Я хорошо знаю русский язык</label>
+                        </div>
+                        <div class="test-item">
+                            <input type="checkbox" name="type1">
+                            <label for="type1"> Средне</label>
+                        </div>
+                        <div class="test-item">
+                            <input type="checkbox" name="type1">
+                            <label for="type1">Я не стараюсь писать грамотно</label>
+                        </div>
+                        <div class="test-item">
+                            <input type="checkbox" name="type1">
+                            <label for="type1"> Я плохо знаю русский язык</label>
+                        </div>
+                    </div>
+                    <button class="btn">Далее</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                        <a class="footer__menu-link" href="#">О наc</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="footer__menu-link" href="#">Контакты</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="footer__menu-link" href="#"> Отзывы о школах</a>
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item telegram"></a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item vkontakte"></a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item twitter">
+                        </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item yandex"></a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item odnoklassniki"></a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item tiktok"> </a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="" class="footer__social-item viber"> </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__caption">
+                <p class="footer__caption-text">
+                    Данные предоставлены партнером
+                    <a class="caption__link" href="https://coursator.online/">coursator.online</a>
+                </p>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright">© 2022 coursator.online</div>
+                <a class="footer__text" href="">Политика конфиденциальности</a>
+                <a class="footer__text" href="">Пользовательское соглашение</a>
+
+            </div>
+        </div>
+    </footer>
+	@@include('./__scripts.html')
+</body>
+
+</html>
