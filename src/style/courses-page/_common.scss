@@ -1,38 +1,89 @@
 .courses-page {
-    .breadcrumb__list-item {
-        &:last-child {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            color: #ad475c;
-            width: 550px;
-            overflow: hidden;
+    .breadcrumb__list {
+        @include for-750-px {
+            flex-wrap: wrap;
+        }
+        &-item {
+            font-size: 16px;
+            line-height: 19px;
+            @include for-1200-px {
+                padding-right: 20px;
+                margin-right: 20px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+            @include for-750-px {
+                margin-right: 10px;
+                font-size: 9px;
+                line-height: 12px;
+            }
+            &:last-child {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #ad475c;
+                width: 550px;
+                overflow: hidden;
+                @include for-750-px {
+                    padding-right: 0;
+                    margin-top: 6px;
+                    text-overflow: initial;
+                    white-space: normal;
+                    width: auto;
+                    overflow: initial;
+                }
+            }
         }
     }
     .title-h1 {
-        margin-bottom: 20px;
-        padding-bottom: 30px;
         font-style: normal;
         font-weight: 800;
         font-size: 30px;
         line-height: 35px;
         color: #000000;
+        @include for-1200-px {
+            line-height: 42px;
+        }
+        @include for-750-px {
+            font-size: 24px;
+            line-height: 140%;
+        }
+    }
+    .hr {
+        max-width: 1140px;
+        margin: 30px auto 20px;
         border-bottom: 3px solid #ad475c;
+        @include for-1200-px {
+            margin: 20px auto 20px;
+        }
+        @include for-750-px {
+            margin: 10px auto 20px;
+        }
     }
     .categories {
         margin: 0;
+        height: min-content;
         grid-area: categories;
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
         justify-content: start;
+        @include for-750-px {
+            gap: 16px;
+        }
         &-item {
             padding: 14px 24px;
             font-family: "Inter";
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
-            line-height: 19px;
+            line-height: 17px;
             color: #b2aaaa;
             border: 1px solid #b2aaaa;
+            @include for-750-px {
+                padding: 10px 12px;
+                font-size: 12px;
+                line-height: 15px;
+            }
         }
     }
     .button {

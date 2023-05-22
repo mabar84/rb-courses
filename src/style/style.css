@@ -3134,6 +3134,30 @@ select {
     font-size: 12px;
   }
 }
+@media (max-width: 750px) {
+  .courses-page .breadcrumb__list {
+    flex-wrap: wrap;
+  }
+}
+.courses-page .breadcrumb__list-item {
+  font-size: 16px;
+  line-height: 19px;
+}
+@media (max-width: 1200px) {
+  .courses-page .breadcrumb__list-item {
+    padding-right: 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .breadcrumb__list-item {
+    margin-right: 10px;
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
 .courses-page .breadcrumb__list-item:last-child {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3141,22 +3165,62 @@ select {
   width: 550px;
   overflow: hidden;
 }
+@media (max-width: 750px) {
+  .courses-page .breadcrumb__list-item:last-child {
+    padding-right: 0;
+    margin-top: 6px;
+    text-overflow: initial;
+    white-space: normal;
+    width: auto;
+    overflow: initial;
+  }
+}
 .courses-page .title-h1 {
-  margin-bottom: 20px;
-  padding-bottom: 30px;
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
   line-height: 35px;
   color: #000000;
+}
+@media (max-width: 1200px) {
+  .courses-page .title-h1 {
+    line-height: 42px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .title-h1 {
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+.courses-page .hr {
+  max-width: 1140px;
+  margin: 30px auto 20px;
   border-bottom: 3px solid #ad475c;
+}
+@media (max-width: 1200px) {
+  .courses-page .hr {
+    margin: 20px auto 20px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .hr {
+    margin: 10px auto 20px;
+  }
 }
 .courses-page .categories {
   margin: 0;
+  height: min-content;
   grid-area: categories;
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   justify-content: start;
+}
+@media (max-width: 750px) {
+  .courses-page .categories {
+    gap: 16px;
+  }
 }
 .courses-page .categories-item {
   padding: 14px 24px;
@@ -3164,9 +3228,16 @@ select {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 17px;
   color: #b2aaaa;
   border: 1px solid #b2aaaa;
+}
+@media (max-width: 750px) {
+  .courses-page .categories-item {
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 .courses-page .button {
   padding: 14px 24px;
@@ -3306,14 +3377,19 @@ select {
   grid-template-columns: 1fr 366px;
   grid-template-areas: "categories promo-banner" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .promo {
     margin-bottom: 60px;
+    grid-template-columns: 1fr 311px;
+    column-gap: 12px;
+    grid-template-areas: "categories categories" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 750px) {
   .promo {
     margin-bottom: 40px;
+    row-gap: 20px;
+    grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
   }
 }
 .promo .text-content {
@@ -3325,13 +3401,35 @@ select {
   line-height: 140.02%;
   color: #000000;
 }
+@media (max-width: 750px) {
+  .promo .text-content {
+    font-size: 16px;
+  }
+}
 .promo .time-description {
   grid-area: time-description;
+  flex-wrap: wrap;
   display: flex;
   gap: 30px;
 }
+@media (max-width: 1200px) {
+  .promo .time-description {
+    gap: 24px;
+  }
+}
+@media (max-width: 750px) {
+  .promo .time-description {
+    gap: 50px;
+  }
+}
 .promo .time-description .item {
   min-width: 160px;
+}
+@media (max-width: 1200px) {
+  .promo .time-description .item {
+    min-width: auto;
+    width: max-content;
+  }
 }
 .promo .time-description .text {
   margin-bottom: 8px;
@@ -3342,6 +3440,12 @@ select {
   line-height: 24px;
   color: #ad475c;
 }
+@media (max-width: 1200px) {
+  .promo .time-description .text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .promo .time-description .subtext {
   font-family: "Inter";
   font-style: normal;
@@ -3350,10 +3454,27 @@ select {
   line-height: 24px;
   color: #000000;
 }
+@media (max-width: 1200px) {
+  .promo .time-description .subtext {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .promo .text-description {
   grid-area: text-description;
+  flex-wrap: wrap;
   display: flex;
   gap: 26px;
+}
+@media (max-width: 1200px) {
+  .promo .text-description {
+    gap: 21px;
+  }
+}
+@media (max-width: 750px) {
+  .promo .text-description {
+    gap: 20px;
+  }
 }
 .promo .text-description .item {
   display: flex;
@@ -3380,4 +3501,9 @@ select {
   font-size: 18px;
   line-height: 130%;
   color: #000000;
+}
+@media (max-width: 1200px) {
+  .promo .text-description .text {
+    font-size: 16px;
+  }
 }

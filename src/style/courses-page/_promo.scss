@@ -1,6 +1,5 @@
 .promo {
     margin-bottom: 100px;
-
     display: grid;
     column-gap: 60px;
     row-gap: 40px;
@@ -10,13 +9,26 @@
         "text-content promo-banner"
         "time-description promo-banner"
         "text-description promo-banner";
-    @include for-1000-px {
+    @include for-1200-px {
         margin-bottom: 60px;
+        grid-template-columns: 1fr 311px;
+        column-gap: 12px;
+        grid-template-areas:
+            "categories categories"
+            "text-content promo-banner"
+            "time-description promo-banner"
+            "text-description promo-banner";
     }
-    @include for-640-px {
+    @include for-750-px {
         margin-bottom: 40px;
+        row-gap: 20px;
+        grid-template-areas:
+            "categories"
+            "text-content"
+            "time-description"
+            "text-description"
+            "promo-banner";
     }
-
     .text-content {
         grid-area: text-content;
         font-family: "Inter";
@@ -25,14 +37,27 @@
         font-size: 24px;
         line-height: 140.02%;
         color: #000000;
+        @include for-750-px {
+            font-size: 16px;
+        }
     }
     .time-description {
         grid-area: time-description;
-
+        flex-wrap: wrap;
         display: flex;
         gap: 30px;
+        @include for-1200-px {
+            gap: 24px;
+        }
+        @include for-750-px {
+            gap: 50px;
+        }
         .item {
             min-width: 160px;
+            @include for-1200-px {
+                min-width: auto;
+                width: max-content;
+            }
         }
         .text {
             margin-bottom: 8px;
@@ -42,6 +67,10 @@
             font-size: 20px;
             line-height: 24px;
             color: #ad475c;
+            @include for-1200-px {
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
         .subtext {
             font-family: "Inter";
@@ -50,12 +79,23 @@
             font-size: 20px;
             line-height: 24px;
             color: #000000;
+            @include for-1200-px {
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
     }
     .text-description {
         grid-area: text-description;
+        flex-wrap: wrap;
         display: flex;
         gap: 26px;
+        @include for-1200-px {
+            gap: 21px;
+        }
+        @include for-750-px {
+            gap: 20px;
+        }
         .item {
             display: flex;
             align-items: center;
@@ -81,6 +121,9 @@
             font-size: 18px;
             line-height: 130%;
             color: #000000;
+            @include for-1200-px {
+                font-size: 16px;
+            }
         }
     }
 }
