@@ -3134,10 +3134,21 @@ select {
     font-size: 12px;
   }
 }
-.about-course {
+.courses-page .about-course {
   overflow: hidden;
+  margin-bottom: 100px;
 }
-.about-course .text {
+@media (max-width: 1200px) {
+  .courses-page .about-course {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .about-course {
+    margin-bottom: 30px;
+  }
+}
+.courses-page .about-course .text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3147,7 +3158,7 @@ select {
   /* Black */
   color: #000000;
 }
-.about-course .cards {
+.courses-page .about-course .cards {
   margin-top: 40px;
   margin-bottom: 60px;
   display: flex;
@@ -3156,36 +3167,36 @@ select {
   flex-wrap: wrap;
 }
 @media (max-width: 1200px) {
-  .about-course .cards {
+  .courses-page .about-course .cards {
     margin-bottom: 40px;
     column-gap: 20px;
     justify-content: center;
   }
 }
 @media (max-width: 750px) {
-  .about-course .cards {
+  .courses-page .about-course .cards {
     margin-top: 20px;
     margin-bottom: 20px;
     column-gap: 10px;
     row-gap: 10px;
   }
 }
-.about-course .cards .card {
+.courses-page .about-course .cards .card {
   padding: 30px;
   border: 1px solid #b2aaaa;
 }
 @media (max-width: 1200px) {
-  .about-course .cards .card {
+  .courses-page .about-course .cards .card {
     width: 367px;
   }
 }
 @media (max-width: 750px) {
-  .about-course .cards .card {
+  .courses-page .about-course .cards .card {
     padding: 20px;
     width: 100%;
   }
 }
-.about-course .cards .card .label {
+.courses-page .about-course .cards .card .label {
   margin-bottom: 10px;
   font-family: "Inter";
   font-style: normal;
@@ -3196,12 +3207,12 @@ select {
   color: #ad475c;
 }
 @media (max-width: 750px) {
-  .about-course .cards .card .label {
+  .courses-page .about-course .cards .card .label {
     font-size: 18px;
     line-height: 22px;
   }
 }
-.about-course .cards .card .course-name {
+.courses-page .about-course .cards .card .course-name {
   margin-bottom: 24px;
   font-family: "Inter";
   font-style: normal;
@@ -3212,28 +3223,28 @@ select {
   color: #000000;
 }
 @media (max-width: 1200px) {
-  .about-course .cards .card .course-name {
+  .courses-page .about-course .cards .card .course-name {
     margin-bottom: 10px;
   }
 }
 @media (max-width: 750px) {
-  .about-course .cards .card .course-name {
+  .courses-page .about-course .cards .card .course-name {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 17px;
   }
 }
-.about-course .cards .card .item {
+.courses-page .about-course .cards .card .item {
   margin-top: 9px;
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.about-course .cards .card .item .image {
+.courses-page .about-course .cards .card .item .image {
   width: 16px;
   height: 11px;
 }
-.about-course .cards .card .item .text {
+.courses-page .about-course .cards .card .item .text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3243,7 +3254,7 @@ select {
   /* Black */
   color: #000000;
 }
-.about-course .button {
+.courses-page .about-course .button {
   display: block;
   margin: 0 auto;
 }
@@ -3439,30 +3450,38 @@ select {
   background: #ffffff;
   color: #ad475c;
 }
+.courses-page .button.reverse {
+  background: #ffffff;
+  color: #ad475c;
+}
+.courses-page .button.reverse:hover {
+  background: #ad475c;
+  color: #ffffff;
+}
 
-.promo-banner {
+.courses-page .promo-banner {
   grid-area: promo-banner;
   width: 286px;
   padding: 18px 30px;
   border: 1px solid #b2aaaa;
 }
 @media (max-width: 750px) {
-  .promo-banner {
+  .courses-page .promo-banner {
     margin: 0 auto;
   }
 }
-.promo-banner-wrapper {
+.courses-page .promo-banner-wrapper {
   border-bottom: 1px solid #b2aaaa;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.promo-banner .image {
+.courses-page .promo-banner .image {
   margin-right: 10px;
   width: 33px;
   height: 32px;
 }
-.promo-banner .number {
+.courses-page .promo-banner .number {
   margin-right: 6px;
   font-family: "Inter";
   font-style: normal;
@@ -3471,7 +3490,7 @@ select {
   line-height: 36px;
   color: #000000;
 }
-.promo-banner .subnumber {
+.courses-page .promo-banner .subnumber {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3479,7 +3498,7 @@ select {
   line-height: 24px;
   color: #b2aaaa;
 }
-.promo-banner .all-reviews {
+.courses-page .promo-banner .all-reviews {
   margin-top: 10px;
   margin-bottom: 18px;
   font-family: "Inter";
@@ -3490,7 +3509,7 @@ select {
   text-decoration-line: underline;
   color: #b2aaaa;
 }
-.promo-banner .old-price {
+.courses-page .promo-banner .old-price {
   margin-top: 18px;
   text-align: center;
   font-family: "Inter";
@@ -3501,7 +3520,7 @@ select {
   color: #b2aaaa;
   text-decoration-line: line-through;
 }
-.promo-banner .price {
+.courses-page .promo-banner .price {
   text-align: center;
   margin-bottom: 8px;
   font-family: "Inter";
@@ -3511,7 +3530,7 @@ select {
   line-height: 36px;
   color: #000000;
 }
-.promo-banner .price-per-mounth {
+.courses-page .promo-banner .price-per-mounth {
   text-align: center;
   font-family: "Inter";
   font-style: normal;
@@ -3521,22 +3540,22 @@ select {
   color: #ad475c;
   margin-bottom: 10px;
 }
-.promo-banner-discount {
+.courses-page .promo-banner-discount {
   margin-top: 18px;
   margin-bottom: 36px;
   display: flex;
   justify-content: space-between;
 }
-.promo-banner-discount .item {
+.courses-page .promo-banner-discount .item {
   display: flex;
   align-items: center;
 }
-.promo-banner-discount .item img {
+.courses-page .promo-banner-discount .item img {
   margin-right: 10px;
   width: 28px;
   height: 28px;
 }
-.promo-banner-discount .item .text {
+.courses-page .promo-banner-discount .item .text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3544,7 +3563,7 @@ select {
   line-height: 17px;
   color: #000000;
 }
-.promo-banner-discount .item .text {
+.courses-page .promo-banner-discount .item .text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -3552,7 +3571,7 @@ select {
   line-height: 17px;
   color: #ad475c;
 }
-.promo-banner .button {
+.courses-page .promo-banner .button {
   width: 100%;
 }
 
@@ -3694,4 +3713,199 @@ select {
   .promo .text-description .text {
     font-size: 16px;
   }
+}
+
+.courses-page .reviews {
+  margin-bottom: 100px;
+}
+@media (max-width: 1200px) {
+  .courses-page .reviews {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .reviews {
+    margin-bottom: 40px;
+  }
+}
+.courses-page .reviews .cards {
+  margin-bottom: 60px;
+}
+@media (max-width: 1200px) {
+  .courses-page .reviews .cards {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .reviews .cards {
+    margin-bottom: 20px;
+  }
+}
+.courses-page .reviews .cards .card {
+  padding: 20px;
+  border: 1px solid #b2aaaa;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 20px;
+  grid-template-areas: "author names " "author text-content" "thumbs plus-minus" "thumbs add-comment";
+}
+.courses-page .reviews .cards .card .author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: author;
+  padding: 10px 0px 10px;
+  margin-bottom: 11px;
+}
+.courses-page .reviews .cards .card .author .avatar {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.courses-page .reviews .cards .card .author .numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.courses-page .reviews .cards .card .author .numbers .date {
+  margin-bottom: 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #b2aaaa;
+}
+.courses-page .reviews .cards .card .author .numbers .ratings .wrapper {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+.courses-page .reviews .cards .card .author .numbers .ratings .wrapper .star {
+  width: 27px;
+  height: 26px;
+}
+.courses-page .reviews .cards .card .author .numbers .ratings .wrapper .number {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+.courses-page .reviews .cards .card .author .numbers .ratings .subnumber {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #b2aaaa;
+  text-align: center;
+}
+.courses-page .reviews .cards .card .thumbs {
+  grid-area: thumbs;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.courses-page .reviews .cards .card .thumbs .image-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+.courses-page .reviews .cards .card .thumbs .image-wrapper .value {
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -10px;
+  right: -10px;
+  background: #ad475c;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+}
+.courses-page .reviews .cards .card .thumbs .image-wrapper .value.grey {
+  background: #b2aaaa;
+}
+.courses-page .reviews .cards .card .thumbs .image-wrapper .image {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+}
+.courses-page .reviews .cards .card .names {
+  grid-area: names;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.courses-page .reviews .cards .card .names .author-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+.courses-page .reviews .cards .card .names .course-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #b2aaaa;
+}
+.courses-page .reviews .cards .card .text-content {
+  grid-area: text-content;
+}
+.courses-page .reviews .cards .card .text-content .text-item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+}
+.courses-page .reviews .cards .card .text-content .text-item:last-child {
+  background: red;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ad475c;
+  width: 550px;
+  overflow: hidden;
+}
+.courses-page .reviews .cards .card .text-content .text-item .open-review {
+  width: max-content;
+  margin-top: -22px;
+  margin-left: auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  text-decoration-line: underline;
+  color: #ad475c;
+  cursor: pointer;
+  display: block;
+}
+.courses-page .reviews .cards .card .plus-minus {
+  grid-area: plus-minus;
+}
+.courses-page .reviews .cards .card .add-comment {
+  grid-area: add-comment;
+}
+.courses-page .reviews .buttons {
+  justify-content: center;
+  display: flex;
+  gap: 30px;
 }

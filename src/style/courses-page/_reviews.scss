@@ -1,0 +1,197 @@
+.courses-page {
+    .reviews {
+        margin-bottom: 100px;
+
+        @include for-1200-px {
+            margin-bottom: 60px;
+        }
+        @include for-750-px {
+            margin-bottom: 40px;
+        }
+        .cards {
+            margin-bottom: 60px;
+
+            @include for-1200-px {
+                margin-bottom: 40px;
+            }
+            @include for-750-px {
+                margin-bottom: 20px;
+            }
+            .card {
+                padding: 20px;
+                border: 1px solid #b2aaaa;
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                column-gap: 20px;
+                grid-template-areas:
+                    "author names "
+                    "author text-content"
+                    "thumbs plus-minus"
+                    "thumbs add-comment";
+
+                .author {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    grid-area: author;
+                    padding: 10px 0px 10px;
+                    margin-bottom: 11px;
+                    .avatar {
+                        margin-bottom: 10px;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    .numbers {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .date {
+                            margin-bottom: 12px;
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #b2aaaa;
+                        }
+                        .ratings {
+                            .wrapper {
+                                margin-bottom: 4px;
+                                display: flex;
+                                align-items: center;
+                                .star {
+                                    width: 27px;
+                                    height: 26px;
+                                }
+                                .number {
+                                    font-family: "Inter";
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 24px;
+                                    line-height: 29px;
+                                    color: #000000;
+                                }
+                            }
+                            .subnumber {
+                                font-family: "Inter";
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #b2aaaa;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .thumbs {
+                    grid-area: thumbs;
+                    display: flex;
+                    justify-content: center;
+                    gap: 14px;
+                    .image-wrapper {
+                        position: relative;
+                        cursor: pointer;
+                        .value {
+                            padding: 3px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            width: 18px;
+                            height: 18px;
+                            top: -10px;
+                            right: -10px;
+                            background: #ad475c;
+                            border-radius: 50%;
+                            border: 2px solid #ffffff;
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 10px;
+                            line-height: 12px;
+                            color: #ffffff;
+                            &.grey {
+                                background: #b2aaaa;
+                            }
+                        }
+                        .image {
+                            width: 36px;
+                            height: 36px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                .names {
+                    grid-area: names;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .author-name {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #000000;
+                    }
+                    .course-name {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #b2aaaa;
+                    }
+                }
+                .text-content {
+                    grid-area: text-content;
+                    .text-item {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: #000000;
+                        &:last-child {
+                            background: red;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            color: #ad475c;
+                            width: 550px;
+                            overflow: hidden;
+                        }
+                        .open-review {
+                            width: max-content;
+                            margin-top: -22px;
+                            margin-left: auto;
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+                            text-align: right;
+                            text-decoration-line: underline;
+                            color: #ad475c;
+                            cursor: pointer;
+                            display: block;
+                        }
+                    }
+                }
+                .plus-minus {
+                    grid-area: plus-minus;
+                }
+                .add-comment {
+                    grid-area: add-comment;
+                }
+            }
+        }
+        .buttons {
+            justify-content: center;
+            display: flex;
+            gap: 30px;
+        }
+    }
+}

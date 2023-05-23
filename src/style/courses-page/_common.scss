@@ -162,5 +162,13 @@
             background: #ffffff;
             color: #ad475c;
         }
+        &.reverse {
+            background: #ffffff;
+            color: #ad475c;
+            &:hover {
+                background: #ad475c;
+                color: #ffffff;
+            }
+        }
     }
 }
