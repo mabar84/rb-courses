@@ -227,6 +227,14 @@
                             @include for-833-px {
                                 width: 400px;
                             }
+                            @include for-725-px {
+                                display: inline-block;
+                                width: 100%;
+                                white-space: normal;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                            }
                         }
                     }
                     .open-review {
@@ -317,6 +325,7 @@
                 }
                 .add-comment {
                     grid-area: add-comment;
+                    width: max-content;
                     font-family: "Inter";
                     font-style: normal;
                     font-weight: 400;
@@ -325,6 +334,12 @@
                     text-decoration-line: underline;
                     color: #ad475c;
                     cursor: pointer;
+                    @include for-725-px {
+                        margin-left: 15px;
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 10px;
+                    }
                 }
             }
         }
@@ -332,6 +347,15 @@
             justify-content: center;
             display: flex;
             gap: 30px;
+            .button {
+                @include for-725-px {
+                    width: 100%;
+                }
+            }
+            @include for-725-px {
+                gap: 10px;
+                flex-direction: column;
+            }
         }
     }
 }
