@@ -3134,6 +3134,120 @@ select {
     font-size: 12px;
   }
 }
+.about-course {
+  overflow: hidden;
+}
+.about-course .text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  /* Black */
+  color: #000000;
+}
+.about-course .cards {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  display: flex;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1200px) {
+  .about-course .cards {
+    margin-bottom: 40px;
+    column-gap: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 750px) {
+  .about-course .cards {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+.about-course .cards .card {
+  padding: 30px;
+  border: 1px solid #b2aaaa;
+}
+@media (max-width: 1200px) {
+  .about-course .cards .card {
+    width: 367px;
+  }
+}
+@media (max-width: 750px) {
+  .about-course .cards .card {
+    padding: 20px;
+    width: 100%;
+  }
+}
+.about-course .cards .card .label {
+  margin-bottom: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  /* Active */
+  color: #ad475c;
+}
+@media (max-width: 750px) {
+  .about-course .cards .card .label {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.about-course .cards .card .course-name {
+  margin-bottom: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* Black */
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .about-course .cards .card .course-name {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .about-course .cards .card .course-name {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.about-course .cards .card .item {
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.about-course .cards .card .item .image {
+  width: 16px;
+  height: 11px;
+}
+.about-course .cards .card .item .text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  /* Black */
+  color: #000000;
+}
+.about-course .button {
+  display: block;
+  margin: 0 auto;
+}
+
 @media (max-width: 750px) {
   .courses-page .breadcrumb__list {
     flex-wrap: wrap;
@@ -3176,21 +3290,89 @@ select {
   }
 }
 .courses-page .title-h1 {
+  margin-bottom: 50px;
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
   line-height: 35px;
   color: #000000;
+  font-family: "ZonaPro";
+  position: relative;
 }
 @media (max-width: 1200px) {
   .courses-page .title-h1 {
+    margin-bottom: 40px;
     line-height: 42px;
   }
 }
 @media (max-width: 750px) {
   .courses-page .title-h1 {
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 140%;
+  }
+}
+.courses-page .title-h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  border-bottom: 3px solid #ad475c;
+}
+@media (max-width: 1200px) {
+  .courses-page .title-h1::after {
+    bottom: -20px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .title-h1::after {
+    bottom: -10px;
+  }
+}
+.courses-page .title-h2 {
+  margin-bottom: 70px;
+  padding-right: 395px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 150%;
+  color: #000000;
+  font-family: "ZonaPro";
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .courses-page .title-h2 {
+    padding-right: 0;
+    margin-bottom: 40px;
+    line-height: 140%;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .title-h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+.courses-page .title-h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  border-bottom: 3px solid #ad475c;
+}
+@media (max-width: 1200px) {
+  .courses-page .title-h2::after {
+    width: 200%;
+    left: -50%;
+    bottom: -20px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .title-h2::after {
+    bottom: -10px;
   }
 }
 .courses-page .hr {
@@ -3263,6 +3445,11 @@ select {
   width: 286px;
   padding: 18px 30px;
   border: 1px solid #b2aaaa;
+}
+@media (max-width: 750px) {
+  .promo-banner {
+    margin: 0 auto;
+  }
 }
 .promo-banner-wrapper {
   border-bottom: 1px solid #b2aaaa;
@@ -3389,6 +3576,7 @@ select {
   .promo {
     margin-bottom: 40px;
     row-gap: 20px;
+    grid-template-columns: 1fr;
     grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
   }
 }

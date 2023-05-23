@@ -34,18 +34,77 @@
             }
         }
     }
+
     .title-h1 {
+        margin-bottom: 50px;
         font-style: normal;
         font-weight: 800;
         font-size: 30px;
         line-height: 35px;
         color: #000000;
+        font-family: "ZonaPro";
+        position: relative;
         @include for-1200-px {
+            margin-bottom: 40px;
+
             line-height: 42px;
         }
         @include for-750-px {
+            margin-bottom: 30px;
+
             font-size: 24px;
             line-height: 140%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            width: 100%;
+            border-bottom: 3px solid #ad475c;
+            @include for-1200-px {
+                bottom: -20px;
+            }
+            @include for-750-px {
+                bottom: -10px;
+            }
+        }
+    }
+    .title-h2 {
+        margin-bottom: 70px;
+        padding-right: 395px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 150%;
+        color: #000000;
+        font-family: "ZonaPro";
+        position: relative;
+        @include for-1200-px {
+            padding-right: 0;
+            margin-bottom: 40px;
+            line-height: 140%;
+        }
+        @include for-750-px {
+            margin-bottom: 30px;
+            font-size: 24px;
+            line-height: 140%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            width: 100%;
+            border-bottom: 3px solid #ad475c;
+            @include for-1200-px {
+                width: 200%;
+                left: -50%;
+                bottom: -20px;
+            }
+            @include for-750-px {
+                bottom: -10px;
+            }
         }
     }
     .hr {

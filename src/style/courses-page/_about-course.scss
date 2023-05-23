@@ -1,0 +1,107 @@
+.about-course {
+    overflow: hidden;
+    .text {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        /* or 25px */
+
+        /* Black */
+
+        color: #000000;
+    }
+    .cards {
+        margin-top: 40px;
+        margin-bottom: 60px;
+        display: flex;
+        column-gap: 30px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+        @include for-1200-px {
+            margin-bottom: 40px;
+            column-gap: 20px;
+            justify-content: center;
+        }
+        @include for-750-px {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+        .card {
+            padding: 30px;
+            border: 1px solid #b2aaaa;
+            @include for-1200-px {
+                width: 367px;
+            }
+            @include for-750-px {
+                padding: 20px;
+                width: 100%;
+            }
+            .label {
+                margin-bottom: 10px;
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+
+                /* Active */
+
+                color: #ad475c;
+                @include for-750-px {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+            .course-name {
+                margin-bottom: 24px;
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+
+                /* Black */
+
+                color: #000000;
+                @include for-1200-px {
+                    margin-bottom: 10px;
+                }
+                @include for-750-px {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+            .item {
+                margin-top: 9px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                .image {
+                    width: 16px;
+                    height: 11px;
+                }
+                .text {
+                    font-family: "Inter";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    /* identical to box height */
+
+                    /* Black */
+
+                    color: #000000;
+                }
+            }
+        }
+    }
+    .button {
+        display: block;
+        margin: 0 auto;
+    }
+}
