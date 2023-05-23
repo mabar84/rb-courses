@@ -3714,6 +3714,84 @@ select {
   }
 }
 
+.courses-page .promocode {
+  width: 980px;
+  height: 320px;
+  margin: 0 auto 100px;
+  background: #ffffff;
+  background-image: url(../images/coupon-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -37px;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .courses-page .promocode {
+    margin: 0 auto 60px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .promocode {
+    margin: 0 auto 40px;
+  }
+}
+.courses-page .promocode .text {
+  font-family: "ZonaPro";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 75px;
+  line-height: 88px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  left: 90px;
+  top: 35px;
+}
+.courses-page .promocode .text.second {
+  top: 128px;
+  font-size: 65px;
+  line-height: 76px;
+}
+.courses-page .promocode .get {
+  padding: 18px 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  background: #ffffff;
+  position: absolute;
+  left: 90px;
+  bottom: 35px;
+}
+.courses-page .promocode .from {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+  position: absolute;
+  bottom: 92px;
+  left: 394px;
+  transform: rotate(-4.77deg);
+}
+.courses-page .promocode .percent {
+  width: 222px;
+  height: 222px;
+  position: absolute;
+  bottom: 54px;
+  right: 90px;
+  transform: rotate(19.19deg);
+}
+
 .courses-page .reviews {
   margin-bottom: 100px;
   overflow: hidden;
