@@ -28,6 +28,10 @@
                 font-size: 18px;
                 line-height: 22px;
             }
+            @include for-750-px {
+                font-size: 11px;
+                line-height: 13px;
+            }
         }
         &-price {
             font-family: "Inter";
@@ -39,6 +43,10 @@
             @include for-1200-px {
                 font-size: 18px;
                 line-height: 22px;
+            }
+            @include for-750-px {
+                font-size: 11px;
+                line-height: 13px;
             }
         }
         .button {

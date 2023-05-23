@@ -10,10 +10,17 @@
         background-position: 0 -37px;
         position: relative;
         @include for-1200-px {
+            width: 755px;
+            height: 247px;
             margin: 0 auto 60px;
+            background-position: 0 -28px;
         }
         @include for-750-px {
             margin: 0 auto 40px;
+            width: 288px;
+            height: 395px;
+            background-image: url(../images/coupon-mobile.png);
+            background-position: 0 0;
         }
         .text {
             font-family: "ZonaPro";
@@ -26,10 +33,33 @@
             position: absolute;
             left: 90px;
             top: 35px;
+            @include for-1200-px {
+                font-size: 60px;
+                line-height: 76px;
+                left: 70px;
+                top: 20px;
+            }
+            @include for-750-px {
+                font-size: 31px;
+                line-height: 36px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
             &.second {
                 top: 128px;
                 font-size: 65px;
                 line-height: 76px;
+                @include for-1200-px {
+                    font-size: 60px;
+                    top: 85px;
+                }
+                @include for-750-px {
+                    font-size: 31px;
+                    line-height: 36px;
+                    top: 60px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
         .get {
@@ -47,6 +77,16 @@
             position: absolute;
             left: 90px;
             bottom: 35px;
+            @include for-1200-px {
+                left: 70px;
+                bottom: 20px;
+            }
+            @include for-750-px {
+                width: 240px;
+                height: 60px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
         .from {
             padding: 12px 20px;
@@ -62,6 +102,19 @@
             bottom: 92px;
             left: 394px;
             transform: rotate(-4.77deg);
+            @include for-1200-px {
+                font-size: 20px;
+                line-height: 24px;
+                left: 350px;
+                bottom: 65px;
+            }
+            @include for-750-px {
+                padding: 8px 16px;
+                font-size: 16px;
+                line-height: 19px;
+                left: 122px;
+                bottom: 271px;
+            }
         }
         .percent {
             width: 222px;
@@ -70,6 +123,17 @@
             bottom: 54px;
             right: 90px;
             transform: rotate(19.19deg);
+            @include for-1200-px {
+                width: 160px;
+                height: 160px;
+                right: 50px;
+                bottom: 45px;
+            }
+            @include for-750-px {
+                width: 180px;
+                height: 180px;
+                bottom: 90px;
+            }
         }
     }
 }
