@@ -3458,6 +3458,107 @@ select {
   color: #ffffff;
 }
 
+.courses-page .other-courses {
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+@media (max-width: 1200px) {
+  .courses-page .other-courses {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .other-courses {
+    margin-bottom: 40px;
+  }
+}
+.courses-page .other-courses .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 1200px) {
+  .courses-page .other-courses .cards {
+    gap: 23px;
+  }
+}
+@media (max-width: 530px) {
+  .courses-page .other-courses .cards {
+    gap: 10px;
+    justify-content: center;
+  }
+}
+.courses-page .other-courses .cards .card {
+  padding: 20px;
+  width: 256px;
+  height: 194px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #b2aaaa;
+}
+@media (max-width: 1200px) {
+  .courses-page .other-courses .cards .card {
+    padding: 10px;
+    width: 236px;
+    height: 174px;
+  }
+}
+@media (max-width: 530px) {
+  .courses-page .other-courses .cards .card {
+    padding: 20px;
+    width: 288px;
+    height: 194px;
+  }
+}
+.courses-page .other-courses .cards .card .course-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .courses-page .other-courses .cards .card .course-name {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 530px) {
+  .courses-page .other-courses .cards .card .course-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.courses-page .other-courses .cards .card .wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.courses-page .other-courses .cards .card .wrapper .time {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+.courses-page .other-courses .cards .card .wrapper .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #ad475c;
+}
+.courses-page .other-courses .cards .card .button {
+  width: max-content;
+}
+
 .courses-page .promo-banner {
   grid-area: promo-banner;
   width: 286px;
