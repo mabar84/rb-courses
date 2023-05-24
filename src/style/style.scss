@@ -1219,7 +1219,7 @@ input[type="submit"] {
     font-size: 12px;
   }
 }
-
+// courses
 @import "courses-page/mixin";
 @import "courses-page/about-course";
 @import "courses-page/anchors";
@@ -1231,3 +1231,10 @@ input[type="submit"] {
 @import "courses-page/promocode";
 @import "courses-page/reviews";
 @import "courses-page/sticky-banner";
+// reviews
+@import "reviews-page/common";
+@import "reviews-page/other-categories";
+@import "reviews-page/other-schools";
+@import "reviews-page/promo";
+@import "reviews-page/promocode";
+@import "reviews-page/reviews";

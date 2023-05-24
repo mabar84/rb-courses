@@ -1,0 +1,86 @@
+.courses-page {
+    .other-courses {
+        overflow: hidden;
+        margin-bottom: 100px;
+        @include for-1200-px {
+            margin-bottom: 60px;
+        }
+        @include for-750-px {
+            margin-bottom: 40px;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            @include for-1200-px {
+                gap: 23px;
+            }
+            @include for-530-px {
+                gap: 10px;
+                justify-content: center;
+            }
+            .card {
+                padding: 20px;
+                width: 256px;
+                height: 194px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border: 1px solid #b2aaaa;
+                @include for-1200-px {
+                    padding: 10px;
+                    width: 236px;
+                    height: 174px;
+                }
+                @include for-530-px {
+                    padding: 20px;
+                    width: 288px;
+                    height: 194px;
+                }
+                .course-name {
+                    font-family: "Inter";
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #000000;
+                    @include for-1200-px {
+                        margin-bottom: 14px;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @include for-530-px {
+                        margin-bottom: 10px;
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+                .wrapper {
+                    margin-bottom: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    .time {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #000000;
+                    }
+                    .price {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: right;
+                        color: #ad475c;
+                    }
+                }
+                .button {
+                    width: max-content;
+                }
+            }
+        }
+    }
+}

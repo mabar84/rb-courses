@@ -1,6 +1,5 @@
 const stickyBanner = document.getElementById("sticky-banner");
 const windowInnerHeight = window.innerHeight;
-
 window.addEventListener("scroll", () => {
 	if (
 		window.pageYOffset > windowInnerHeight / 2 &&
