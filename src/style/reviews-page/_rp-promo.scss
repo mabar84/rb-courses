@@ -24,5 +24,156 @@
                 font-size: 12px;
             }
         }
+        .plus-minus {
+            margin-bottom: 100px;
+            @include for-1200-px {
+                margin-bottom: 60px;
+            }
+            @include for-725-px {
+                margin-bottom: 40px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .cards {
+                display: flex;
+                gap: 60px;
+                .card {
+                    padding: 20px 30px;
+                    width: 339px;
+                    height: 215px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    border: 0.5px solid #b2aaaa;
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .left {
+                            display: flex;
+                            align-items: center;
+                        }
+                        .right {
+                            width: 197px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .star {
+                            width: 20px;
+                            height: 19px;
+                            margin-right: 4px;
+                        }
+                        .number {
+                            margin-right: 6px;
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #000000;
+                        }
+                        .quantity {
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #000000;
+                        }
+                        .diagram {
+                            margin-right: 10px;
+                            width: 157px;
+                            height: 10px;
+                            left: 82px;
+                            top: 5px;
+                            background: #f7f7f7;
+                            .value {
+                                background: #ad475c;
+                                &-5 {
+                                    width: 90%;
+                                }
+                                &-4 {
+                                    width: 8%;
+                                }
+                                &-3 {
+                                    width: 1%;
+                                }
+                                &-2 {
+                                    width: 0%;
+                                }
+                                &-1 {
+                                    width: 1%;
+                                }
+                            }
+                        }
+                        .value {
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+            .items {
+                display: flex;
+                gap: 30px;
+                .item {
+                    width: 340px;
+                    @include for-1200-px {
+                        width: 264px;
+                    }
+                    @include for-833-px {
+                        width: 100%;
+                    }
+                    .sign {
+                        margin-bottom: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        @include for-725-px {
+                            margin-bottom: 6px;
+                        }
+                        .image {
+                            width: 20px;
+                            height: 20px;
+                        }
+                        .word {
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 24px;
+                            display: flex;
+                            align-items: center;
+                            color: #67e599;
+                            @include for-833-px {
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
+                            &.red {
+                                color: #e56767;
+                            }
+                        }
+                    }
+                    .text {
+                        margin-top: 9px;
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 140%;
+                        color: #000000;
+                        @include for-833-px {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

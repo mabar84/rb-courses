@@ -4738,6 +4738,20 @@ select {
     bottom: -10px;
   }
 }
+.reviews-page .title-h3 {
+  margin-bottom: 30px;
+  font-family: "ZonaPro";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+}
+@media (max-width: 750px) {
+  .reviews-page .title-h3 {
+    margin-bottom: 17px;
+  }
+}
 .reviews-page .hr {
   max-width: 1140px;
   margin: 30px auto 20px;
@@ -5022,6 +5036,171 @@ select {
   .reviews-page .promo .text-content {
     margin-bottom: 20px;
     font-size: 12px;
+  }
+}
+.reviews-page .promo .plus-minus {
+  margin-bottom: 100px;
+}
+@media (max-width: 1200px) {
+  .reviews-page .promo .plus-minus {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 725px) {
+  .reviews-page .promo .plus-minus {
+    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.reviews-page .promo .plus-minus .cards {
+  display: flex;
+  gap: 60px;
+}
+.reviews-page .promo .plus-minus .cards .card {
+  padding: 20px 30px;
+  width: 339px;
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 0.5px solid #b2aaaa;
+}
+.reviews-page .promo .plus-minus .cards .card .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reviews-page .promo .plus-minus .cards .card .item .left {
+  display: flex;
+  align-items: center;
+}
+.reviews-page .promo .plus-minus .cards .card .item .right {
+  width: 197px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-page .promo .plus-minus .cards .card .item .star {
+  width: 20px;
+  height: 19px;
+  margin-right: 4px;
+}
+.reviews-page .promo .plus-minus .cards .card .item .number {
+  margin-right: 6px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.reviews-page .promo .plus-minus .cards .card .item .quantity {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram {
+  margin-right: 10px;
+  width: 157px;
+  height: 10px;
+  left: 82px;
+  top: 5px;
+  background: #f7f7f7;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram .value {
+  background: #ad475c;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram .value-5 {
+  width: 90%;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram .value-4 {
+  width: 8%;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram .value-3 {
+  width: 1%;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram .value-2 {
+  width: 0%;
+}
+.reviews-page .promo .plus-minus .cards .card .item .diagram .value-1 {
+  width: 1%;
+}
+.reviews-page .promo .plus-minus .cards .card .item .value {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.reviews-page .promo .plus-minus .items {
+  display: flex;
+  gap: 30px;
+}
+.reviews-page .promo .plus-minus .items .item {
+  width: 340px;
+}
+@media (max-width: 1200px) {
+  .reviews-page .promo .plus-minus .items .item {
+    width: 264px;
+  }
+}
+@media (max-width: 833px) {
+  .reviews-page .promo .plus-minus .items .item {
+    width: 100%;
+  }
+}
+.reviews-page .promo .plus-minus .items .item .sign {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 725px) {
+  .reviews-page .promo .plus-minus .items .item .sign {
+    margin-bottom: 6px;
+  }
+}
+.reviews-page .promo .plus-minus .items .item .sign .image {
+  width: 20px;
+  height: 20px;
+}
+.reviews-page .promo .plus-minus .items .item .sign .word {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #67e599;
+}
+@media (max-width: 833px) {
+  .reviews-page .promo .plus-minus .items .item .sign .word {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.reviews-page .promo .plus-minus .items .item .sign .word.red {
+  color: #e56767;
+}
+.reviews-page .promo .plus-minus .items .item .text {
+  margin-top: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+}
+@media (max-width: 833px) {
+  .reviews-page .promo .plus-minus .items .item .text {
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 

@@ -118,6 +118,18 @@
             }
         }
     }
+    .title-h3 {
+        margin-bottom: 30px;
+        font-family: "ZonaPro";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 35px;
+        color: #000000;
+        @include for-750-px {
+            margin-bottom: 17px;
+        }
+    }
     .hr {
         max-width: 1140px;
         margin: 30px auto 20px;
