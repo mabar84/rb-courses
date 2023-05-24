@@ -52,7 +52,8 @@
             gap: 24px;
         }
         @include for-750-px {
-            gap: 50px;
+            column-gap: 50px;
+            row-gap: 20px;
         }
         .item {
             min-width: 160px;
