@@ -1,0 +1,188 @@
+.reviews-page {
+    .school-banner {
+        width: 1110px;
+        padding: 15px 30px;
+        border: 1px solid #b2aaaa;
+        margin: 0 auto 70px;
+        display: grid;
+        grid-template-columns: 220px 690px 1fr;
+        grid-template-areas: "head bars links";
+        @include for-1200-px {
+            width: 754px;
+            padding: 28px 20px;
+            margin: 0 auto 40px;
+            grid-template-columns: 160px 470px 1fr;
+        }
+        @include for-750-px {
+            width: 100%;
+            padding: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "head links"
+                "bars bars";
+        }
+        .head {
+            grid-area: head;
+            @include for-750-px {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-width: 142px;
+            }
+            .school-logo {
+                margin-bottom: 8px;
+                width: 220px;
+                height: 49px;
+                object-fit: cover;
+                @include for-1200-px {
+                    width: 160px;
+                    height: 35px;
+                    margin-bottom: 10px;
+                }
+                @include for-750-px {
+                    width: 142px;
+                    height: 31px;
+                    margin-bottom: 6px;
+                }
+            }
+            .wrapper {
+                margin-bottom: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include for-1200-px {
+                    margin-bottom: 3px;
+                }
+                .star {
+                    margin-right: 10px;
+                    width: 33px;
+                    height: 22px;
+                    @include for-1200-px {
+                        margin-right: 6px;
+                        width: 24px;
+                        height: 23px;
+                    }
+                }
+                .number {
+                    margin-right: 6px;
+                    font-family: "Inter";
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 30px;
+                    line-height: 36px;
+                    color: #000000;
+                    @include for-1200-px {
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+                .subnumber {
+                    font-family: "Inter";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #b2aaaa;
+                    @include for-1200-px {
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+            }
+            .quantity {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #b2aaaa;
+                text-align: center;
+                @include for-1200-px {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+        .bars {
+            grid-area: bars;
+            padding: 0 60px;
+            display: flex;
+            row-gap: 20px;
+            column-gap: 30px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include for-1200-px {
+                column-gap: 20px;
+                padding: 0 25px;
+            }
+            @include for-750-px {
+                padding: 20px 0 0;
+            }
+            &-item {
+                width: 270px;
+                @include for-1200-px {
+                    width: 200px;
+                }
+                @include for-750-px {
+                    width: 248px;
+                }
+                &-header {
+                    margin-bottom: 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .text {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #000000;
+                    }
+                    .value {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-align: right;
+                        color: #ad475c;
+                    }
+                }
+                .diagram {
+                    height: 10px;
+                    background: #f7f7f7;
+                    &.value {
+                        width: 75%;
+                        height: 10px;
+                        background: #ad475c;
+                    }
+                }
+            }
+        }
+        .links {
+            grid-area: links;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @include for-1200-px {
+                gap: 16px;
+            }
+            &-item {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                text-decoration-line: underline;
+                color: #ad475c;
+                @include for-1200-px {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}

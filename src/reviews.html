@@ -4,7 +4,7 @@
 
 	<body>
 		@@include('./_header.html')
-		<main class="reviews__main raviews-page">
+		<main class="reviews__main reviews-page">
 			<section class="breadcrumb">
 				<div class="container">
 					<ul class="breadcrumb__list">
@@ -15,131 +15,92 @@
 						</li>
 						<li class="breadcrumb__list-item">
 							<a class="breadcrumb__list-link" href="#">
-								Курсы
+								SkillFactory
 							</a>
 						</li>
 						<li class="breadcrumb__list-item">
 							<a class="breadcrumb__list-link" href="#">
-								Программирование
-							</a>
-						</li>
-						<li class="breadcrumb__list-item">
-							<a class="breadcrumb__list-link" href="#">
-								Профессия Fullstack-разработчик
-								на&nbsp;JavaScript от&nbsp;SkillFactory
+								ОТзывы SkillFactory
 							</a>
 						</li>
 					</ul>
 				</div>
 			</section>
 			<section class="page">
-				<h1 class="title-h1 container">Отзывы SkillFactory</h1>
+				<div class="wrapper-h1 container">
+					<h1 class="title-h1">Отзывы SkillFactory</h1>
+					<button class="button">Сайт школы</button>
+				</div>
+
 				<div class="promo container">
-					<div class="categories">
-						<a class="categories-item" href="#">
-							Программирование
-						</a>
-						<a class="categories-item" href="#">
-							Java-разработка
-						</a>
-						<a class="categories-item" href="#">
-							Все курсы Skillbox
-						</a>
-					</div>
-
 					<div class="text-content">
-						На курсе вы научитесь создавать корпоративные приложения
-						и встраивать их в инфраструктуру бизнеса.
+						Школа является частью образовательной экосистемы Mail.ru
+						Group. Обучают цифровым профессиям с нуля учеников
+						любого возраста и без технического опыта,
+						специализируются на программировании, разработке,
+						аналитике данных.
 					</div>
 
-					<div class="time-description">
-						<div class="item">
-							<p class="text">Начало</p>
-							<p class="subtext">07.03.2022 г.</p>
-						</div>
-						<div class="item">
-							<p class="text">Длительность</p>
-							<p class="subtext">12 месяцев</p>
-						</div>
-						<div class="item">
-							<p class="text">Занятия</p>
-							<p class="subtext">Около 8 часов в неделю</p>
-						</div>
-					</div>
-
-					<div class="text-description">
-						<div class="item">
+					<div class="school-banner">
+						<div class="head">
 							<img
-								src="images/icons/Message.svg"
-								alt="icon"
-								class="image"
+								src="images/head.svg"
+								alt="logo"
+								class="school-logo"
 							/>
-							<p class="text">Общение с экспертами</p>
-						</div>
-						<div class="item">
-							<img
-								src="images/icons/Calendar.svg"
-								alt="icon"
-								class="image"
-							/>
-							<p class="text">Доступ к курсу навсегда</p>
-						</div>
-						<div class="item">
-							<img
-								src="images/icons/pencil.svg"
-								alt="icon"
-								class="image"
-							/>
-							<p class="text">
-								Практика на&nbsp;реальных&nbsp;проектах
-							</p>
-						</div>
-					</div>
-
-					<div class="promo-banner">
-						<div class="promo-banner-wrapper">
-							<div class="">
+							<div class="wrapper">
 								<img
 									src="images/icons/cp-star.svg"
 									alt="star"
-									class="image"
+									class="star"
 								/>
 								<span class="number">4.9</span>
 								<span class="subnumber">(5.0)</span>
 							</div>
-
-							<a href="#" class="all-reviews">
-								все отзывы о школе
-							</a>
+							<p class="quantity">122 отзыва</p>
 						</div>
-						<div class="promo-banner-wrapper">
-							<p class="old-price">166 777 ₽ / курс</p>
-							<p class="price">98 150 ₽/курс</p>
-							<p class="price-per-mounth">От 6 777 ₽/мес</p>
-						</div>
-						<div class="promo-banner-discount">
-							<div class="item">
-								<img
-									src="images/icons/gal-white.svg"
-									alt="gal"
-								/>
-								<div class="">
-									<p class="text">скидка</p>
-									<p class="subtext">30%</p>
+						<div class="bars">
+							<div class="bars-item">
+								<div class="bars-item-header">
+									<p class="text">Стоимость</p>
+									<p class="value">4.5</p>
+								</div>
+								<div class="diagram">
+									<div class="diagram value"></div>
 								</div>
 							</div>
-							<div class="item">
-								<img
-									src="images/icons/gal-bordo.svg"
-									alt="gal"
-								/>
-								<div class="">
-									<p class="text">рассрочка</p>
-									<p class="subtext">24 месяца</p>
+							<div class="bars-item">
+								<div class="bars-item-header">
+									<p class="text">Подача материала</p>
+									<p class="value">4.5</p>
+								</div>
+								<div class="diagram">
+									<div class="diagram value"></div>
+								</div>
+							</div>
+							<div class="bars-item">
+								<div class="bars-item-header">
+									<p class="text">Программа обучения</p>
+									<p class="value">4.5</p>
+								</div>
+								<div class="diagram">
+									<div class="diagram value"></div>
+								</div>
+							</div>
+							<div class="bars-item">
+								<div class="bars-item-header">
+									<p class="text">Уровень организации</p>
+									<p class="value">4.5</p>
+								</div>
+								<div class="diagram">
+									<div class="diagram value"></div>
 								</div>
 							</div>
 						</div>
-						<button class="button">Записаться на курс</button>
+						<div class="links">
+							<a href="#" class="links-item">Промокоды</a>
+							<a href="#" class="links-item">Все курсы</a>
+						</div>
 					</div>
 				</div>
 

@@ -1,0 +1,28 @@
+.reviews-page {
+    .promo {
+        margin-bottom: 100px;
+        @include for-1200-px {
+            margin-bottom: 60px;
+        }
+        @include for-750-px {
+            margin-bottom: 40px;
+        }
+        .text-content {
+            margin-bottom: 40px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #000000;
+            @include for-1200-px {
+                margin-bottom: 40px;
+                font-size: 16px;
+            }
+            @include for-750-px {
+                margin-bottom: 20px;
+                font-size: 12px;
+            }
+        }
+    }
+}

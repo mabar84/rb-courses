@@ -3285,16 +3285,16 @@ select {
 }
 
 @media (max-width: 750px) {
-  .rivews-page .breadcrumb__list {
+  .courses-page .breadcrumb__list {
     flex-wrap: wrap;
   }
 }
-.rivews-page .breadcrumb__list-item {
+.courses-page .breadcrumb__list-item {
   font-size: 16px;
   line-height: 19px;
 }
 @media (max-width: 1200px) {
-  .rivews-page .breadcrumb__list-item {
+  .courses-page .breadcrumb__list-item {
     padding-right: 20px;
     margin-right: 20px;
     font-size: 12px;
@@ -3302,13 +3302,13 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .rivews-page .breadcrumb__list-item {
+  .courses-page .breadcrumb__list-item {
     margin-right: 10px;
     font-size: 9px;
     line-height: 12px;
   }
 }
-.rivews-page .breadcrumb__list-item:last-child {
+.courses-page .breadcrumb__list-item:last-child {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #ad475c;
@@ -3316,7 +3316,7 @@ select {
   overflow: hidden;
 }
 @media (max-width: 750px) {
-  .rivews-page .breadcrumb__list-item:last-child {
+  .courses-page .breadcrumb__list-item:last-child {
     padding-right: 0;
     margin-top: 6px;
     text-overflow: initial;
@@ -3325,7 +3325,7 @@ select {
     overflow: initial;
   }
 }
-.rivews-page .title-h1 {
+.courses-page .title-h1 {
   margin-bottom: 50px;
   font-style: normal;
   font-weight: 800;
@@ -3336,19 +3336,19 @@ select {
   position: relative;
 }
 @media (max-width: 1200px) {
-  .rivews-page .title-h1 {
+  .courses-page .title-h1 {
     margin-bottom: 40px;
     line-height: 42px;
   }
 }
 @media (max-width: 750px) {
-  .rivews-page .title-h1 {
+  .courses-page .title-h1 {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 140%;
   }
 }
-.rivews-page .title-h1::after {
+.courses-page .title-h1::after {
   content: "";
   position: absolute;
   left: 0;
@@ -3357,16 +3357,16 @@ select {
   border-bottom: 3px solid #ad475c;
 }
 @media (max-width: 1200px) {
-  .rivews-page .title-h1::after {
+  .courses-page .title-h1::after {
     bottom: -20px;
   }
 }
 @media (max-width: 750px) {
-  .rivews-page .title-h1::after {
+  .courses-page .title-h1::after {
     bottom: -10px;
   }
 }
-.rivews-page .title-h2 {
+.courses-page .title-h2 {
   margin-bottom: 70px;
   padding-right: 395px;
   font-style: normal;
@@ -3378,20 +3378,20 @@ select {
   position: relative;
 }
 @media (max-width: 1200px) {
-  .rivews-page .title-h2 {
+  .courses-page .title-h2 {
     padding-right: 0;
     margin-bottom: 40px;
     line-height: 140%;
   }
 }
 @media (max-width: 750px) {
-  .rivews-page .title-h2 {
+  .courses-page .title-h2 {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 140%;
   }
 }
-.rivews-page .title-h2::after {
+.courses-page .title-h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -3400,33 +3400,33 @@ select {
   border-bottom: 3px solid #ad475c;
 }
 @media (max-width: 1200px) {
-  .rivews-page .title-h2::after {
+  .courses-page .title-h2::after {
     width: 200%;
     left: -50%;
     bottom: -20px;
   }
 }
 @media (max-width: 750px) {
-  .rivews-page .title-h2::after {
+  .courses-page .title-h2::after {
     bottom: -10px;
   }
 }
-.rivews-page .hr {
+.courses-page .hr {
   max-width: 1140px;
   margin: 30px auto 20px;
   border-bottom: 3px solid #ad475c;
 }
 @media (max-width: 1200px) {
-  .rivews-page .hr {
+  .courses-page .hr {
     margin: 20px auto 20px;
   }
 }
 @media (max-width: 750px) {
-  .rivews-page .hr {
+  .courses-page .hr {
     margin: 10px auto 20px;
   }
 }
-.rivews-page .categories {
+.courses-page .categories {
   margin: 0;
   height: min-content;
   grid-area: categories;
@@ -3436,11 +3436,11 @@ select {
   justify-content: start;
 }
 @media (max-width: 750px) {
-  .rivews-page .categories {
+  .courses-page .categories {
     gap: 16px;
   }
 }
-.rivews-page .categories-item {
+.courses-page .categories-item {
   padding: 14px 24px;
   font-family: "Inter";
   font-style: normal;
@@ -3451,13 +3451,13 @@ select {
   border: 1px solid #b2aaaa;
 }
 @media (max-width: 750px) {
-  .rivews-page .categories-item {
+  .courses-page .categories-item {
     padding: 10px 12px;
     font-size: 12px;
     line-height: 15px;
   }
 }
-.rivews-page .button {
+.courses-page .button {
   padding: 14px 24px;
   color: #ffffff;
   background: #ad475c;
@@ -3471,15 +3471,15 @@ select {
   transition: 0.3s;
   color: #ffffff;
 }
-.rivews-page .button:hover {
+.courses-page .button:hover {
   background: #ffffff;
   color: #ad475c;
 }
-.rivews-page .button.reverse {
+.courses-page .button.reverse {
   background: #ffffff;
   color: #ad475c;
 }
-.rivews-page .button.reverse:hover {
+.courses-page .button.reverse:hover {
   background: #ad475c;
   color: #ffffff;
 }
@@ -3779,7 +3779,7 @@ select {
   width: 100%;
 }
 
-.promo {
+.courses-page .promo {
   margin-bottom: 100px;
   display: grid;
   column-gap: 60px;
@@ -3788,7 +3788,7 @@ select {
   grid-template-areas: "categories promo-banner" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
 }
 @media (max-width: 1200px) {
-  .promo {
+  .courses-page .promo {
     margin-bottom: 60px;
     grid-template-columns: 1fr 311px;
     column-gap: 12px;
@@ -3796,14 +3796,14 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .promo {
+  .courses-page .promo {
     margin-bottom: 40px;
     row-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
   }
 }
-.promo .text-content {
+.courses-page .promo .text-content {
   grid-area: text-content;
   font-family: "Inter";
   font-style: normal;
@@ -3813,37 +3813,37 @@ select {
   color: #000000;
 }
 @media (max-width: 750px) {
-  .promo .text-content {
+  .courses-page .promo .text-content {
     font-size: 16px;
   }
 }
-.promo .time-description {
+.courses-page .promo .time-description {
   grid-area: time-description;
   flex-wrap: wrap;
   display: flex;
   gap: 30px;
 }
 @media (max-width: 1200px) {
-  .promo .time-description {
+  .courses-page .promo .time-description {
     gap: 24px;
   }
 }
 @media (max-width: 750px) {
-  .promo .time-description {
+  .courses-page .promo .time-description {
     column-gap: 50px;
     row-gap: 20px;
   }
 }
-.promo .time-description .item {
+.courses-page .promo .time-description .item {
   min-width: 160px;
 }
 @media (max-width: 1200px) {
-  .promo .time-description .item {
+  .courses-page .promo .time-description .item {
     min-width: auto;
     width: max-content;
   }
 }
-.promo .time-description .text {
+.courses-page .promo .time-description .text {
   margin-bottom: 8px;
   font-family: "Inter";
   font-style: normal;
@@ -3853,12 +3853,12 @@ select {
   color: #ad475c;
 }
 @media (max-width: 1200px) {
-  .promo .time-description .text {
+  .courses-page .promo .time-description .text {
     font-size: 16px;
     line-height: 19px;
   }
 }
-.promo .time-description .subtext {
+.courses-page .promo .time-description .subtext {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3867,46 +3867,46 @@ select {
   color: #000000;
 }
 @media (max-width: 1200px) {
-  .promo .time-description .subtext {
+  .courses-page .promo .time-description .subtext {
     font-size: 16px;
     line-height: 19px;
   }
 }
-.promo .text-description {
+.courses-page .promo .text-description {
   grid-area: text-description;
   flex-wrap: wrap;
   display: flex;
   gap: 26px;
 }
 @media (max-width: 1200px) {
-  .promo .text-description {
+  .courses-page .promo .text-description {
     gap: 21px;
   }
 }
 @media (max-width: 750px) {
-  .promo .text-description {
+  .courses-page .promo .text-description {
     gap: 20px;
   }
 }
-.promo .text-description .item {
+.courses-page .promo .text-description .item {
   display: flex;
   align-items: center;
 }
-.promo .text-description .item:nth-child(1) {
+.courses-page .promo .text-description .item:nth-child(1) {
   width: 180px;
 }
-.promo .text-description .item:nth-child(2) {
+.courses-page .promo .text-description .item:nth-child(2) {
   width: 200px;
 }
-.promo .text-description .item:nth-child(3) {
+.courses-page .promo .text-description .item:nth-child(3) {
   width: 260px;
 }
-.promo .text-description .image {
+.courses-page .promo .text-description .image {
   margin-right: 14px;
   width: 38px;
   height: 38px;
 }
-.promo .text-description .text {
+.courses-page .promo .text-description .text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3915,7 +3915,7 @@ select {
   color: #000000;
 }
 @media (max-width: 1200px) {
-  .promo .text-description .text {
+  .courses-page .promo .text-description .text {
     font-size: 16px;
   }
 }
@@ -4595,16 +4595,16 @@ select {
 }
 
 @media (max-width: 750px) {
-  .courses-page .breadcrumb__list {
+  .reviews-page .breadcrumb__list {
     flex-wrap: wrap;
   }
 }
-.courses-page .breadcrumb__list-item {
+.reviews-page .breadcrumb__list-item {
   font-size: 16px;
   line-height: 19px;
 }
 @media (max-width: 1200px) {
-  .courses-page .breadcrumb__list-item {
+  .reviews-page .breadcrumb__list-item {
     padding-right: 20px;
     margin-right: 20px;
     font-size: 12px;
@@ -4612,13 +4612,13 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .courses-page .breadcrumb__list-item {
+  .reviews-page .breadcrumb__list-item {
     margin-right: 10px;
     font-size: 9px;
     line-height: 12px;
   }
 }
-.courses-page .breadcrumb__list-item:last-child {
+.reviews-page .breadcrumb__list-item:last-child {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #ad475c;
@@ -4626,7 +4626,7 @@ select {
   overflow: hidden;
 }
 @media (max-width: 750px) {
-  .courses-page .breadcrumb__list-item:last-child {
+  .reviews-page .breadcrumb__list-item:last-child {
     padding-right: 0;
     margin-top: 6px;
     text-overflow: initial;
@@ -4635,30 +4635,27 @@ select {
     overflow: initial;
   }
 }
-.courses-page .title-h1 {
+.reviews-page .wrapper-h1 {
   margin-bottom: 50px;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 35px;
-  color: #000000;
-  font-family: "ZonaPro";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 @media (max-width: 1200px) {
-  .courses-page .title-h1 {
+  .reviews-page .wrapper-h1 {
     margin-bottom: 40px;
-    line-height: 42px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .title-h1 {
+  .reviews-page .wrapper-h1 {
     margin-bottom: 30px;
-    font-size: 24px;
-    line-height: 140%;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
   }
 }
-.courses-page .title-h1::after {
+.reviews-page .wrapper-h1::after {
   content: "";
   position: absolute;
   left: 0;
@@ -4667,16 +4664,36 @@ select {
   border-bottom: 3px solid #ad475c;
 }
 @media (max-width: 1200px) {
-  .courses-page .title-h1::after {
+  .reviews-page .wrapper-h1::after {
     bottom: -20px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .title-h1::after {
+  .reviews-page .wrapper-h1::after {
     bottom: -10px;
+    flex-direction: column;
   }
 }
-.courses-page .title-h2 {
+.reviews-page .wrapper-h1 .title-h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+  font-family: "ZonaPro";
+}
+@media (max-width: 1200px) {
+  .reviews-page .wrapper-h1 .title-h1 {
+    line-height: 42px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .wrapper-h1 .title-h1 {
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+.reviews-page .title-h2 {
   margin-bottom: 70px;
   padding-right: 395px;
   font-style: normal;
@@ -4688,20 +4705,20 @@ select {
   position: relative;
 }
 @media (max-width: 1200px) {
-  .courses-page .title-h2 {
+  .reviews-page .title-h2 {
     padding-right: 0;
     margin-bottom: 40px;
     line-height: 140%;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .title-h2 {
+  .reviews-page .title-h2 {
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 140%;
   }
 }
-.courses-page .title-h2::after {
+.reviews-page .title-h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -4710,33 +4727,33 @@ select {
   border-bottom: 3px solid #ad475c;
 }
 @media (max-width: 1200px) {
-  .courses-page .title-h2::after {
+  .reviews-page .title-h2::after {
     width: 200%;
     left: -50%;
     bottom: -20px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .title-h2::after {
+  .reviews-page .title-h2::after {
     bottom: -10px;
   }
 }
-.courses-page .hr {
+.reviews-page .hr {
   max-width: 1140px;
   margin: 30px auto 20px;
   border-bottom: 3px solid #ad475c;
 }
 @media (max-width: 1200px) {
-  .courses-page .hr {
+  .reviews-page .hr {
     margin: 20px auto 20px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .hr {
+  .reviews-page .hr {
     margin: 10px auto 20px;
   }
 }
-.courses-page .categories {
+.reviews-page .categories {
   margin: 0;
   height: min-content;
   grid-area: categories;
@@ -4746,11 +4763,11 @@ select {
   justify-content: start;
 }
 @media (max-width: 750px) {
-  .courses-page .categories {
+  .reviews-page .categories {
     gap: 16px;
   }
 }
-.courses-page .categories-item {
+.reviews-page .categories-item {
   padding: 14px 24px;
   font-family: "Inter";
   font-style: normal;
@@ -4761,13 +4778,13 @@ select {
   border: 1px solid #b2aaaa;
 }
 @media (max-width: 750px) {
-  .courses-page .categories-item {
+  .reviews-page .categories-item {
     padding: 10px 12px;
     font-size: 12px;
     line-height: 15px;
   }
 }
-.courses-page .button {
+.reviews-page .button {
   padding: 14px 24px;
   color: #ffffff;
   background: #ad475c;
@@ -4781,15 +4798,15 @@ select {
   transition: 0.3s;
   color: #ffffff;
 }
-.courses-page .button:hover {
+.reviews-page .button:hover {
   background: #ffffff;
   color: #ad475c;
 }
-.courses-page .button.reverse {
+.reviews-page .button.reverse {
   background: #ffffff;
   color: #ad475c;
 }
-.courses-page .button.reverse:hover {
+.reviews-page .button.reverse:hover {
   background: #ad475c;
   color: #ffffff;
 }
@@ -4973,144 +4990,255 @@ select {
   width: max-content;
 }
 
-.promo {
+.reviews-page .promo {
   margin-bottom: 100px;
-  display: grid;
-  column-gap: 60px;
-  row-gap: 40px;
-  grid-template-columns: 1fr 366px;
-  grid-template-areas: "categories promo-banner" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
 }
 @media (max-width: 1200px) {
-  .promo {
+  .reviews-page .promo {
     margin-bottom: 60px;
-    grid-template-columns: 1fr 311px;
-    column-gap: 12px;
-    grid-template-areas: "categories categories" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
   }
 }
 @media (max-width: 750px) {
-  .promo {
+  .reviews-page .promo {
     margin-bottom: 40px;
-    row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
   }
 }
-.promo .text-content {
-  grid-area: text-content;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140.02%;
-  color: #000000;
-}
-@media (max-width: 750px) {
-  .promo .text-content {
-    font-size: 16px;
-  }
-}
-.promo .time-description {
-  grid-area: time-description;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 30px;
-}
-@media (max-width: 1200px) {
-  .promo .time-description {
-    gap: 24px;
-  }
-}
-@media (max-width: 750px) {
-  .promo .time-description {
-    column-gap: 50px;
-    row-gap: 20px;
-  }
-}
-.promo .time-description .item {
-  min-width: 160px;
-}
-@media (max-width: 1200px) {
-  .promo .time-description .item {
-    min-width: auto;
-    width: max-content;
-  }
-}
-.promo .time-description .text {
-  margin-bottom: 8px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #ad475c;
-}
-@media (max-width: 1200px) {
-  .promo .time-description .text {
-    font-size: 16px;
-    line-height: 19px;
-  }
-}
-.promo .time-description .subtext {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-}
-@media (max-width: 1200px) {
-  .promo .time-description .subtext {
-    font-size: 16px;
-    line-height: 19px;
-  }
-}
-.promo .text-description {
-  grid-area: text-description;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 26px;
-}
-@media (max-width: 1200px) {
-  .promo .text-description {
-    gap: 21px;
-  }
-}
-@media (max-width: 750px) {
-  .promo .text-description {
-    gap: 20px;
-  }
-}
-.promo .text-description .item {
-  display: flex;
-  align-items: center;
-}
-.promo .text-description .item:nth-child(1) {
-  width: 180px;
-}
-.promo .text-description .item:nth-child(2) {
-  width: 200px;
-}
-.promo .text-description .item:nth-child(3) {
-  width: 260px;
-}
-.promo .text-description .image {
-  margin-right: 14px;
-  width: 38px;
-  height: 38px;
-}
-.promo .text-description .text {
+.reviews-page .promo .text-content {
+  margin-bottom: 40px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 130%;
+  line-height: 140%;
   color: #000000;
 }
 @media (max-width: 1200px) {
-  .promo .text-description .text {
+  .reviews-page .promo .text-content {
+    margin-bottom: 40px;
     font-size: 16px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .promo .text-content {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+}
+
+.reviews-page .school-banner {
+  width: 1110px;
+  padding: 15px 30px;
+  border: 1px solid #b2aaaa;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: 220px 690px 1fr;
+  grid-template-areas: "head bars links";
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner {
+    width: 754px;
+    padding: 28px 20px;
+    margin: 0 auto 40px;
+    grid-template-columns: 160px 470px 1fr;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .school-banner {
+    width: 100%;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "head links" "bars bars";
+  }
+}
+.reviews-page .school-banner .head {
+  grid-area: head;
+}
+@media (max-width: 750px) {
+  .reviews-page .school-banner .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 142px;
+  }
+}
+.reviews-page .school-banner .head .school-logo {
+  margin-bottom: 8px;
+  width: 220px;
+  height: 49px;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .head .school-logo {
+    width: 160px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .school-banner .head .school-logo {
+    width: 142px;
+    height: 31px;
+    margin-bottom: 6px;
+  }
+}
+.reviews-page .school-banner .head .wrapper {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .head .wrapper {
+    margin-bottom: 3px;
+  }
+}
+.reviews-page .school-banner .head .wrapper .star {
+  margin-right: 10px;
+  width: 33px;
+  height: 22px;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .head .wrapper .star {
+    margin-right: 6px;
+    width: 24px;
+    height: 23px;
+  }
+}
+.reviews-page .school-banner .head .wrapper .number {
+  margin-right: 6px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .head .wrapper .number {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.reviews-page .school-banner .head .wrapper .subnumber {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #b2aaaa;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .head .wrapper .subnumber {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.reviews-page .school-banner .head .quantity {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b2aaaa;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .head .quantity {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.reviews-page .school-banner .bars {
+  grid-area: bars;
+  padding: 0 60px;
+  display: flex;
+  row-gap: 20px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .bars {
+    column-gap: 20px;
+    padding: 0 25px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .school-banner .bars {
+    padding: 20px 0 0;
+  }
+}
+.reviews-page .school-banner .bars-item {
+  width: 270px;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .bars-item {
+    width: 200px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .school-banner .bars-item {
+    width: 248px;
+  }
+}
+.reviews-page .school-banner .bars-item-header {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-page .school-banner .bars-item-header .text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.reviews-page .school-banner .bars-item-header .value {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: right;
+  color: #ad475c;
+}
+.reviews-page .school-banner .bars-item .diagram {
+  height: 10px;
+  background: #f7f7f7;
+}
+.reviews-page .school-banner .bars-item .diagram.value {
+  width: 75%;
+  height: 10px;
+  background: #ad475c;
+}
+.reviews-page .school-banner .links {
+  grid-area: links;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .links {
+    gap: 16px;
+  }
+}
+.reviews-page .school-banner .links-item {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  color: #ad475c;
+}
+@media (max-width: 1200px) {
+  .reviews-page .school-banner .links-item {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
