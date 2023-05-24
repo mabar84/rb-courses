@@ -5477,7 +5477,7 @@ select {
   }
 }
 
-.courses-page .promocode {
+.reviews-page .promocode {
   width: 980px;
   height: 320px;
   margin: 0 auto 100px;
@@ -5489,7 +5489,7 @@ select {
   position: relative;
 }
 @media (max-width: 1200px) {
-  .courses-page .promocode {
+  .reviews-page .promocode {
     width: 755px;
     height: 247px;
     margin: 0 auto 60px;
@@ -5497,7 +5497,7 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .courses-page .promocode {
+  .reviews-page .promocode {
     margin: 0 auto 40px;
     width: 288px;
     height: 395px;
@@ -5505,7 +5505,7 @@ select {
     background-position: 0 0;
   }
 }
-.courses-page .promocode .text {
+.reviews-page .promocode .text {
   font-family: "ZonaPro";
   font-style: normal;
   font-weight: 800;
@@ -5518,7 +5518,7 @@ select {
   top: 35px;
 }
 @media (max-width: 1200px) {
-  .courses-page .promocode .text {
+  .reviews-page .promocode .text {
     font-size: 60px;
     line-height: 76px;
     left: 70px;
@@ -5526,26 +5526,26 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .courses-page .promocode .text {
+  .reviews-page .promocode .text {
     font-size: 31px;
     line-height: 36px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-.courses-page .promocode .text.second {
+.reviews-page .promocode .text.second {
   top: 128px;
   font-size: 65px;
   line-height: 76px;
 }
 @media (max-width: 1200px) {
-  .courses-page .promocode .text.second {
+  .reviews-page .promocode .text.second {
     font-size: 60px;
     top: 85px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .promocode .text.second {
+  .reviews-page .promocode .text.second {
     font-size: 31px;
     line-height: 36px;
     top: 60px;
@@ -5553,7 +5553,7 @@ select {
     transform: translateX(-50%);
   }
 }
-.courses-page .promocode .get {
+.reviews-page .promocode .get {
   padding: 18px 74px;
   display: flex;
   align-items: center;
@@ -5570,20 +5570,20 @@ select {
   bottom: 35px;
 }
 @media (max-width: 1200px) {
-  .courses-page .promocode .get {
+  .reviews-page .promocode .get {
     left: 70px;
     bottom: 20px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .promocode .get {
+  .reviews-page .promocode .get {
     width: 240px;
     height: 60px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-.courses-page .promocode .from {
+.reviews-page .promocode .from {
   padding: 12px 20px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
@@ -5599,7 +5599,7 @@ select {
   transform: rotate(-4.77deg);
 }
 @media (max-width: 1200px) {
-  .courses-page .promocode .from {
+  .reviews-page .promocode .from {
     font-size: 20px;
     line-height: 24px;
     left: 350px;
@@ -5607,7 +5607,7 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .courses-page .promocode .from {
+  .reviews-page .promocode .from {
     padding: 8px 16px;
     font-size: 16px;
     line-height: 19px;
@@ -5615,7 +5615,7 @@ select {
     bottom: 271px;
   }
 }
-.courses-page .promocode .percent {
+.reviews-page .promocode .percent {
   width: 222px;
   height: 222px;
   position: absolute;
@@ -5624,7 +5624,7 @@ select {
   transform: rotate(19.19deg);
 }
 @media (max-width: 1200px) {
-  .courses-page .promocode .percent {
+  .reviews-page .promocode .percent {
     width: 160px;
     height: 160px;
     right: 50px;
@@ -5632,45 +5632,45 @@ select {
   }
 }
 @media (max-width: 750px) {
-  .courses-page .promocode .percent {
+  .reviews-page .promocode .percent {
     width: 180px;
     height: 180px;
     bottom: 90px;
   }
 }
 
-.courses-page .reviews {
+.reviews-page .reviews {
   margin-bottom: 100px;
   overflow: hidden;
 }
 @media (max-width: 1200px) {
-  .courses-page .reviews {
+  .reviews-page .reviews {
     margin-bottom: 60px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .reviews {
+  .reviews-page .reviews {
     margin-bottom: 40px;
   }
 }
-.courses-page .reviews .cards {
+.reviews-page .reviews .cards {
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 @media (max-width: 1200px) {
-  .courses-page .reviews .cards {
+  .reviews-page .reviews .cards {
     gap: 20px;
     margin-bottom: 40px;
   }
 }
 @media (max-width: 750px) {
-  .courses-page .reviews .cards {
+  .reviews-page .reviews .cards {
     margin-bottom: 20px;
   }
 }
-.courses-page .reviews .cards .card {
+.reviews-page .reviews .cards .card {
   padding: 0px 70px 30px 20px;
   border: 1px solid #b2aaaa;
   display: grid;
@@ -5679,24 +5679,24 @@ select {
   grid-template-areas: "author names" "author text-content" "thumbs plus-minus" "thumbs add-comment";
 }
 @media (max-width: 1200px) {
-  .courses-page .reviews .cards .card {
+  .reviews-page .reviews .cards .card {
     padding-right: 60px;
   }
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card {
+  .reviews-page .reviews .cards .card {
     padding-right: 20px;
   }
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card {
+  .reviews-page .reviews .cards .card {
     padding: 10px;
     grid-template-columns: 96px 1fr;
     column-gap: 0px;
     grid-template-areas: "author author" "names names" "text-content text-content" "plus-minus plus-minus" "thumbs add-comment";
   }
 }
-.courses-page .reviews .cards .card .author {
+.reviews-page .reviews .cards .card .author {
   padding-top: 18px;
   display: flex;
   flex-direction: column;
@@ -5705,13 +5705,13 @@ select {
   margin-bottom: 11px;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author {
+  .reviews-page .reviews .cards .card .author {
     padding-top: 0;
     flex-direction: row;
     gap: 20px;
   }
 }
-.courses-page .reviews .cards .card .author .avatar {
+.reviews-page .reviews .cards .card .author .avatar {
   margin-bottom: 10px;
   width: 100px;
   height: 100px;
@@ -5719,22 +5719,22 @@ select {
   object-fit: cover;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .author .avatar {
+  .reviews-page .reviews .cards .card .author .avatar {
     width: 83px;
     height: 83px;
   }
 }
-.courses-page .reviews .cards .card .author .numbers {
+.reviews-page .reviews .cards .card .author .numbers {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author .numbers {
+  .reviews-page .reviews .cards .card .author .numbers {
     align-items: start;
   }
 }
-.courses-page .reviews .cards .card .author .numbers .date {
+.reviews-page .reviews .cards .card .author .numbers .date {
   margin-bottom: 12px;
   font-family: "Inter";
   font-style: normal;
@@ -5744,28 +5744,28 @@ select {
   color: #b2aaaa;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author .numbers .date {
+  .reviews-page .reviews .cards .card .author .numbers .date {
     order: 1;
   }
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author .numbers .ratings {
+  .reviews-page .reviews .cards .card .author .numbers .ratings {
     margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 4px;
   }
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .wrapper {
+.reviews-page .reviews .cards .card .author .numbers .ratings .wrapper {
   margin-bottom: 4px;
   display: flex;
   align-items: center;
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .wrapper .star {
+.reviews-page .reviews .cards .card .author .numbers .ratings .wrapper .star {
   width: 27px;
   height: 26px;
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .wrapper .number {
+.reviews-page .reviews .cards .card .author .numbers .ratings .wrapper .number {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -5773,7 +5773,7 @@ select {
   line-height: 29px;
   color: #000000;
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .subnumber {
+.reviews-page .reviews .cards .card .author .numbers .ratings .subnumber {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -5783,21 +5783,21 @@ select {
   text-align: center;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author .numbers .ratings .subnumber {
+  .reviews-page .reviews .cards .card .author .numbers .ratings .subnumber {
     padding-bottom: 5px;
   }
 }
-.courses-page .reviews .cards .card .thumbs {
+.reviews-page .reviews .cards .card .thumbs {
   grid-area: thumbs;
   display: flex;
   justify-content: center;
   gap: 14px;
 }
-.courses-page .reviews .cards .card .thumbs .image-wrapper {
+.reviews-page .reviews .cards .card .thumbs .image-wrapper {
   position: relative;
   cursor: pointer;
 }
-.courses-page .reviews .cards .card .thumbs .image-wrapper .value {
+.reviews-page .reviews .cards .card .thumbs .image-wrapper .value {
   padding: 3px;
   display: flex;
   align-items: center;
@@ -5817,29 +5817,29 @@ select {
   line-height: 12px;
   color: #ffffff;
 }
-.courses-page .reviews .cards .card .thumbs .image-wrapper .value.grey {
+.reviews-page .reviews .cards .card .thumbs .image-wrapper .value.grey {
   background: #b2aaaa;
 }
-.courses-page .reviews .cards .card .thumbs .image-wrapper .image {
+.reviews-page .reviews .cards .card .thumbs .image-wrapper .image {
   width: 36px;
   height: 36px;
   object-fit: cover;
 }
-.courses-page .reviews .cards .card .names {
+.reviews-page .reviews .cards .card .names {
   grid-area: names;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .names {
+  .reviews-page .reviews .cards .card .names {
     flex-direction: column;
     gap: 4px;
     align-items: start;
     margin-bottom: 15px;
   }
 }
-.courses-page .reviews .cards .card .names .author-name {
+.reviews-page .reviews .cards .card .names .author-name {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -5848,12 +5848,12 @@ select {
   color: #000000;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .names .author-name {
+  .reviews-page .reviews .cards .card .names .author-name {
     font-size: 18px;
     line-height: 22px;
   }
 }
-.courses-page .reviews .cards .card .names .course-name {
+.reviews-page .reviews .cards .card .names .course-name {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -5862,20 +5862,20 @@ select {
   color: #b2aaaa;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .names .course-name {
+  .reviews-page .reviews .cards .card .names .course-name {
     font-size: 12px;
     line-height: 15px;
   }
 }
-.courses-page .reviews .cards .card .text-content {
+.reviews-page .reviews .cards .card .text-content {
   grid-area: text-content;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .text-content {
+  .reviews-page .reviews .cards .card .text-content {
     margin-bottom: 20px;
   }
 }
-.courses-page .reviews .cards .card .text-content .text-item {
+.reviews-page .reviews .cards .card .text-content .text-item {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -5884,23 +5884,23 @@ select {
   color: #000000;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .text-content .text-item {
+  .reviews-page .reviews .cards .card .text-content .text-item {
     font-size: 12px;
   }
 }
-.courses-page .reviews .cards .card .text-content .text-item.collapsed {
+.reviews-page .reviews .cards .card .text-content .text-item.collapsed {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 460px;
   overflow: hidden;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .text-content .text-item.collapsed {
+  .reviews-page .reviews .cards .card .text-content .text-item.collapsed {
     width: 400px;
   }
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .text-content .text-item.collapsed {
+  .reviews-page .reviews .cards .card .text-content .text-item.collapsed {
     display: inline-block;
     width: 100%;
     white-space: normal;
@@ -5909,7 +5909,7 @@ select {
     -webkit-box-orient: vertical;
   }
 }
-.courses-page .reviews .cards .card .text-content .open-review {
+.reviews-page .reviews .cards .card .text-content .open-review {
   width: max-content;
   margin-top: -22px;
   margin-left: auto;
@@ -5925,58 +5925,58 @@ select {
   display: block;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .text-content .open-review {
+  .reviews-page .reviews .cards .card .text-content .open-review {
     font-size: 12px;
     line-height: 15px;
     margin-top: -17px;
   }
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .text-content .open-review {
+  .reviews-page .reviews .cards .card .text-content .open-review {
     margin-top: 0px;
   }
 }
-.courses-page .reviews .cards .card .plus-minus {
+.reviews-page .reviews .cards .card .plus-minus {
   grid-area: plus-minus;
   margin-bottom: 20px;
   display: flex;
   gap: 20px;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .plus-minus {
+  .reviews-page .reviews .cards .card .plus-minus {
     flex-direction: column;
     gap: 10px;
   }
 }
-.courses-page .reviews .cards .card .plus-minus .item {
+.reviews-page .reviews .cards .card .plus-minus .item {
   width: 420px;
 }
 @media (max-width: 1200px) {
-  .courses-page .reviews .cards .card .plus-minus .item {
+  .reviews-page .reviews .cards .card .plus-minus .item {
     width: 264px;
   }
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .plus-minus .item {
+  .reviews-page .reviews .cards .card .plus-minus .item {
     width: 100%;
   }
 }
-.courses-page .reviews .cards .card .plus-minus .item .sign {
+.reviews-page .reviews .cards .card .plus-minus .item .sign {
   margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .plus-minus .item .sign {
+  .reviews-page .reviews .cards .card .plus-minus .item .sign {
     margin-bottom: 6px;
   }
 }
-.courses-page .reviews .cards .card .plus-minus .item .sign .image {
+.reviews-page .reviews .cards .card .plus-minus .item .sign .image {
   width: 20px;
   height: 20px;
 }
-.courses-page .reviews .cards .card .plus-minus .item .sign .word {
+.reviews-page .reviews .cards .card .plus-minus .item .sign .word {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -5987,15 +5987,15 @@ select {
   color: #67e599;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .plus-minus .item .sign .word {
+  .reviews-page .reviews .cards .card .plus-minus .item .sign .word {
     font-size: 16px;
     line-height: 19px;
   }
 }
-.courses-page .reviews .cards .card .plus-minus .item .sign .word.red {
+.reviews-page .reviews .cards .card .plus-minus .item .sign .word.red {
   color: #e56767;
 }
-.courses-page .reviews .cards .card .plus-minus .item .text-item {
+.reviews-page .reviews .cards .card .plus-minus .item .text-item {
   margin-top: 9px;
   font-family: "Inter";
   font-style: normal;
@@ -6005,12 +6005,12 @@ select {
   color: #000000;
 }
 @media (max-width: 833px) {
-  .courses-page .reviews .cards .card .plus-minus .item .text-item {
+  .reviews-page .reviews .cards .card .plus-minus .item .text-item {
     font-size: 12px;
     line-height: 15px;
   }
 }
-.courses-page .reviews .cards .card .add-comment {
+.reviews-page .reviews .cards .card .add-comment {
   grid-area: add-comment;
   width: max-content;
   font-family: "Inter";
@@ -6023,25 +6023,25 @@ select {
   cursor: pointer;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .add-comment {
+  .reviews-page .reviews .cards .card .add-comment {
     margin-left: 15px;
     display: flex;
     align-items: center;
     padding-bottom: 10px;
   }
 }
-.courses-page .reviews .buttons {
+.reviews-page .reviews .buttons {
   justify-content: center;
   display: flex;
   gap: 30px;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .buttons .button {
+  .reviews-page .reviews .buttons .button {
     width: 100%;
   }
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .buttons {
+  .reviews-page .reviews .buttons {
     gap: 10px;
     flex-direction: column;
   }
