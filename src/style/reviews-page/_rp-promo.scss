@@ -29,7 +29,7 @@
             @include for-1200-px {
                 margin-bottom: 60px;
             }
-            @include for-725-px {
+            @include for-750-px {
                 margin-bottom: 40px;
                 flex-direction: column;
                 gap: 10px;
@@ -37,14 +37,28 @@
             .cards {
                 display: flex;
                 gap: 60px;
-                .card {
+                @include for-1200-px {
+                    gap: 20px;
+                }
+                @include for-750-px {
+                    flex-direction: column;
+                }
+                .ratings {
                     padding: 20px 30px;
-                    width: 339px;
-                    height: 215px;
+                    min-width: 339px;
+                    max-width: 339px;
+                    min-height: 215px;
+                    max-height: 215px;
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
                     border: 0.5px solid #b2aaaa;
+                    @include for-750-px {
+                        margin: 0 auto;
+                        padding: 20px 10px;
+                        min-width: 288px;
+                        max-width: 288px;
+                    }
                     .item {
                         display: flex;
                         align-items: center;
@@ -58,11 +72,17 @@
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            @include for-750-px {
+                                width: 196px;
+                            }
                         }
                         .star {
                             width: 20px;
                             height: 19px;
                             margin-right: 4px;
+                            @include for-750-px {
+                                margin-right: 2px;
+                            }
                         }
                         .number {
                             margin-right: 6px;
@@ -72,6 +92,10 @@
                             font-size: 14px;
                             line-height: 17px;
                             color: #000000;
+                            @include for-750-px {
+                                font-size: 12px;
+                                line-height: 15px;
+                            }
                         }
                         .quantity {
                             font-family: "Inter";
@@ -80,6 +104,10 @@
                             font-size: 14px;
                             line-height: 17px;
                             color: #000000;
+                            @include for-750-px {
+                                font-size: 12px;
+                                line-height: 15px;
+                            }
                         }
                         .diagram {
                             margin-right: 10px;
@@ -121,12 +149,16 @@
             .items {
                 display: flex;
                 gap: 30px;
+                @include for-1200-px {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                @include for-750-px {
+                    gap: 20px;
+                }
                 .item {
                     width: 340px;
                     @include for-1200-px {
-                        width: 264px;
-                    }
-                    @include for-833-px {
                         width: 100%;
                     }
                     .sign {
@@ -150,7 +182,7 @@
                             display: flex;
                             align-items: center;
                             color: #67e599;
-                            @include for-833-px {
+                            @include for-750-px {
                                 font-size: 16px;
                                 line-height: 19px;
                             }
@@ -167,9 +199,13 @@
                         font-size: 18px;
                         line-height: 140%;
                         color: #000000;
-                        @include for-833-px {
+                        @include for-1200-px {
+                            font-size: 14px;
+                            line-height: 140%;
+                        }
+                        @include for-750-px {
                             font-size: 12px;
-                            line-height: 15px;
+                            line-height: 140%;
                         }
                     }
                 }

@@ -4750,6 +4750,8 @@ select {
 @media (max-width: 750px) {
   .reviews-page .title-h3 {
     margin-bottom: 17px;
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 .reviews-page .hr {
@@ -5046,7 +5048,7 @@ select {
     margin-bottom: 60px;
   }
 }
-@media (max-width: 725px) {
+@media (max-width: 750px) {
   .reviews-page .promo .plus-minus {
     margin-bottom: 40px;
     flex-direction: column;
@@ -5057,36 +5059,66 @@ select {
   display: flex;
   gap: 60px;
 }
-.reviews-page .promo .plus-minus .cards .card {
+@media (max-width: 1200px) {
+  .reviews-page .promo .plus-minus .cards {
+    gap: 20px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .cards {
+    flex-direction: column;
+  }
+}
+.reviews-page .promo .plus-minus .cards .ratings {
   padding: 20px 30px;
-  width: 339px;
-  height: 215px;
+  min-width: 339px;
+  max-width: 339px;
+  min-height: 215px;
+  max-height: 215px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   border: 0.5px solid #b2aaaa;
 }
-.reviews-page .promo .plus-minus .cards .card .item {
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .cards .ratings {
+    margin: 0 auto;
+    padding: 20px 10px;
+    min-width: 288px;
+    max-width: 288px;
+  }
+}
+.reviews-page .promo .plus-minus .cards .ratings .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.reviews-page .promo .plus-minus .cards .card .item .left {
+.reviews-page .promo .plus-minus .cards .ratings .item .left {
   display: flex;
   align-items: center;
 }
-.reviews-page .promo .plus-minus .cards .card .item .right {
+.reviews-page .promo .plus-minus .cards .ratings .item .right {
   width: 197px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.reviews-page .promo .plus-minus .cards .card .item .star {
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .cards .ratings .item .right {
+    width: 196px;
+  }
+}
+.reviews-page .promo .plus-minus .cards .ratings .item .star {
   width: 20px;
   height: 19px;
   margin-right: 4px;
 }
-.reviews-page .promo .plus-minus .cards .card .item .number {
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .cards .ratings .item .star {
+    margin-right: 2px;
+  }
+}
+.reviews-page .promo .plus-minus .cards .ratings .item .number {
   margin-right: 6px;
   font-family: "Inter";
   font-style: normal;
@@ -5095,7 +5127,13 @@ select {
   line-height: 17px;
   color: #000000;
 }
-.reviews-page .promo .plus-minus .cards .card .item .quantity {
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .cards .ratings .item .number {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.reviews-page .promo .plus-minus .cards .ratings .item .quantity {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -5103,7 +5141,13 @@ select {
   line-height: 17px;
   color: #000000;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram {
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .cards .ratings .item .quantity {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram {
   margin-right: 10px;
   width: 157px;
   height: 10px;
@@ -5111,25 +5155,25 @@ select {
   top: 5px;
   background: #f7f7f7;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram .value {
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram .value {
   background: #ad475c;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram .value-5 {
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram .value-5 {
   width: 90%;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram .value-4 {
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram .value-4 {
   width: 8%;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram .value-3 {
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram .value-3 {
   width: 1%;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram .value-2 {
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram .value-2 {
   width: 0%;
 }
-.reviews-page .promo .plus-minus .cards .card .item .diagram .value-1 {
+.reviews-page .promo .plus-minus .cards .ratings .item .diagram .value-1 {
   width: 1%;
 }
-.reviews-page .promo .plus-minus .cards .card .item .value {
+.reviews-page .promo .plus-minus .cards .ratings .item .value {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -5141,15 +5185,21 @@ select {
   display: flex;
   gap: 30px;
 }
+@media (max-width: 1200px) {
+  .reviews-page .promo .plus-minus .items {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .promo .plus-minus .items {
+    gap: 20px;
+  }
+}
 .reviews-page .promo .plus-minus .items .item {
   width: 340px;
 }
 @media (max-width: 1200px) {
-  .reviews-page .promo .plus-minus .items .item {
-    width: 264px;
-  }
-}
-@media (max-width: 833px) {
   .reviews-page .promo .plus-minus .items .item {
     width: 100%;
   }
@@ -5179,7 +5229,7 @@ select {
   align-items: center;
   color: #67e599;
 }
-@media (max-width: 833px) {
+@media (max-width: 750px) {
   .reviews-page .promo .plus-minus .items .item .sign .word {
     font-size: 16px;
     line-height: 19px;
@@ -5197,10 +5247,16 @@ select {
   line-height: 140%;
   color: #000000;
 }
-@media (max-width: 833px) {
+@media (max-width: 1200px) {
+  .reviews-page .promo .plus-minus .items .item .text {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+@media (max-width: 750px) {
   .reviews-page .promo .plus-minus .items .item .text {
     font-size: 12px;
-    line-height: 15px;
+    line-height: 140%;
   }
 }
 
