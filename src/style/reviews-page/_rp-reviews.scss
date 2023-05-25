@@ -366,6 +366,38 @@
                     @include for-725-px {
                         margin-top: 20px;
                     }
+                    &.collapsed {
+                        padding: 10px;
+                        .show-comments {
+                            display: block;
+                        }
+                        .comment {
+                            display: none;
+                        }
+                        .hide-comments {
+                            display: none;
+                        }
+                    }
+                    .show-comments {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 140%;
+                        color: #000000;
+                        width: max-content;
+                        display: none;
+                        cursor: pointer;
+                        @include for-725-px {
+                            font-size: 12px;
+                        }
+                        .number {
+                            text-decoration-line: underline;
+                        }
+                        .text {
+                            text-decoration-line: underline;
+                        }
+                    }
                     .comment {
                         margin-bottom: 20px;
                         display: flex;

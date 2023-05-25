@@ -6117,6 +6117,40 @@ select {
     margin-top: 20px;
   }
 }
+.reviews-page .reviews .cards .card .comments.collapsed {
+  padding: 10px;
+}
+.reviews-page .reviews .cards .card .comments.collapsed .show-comments {
+  display: block;
+}
+.reviews-page .reviews .cards .card .comments.collapsed .comment {
+  display: none;
+}
+.reviews-page .reviews .cards .card .comments.collapsed .hide-comments {
+  display: none;
+}
+.reviews-page .reviews .cards .card .comments .show-comments {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #000000;
+  width: max-content;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 725px) {
+  .reviews-page .reviews .cards .card .comments .show-comments {
+    font-size: 12px;
+  }
+}
+.reviews-page .reviews .cards .card .comments .show-comments .number {
+  text-decoration-line: underline;
+}
+.reviews-page .reviews .cards .card .comments .show-comments .text {
+  text-decoration-line: underline;
+}
 .reviews-page .reviews .cards .card .comments .comment {
   margin-bottom: 20px;
   display: flex;

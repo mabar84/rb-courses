@@ -11,3 +11,19 @@ window.addEventListener("scroll", () => {
 		stickyBanner?.classList.remove("sticky");
 	}
 });
+
+//reviews
+const showCommentsAll = document.querySelectorAll(".show-comments");
+const hideCommentsAll = document.querySelectorAll(".hide-comments");
+
+showCommentsAll.forEach((show) => {
+	show.addEventListener("click", () => {
+		show.closest(".comments").classList.remove("collapsed");
+	});
+});
+
+hideCommentsAll.forEach((hide) => {
+	hide.addEventListener("click", () => {
+		hide.closest(".comments").classList.add("collapsed");
+	});
+});
