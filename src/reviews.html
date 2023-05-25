@@ -5,6 +5,98 @@
 	<body>
 		@@include('./_header.html')
 		<main class="reviews__main reviews-page">
+			<div id="modal-comment" class="modal collapsed">
+				<div class="modal-bg"></div>
+				<div class="modal-window">
+					<div class="modal-header">
+						<p class="modal-name">Оставить комментарий</p>
+						<img
+							src="images/icons/IconClose.svg"
+							alt="X"
+							class="modal-close"
+						/>
+					</div>
+					<div class="modal-wrapper">
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="Имя*"
+						/>
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="E-mail*"
+						/>
+						<p class="modal-subtext">
+							Ваш адрес e-mail не будет опубликован
+						</p>
+						<textarea
+							class="modal-textarea"
+							placeholder="Комментарий"
+						></textarea>
+						<p class="modal-subtext">
+							*Обязательные поля для заполнений
+						</p>
+					</div>
+					<button class="button modal-button">
+						Оставить комментарий
+					</button>
+				</div>
+			</div>
+			<div id="modal-review" class="modal collapsed">
+				<div class="modal-bg"></div>
+				<div class="modal-window">
+					<div class="modal-header">
+						<p class="modal-name">Оставить отзыв</p>
+						<img
+							src="images/icons/IconClose.svg"
+							alt="X"
+							class="modal-close"
+						/>
+					</div>
+					<div class="modal-wrapper">
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="Название курса*"
+						/>
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="Имя*"
+						/>
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="E-mail*"
+						/>
+						<p class="modal-subtext">
+							Ваш адрес e-mail не будет опубликован
+						</p>
+						<textarea
+							class="modal-textarea"
+							placeholder="Комментарий"
+						></textarea>
+						<p class="modal-subtext">
+							*Обязательные поля для заполнений
+						</p>
+
+						<div class="modal-ratings">1234</div>
+						<div class="modal-textareas">
+							<textarea
+								class="modal-textarea sign"
+								placeholder="Плюсы"
+							></textarea>
+							<textarea
+								class="modal-textarea sign"
+								placeholder="Минусы"
+							></textarea>
+						</div>
+					</div>
+					<button class="button modal-button">Оставить отзыв</button>
+				</div>
+			</div>
+
 			<section class="breadcrumb">
 				<div class="container">
 					<ul class="breadcrumb__list">
@@ -277,23 +369,34 @@
 						</li>
 					</ul>
 
-					<ul class="sort-wrapper">
-						<li class="word">Cортировать</li>
-						<li>
-							<a href="#" class="sort-item active"
-								>Сначала новые</a
-							>
-						</li>
-						<li>
-							<a href="#" class="sort-item">Популярные</a>
-						</li>
-						<li>
-							<a href="#" class="sort-item">Положительные</a>
-						</li>
-						<li>
-							<a href="#" class="sort-item">Отрицательные</a>
-						</li>
-					</ul>
+					<div class="mobile-flex">
+						<ul class="sort-wrapper">
+							<li id="sort" class="word">
+								Cортировать
+
+								<img
+									src="images/icons/icon-arrow-down.svg"
+									alt="V"
+									class="arrow"
+								/>
+							</li>
+							<li>
+								<a href="#" class="sort-item active"
+									>Сначала новые</a
+								>
+							</li>
+							<li>
+								<a href="#" class="sort-item">Популярные</a>
+							</li>
+							<li>
+								<a href="#" class="sort-item">Положительные</a>
+							</li>
+							<li>
+								<a href="#" class="sort-item">Отрицательные</a>
+							</li>
+						</ul>
+						<p class="sortby"></p>
+					</div>
 
 					<div class="cards">
 						<div class="card">
@@ -964,7 +1067,7 @@
 						</div>
 					</div>
 					<div class="buttons">
-						<button class="button add-review">
+						<button id="add-review" class="button">
 							Оставить отзыв
 						</button>
 						<button class="button reverse show-more">
