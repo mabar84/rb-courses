@@ -259,6 +259,9 @@
                         @include for-725-px {
                             margin-top: 0px;
                         }
+                        &.collapsed {
+                            display: none;
+                        }
                     }
                 }
                 .plus-minus {

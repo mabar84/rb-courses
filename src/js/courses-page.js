@@ -1,3 +1,4 @@
+//sticky banner
 const stickyBanner = document.getElementById("sticky-banner");
 const windowInnerHeight = window.innerHeight;
 window.addEventListener("scroll", () => {

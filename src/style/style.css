@@ -4385,6 +4385,9 @@ select {
     margin-top: 0px;
   }
 }
+.courses-page .reviews .cards .card .text-content .open-review.collapsed {
+  display: none;
+}
 .courses-page .reviews .cards .card .plus-minus {
   grid-area: plus-minus;
   margin-bottom: 20px;
@@ -6115,6 +6118,9 @@ select {
   .reviews-page .reviews .cards .card .text-content .open-review {
     margin-top: 0px;
   }
+}
+.reviews-page .reviews .cards .card .text-content .open-review.collapsed {
+  display: none;
 }
 .reviews-page .reviews .cards .card .plus-minus {
   grid-area: plus-minus;
