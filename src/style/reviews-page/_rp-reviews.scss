@@ -22,21 +22,24 @@
                 margin-bottom: 20px;
             }
             .card {
-                padding: 0px 70px 30px 20px;
+                // padding: 0px 70px 30px 20px;
                 border: 1px solid #b2aaaa;
                 display: grid;
-                grid-template-columns: 100px 1fr;
+                grid-template-columns: 120px 1fr;
                 column-gap: 30px;
                 grid-template-areas:
                     "author names"
                     "author text-content"
                     "thumbs plus-minus"
-                    "thumbs add-comment";
+                    "thumbs add-comment"
+                    "thumbs comments";
                 @include for-1200-px {
-                    padding-right: 60px;
+                    column-gap: 20px;
+
+                    // padding-right: 60px;
                 }
                 @include for-833-px {
-                    padding-right: 20px;
+                    // padding-right: 20px;
                 }
                 @include for-725-px {
                     padding: 10px;
@@ -47,15 +50,20 @@
                         "names names"
                         "text-content text-content"
                         "plus-minus plus-minus"
-                        "thumbs add-comment";
+                        "thumbs add-comment"
+                        "comments comments";
                 }
                 .author {
                     padding-top: 18px;
+                    padding-left: 20px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     grid-area: author;
                     margin-bottom: 11px;
+                    @include for-1200-px {
+                        padding-left: 0;
+                    }
                     @include for-725-px {
                         padding-top: 0;
                         flex-direction: row;
@@ -206,7 +214,14 @@
                 }
                 .text-content {
                     grid-area: text-content;
+                    padding-right: 70px;
+                    @include for-1200-px {
+                        padding-right: 20px;
+                    }
                     @include for-725-px {
+                        width: 100%;
+                        padding-right: 10px;
+
                         margin-bottom: 20px;
                     }
                     .text-item {
@@ -325,6 +340,7 @@
                 }
                 .add-comment {
                     grid-area: add-comment;
+                    margin-bottom: 20px;
                     width: max-content;
                     font-family: "Inter";
                     font-style: normal;
@@ -336,9 +352,99 @@
                     cursor: pointer;
                     @include for-725-px {
                         margin-left: 15px;
+                        margin-bottom: 0;
                         display: flex;
                         align-items: center;
                         padding-bottom: 10px;
+                    }
+                }
+
+                .comments {
+                    grid-area: comments;
+                    padding: 20px;
+                    background: #f7f7f7;
+                    @include for-725-px {
+                        margin-top: 20px;
+                    }
+                    .comment {
+                        margin-bottom: 20px;
+                        display: flex;
+                        gap: 11px;
+                        @include for-1200-px {
+                            gap: 14px;
+                        }
+                        @include for-725-px {
+                            margin-bottom: 5px;
+                        }
+                        .avatar {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            @include for-1200-px {
+                                width: 34px;
+                                height: 34px;
+                            }
+                        }
+                        .top {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .item {
+                                margin-bottom: 11px;
+                                font-family: "Inter";
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #000000;
+                                @include for-1200-px {
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                }
+                                @include for-725-px {
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                }
+                            }
+                        }
+                        .text {
+                            &-item {
+                                font-family: "Inter";
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 150%;
+                                color: #000000;
+                                @include for-1200-px {
+                                    font-size: 12px;
+                                    line-height: 150%;
+                                }
+                                @include for-725-px {
+                                    font-size: 10px;
+                                    line-height: 150%;
+                                }
+                            }
+                        }
+                    }
+                    .hide-comments {
+                        width: max-content;
+                        margin-left: auto;
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-decoration-line: underline;
+                        color: #ad475c;
+                        cursor: pointer;
+                        @include for-1200-px {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                        @include for-725-px {
+                            font-size: 10px;
+                            line-height: 12px;
+                        }
                     }
                 }
             }

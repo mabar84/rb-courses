@@ -6,8 +6,8 @@ window.addEventListener("scroll", () => {
 		window.pageYOffset <
 			document.body.offsetHeight - windowInnerHeight - 250
 	) {
-		stickyBanner.classList.add("sticky");
+		stickyBanner?.classList.add("sticky");
 	} else {
-		stickyBanner.classList.remove("sticky");
+		stickyBanner?.classList.remove("sticky");
 	}
 });

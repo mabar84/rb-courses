@@ -1,6 +1,6 @@
 .reviews-page {
     .school-banner {
-        width: 1110px;
+        // width: 1110px;
         padding: 15px 30px;
         border: 1px solid #b2aaaa;
         margin: 0 auto 70px;
@@ -13,7 +13,7 @@
             margin: 0 auto 40px;
             grid-template-columns: 160px 470px 1fr;
         }
-        @include for-750-px {
+        @include for-833-px {
             width: 100%;
             padding: 20px;
             grid-template-columns: 1fr 1fr;
@@ -23,7 +23,7 @@
         }
         .head {
             grid-area: head;
-            @include for-750-px {
+            @include for-833-px {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -115,7 +115,7 @@
                 column-gap: 20px;
                 padding: 0 25px;
             }
-            @include for-750-px {
+            @include for-833-px {
                 padding: 20px 0 0;
             }
             &-item {
