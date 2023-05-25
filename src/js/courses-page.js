@@ -16,13 +16,30 @@ window.addEventListener("scroll", () => {
 const showCommentsAll = document.querySelectorAll(".show-comments");
 const hideCommentsAll = document.querySelectorAll(".hide-comments");
 
-showCommentsAll.forEach((show) => {
+showCommentsAll?.forEach((show) => {
 	show.addEventListener("click", () => {
 		show.closest(".comments").classList.remove("collapsed");
 	});
 });
-hideCommentsAll.forEach((hide) => {
+hideCommentsAll?.forEach((hide) => {
 	hide.addEventListener("click", () => {
 		hide.closest(".comments").classList.add("collapsed");
+	});
+});
+
+// show more
+const showMore = document.querySelectorAll(".show-more");
+
+showMore?.forEach((item) => {
+	item.addEventListener("click", () => {
+		const collapsedCardsContainer = item.closest(
+			".collapsed-cards-container"
+		);
+		const allCollapsedCards =
+			collapsedCardsContainer?.querySelectorAll(".collapsed");
+		allCollapsedCards?.forEach((el) => {
+			el.classList.remove("collapsed");
+		});
+		item.classList.add("collapsed");
 	});
 });

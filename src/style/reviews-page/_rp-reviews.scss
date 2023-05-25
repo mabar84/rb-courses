@@ -479,6 +479,9 @@
                         }
                     }
                 }
+                &.collapsed {
+                    display: none;
+                }
             }
         }
         .buttons {

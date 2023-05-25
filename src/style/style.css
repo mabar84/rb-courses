@@ -3457,6 +3457,9 @@ select {
     line-height: 15px;
   }
 }
+.courses-page .categories-item.collapsed {
+  display: none;
+}
 .courses-page .button {
   padding: 14px 24px;
   color: #ffffff;
@@ -3528,6 +3531,9 @@ select {
   .courses-page .other-categories .all-categories {
     justify-self: flex-start;
   }
+}
+.courses-page .other-categories .all-categories.collapsed {
+  display: none;
 }
 .courses-page .other-categories-title {
   grid-area: other-categories-title;
@@ -4473,6 +4479,9 @@ select {
     padding-bottom: 10px;
   }
 }
+.courses-page .reviews .cards .card.collapsed {
+  display: none;
+}
 .courses-page .reviews .buttons {
   justify-content: center;
   display: flex;
@@ -5029,6 +5038,9 @@ select {
   text-decoration-line: underline;
   color: #ad475c;
 }
+.reviews-page .other-schools .cards .card.collapsed {
+  display: none;
+}
 .reviews-page .other-schools .show-more {
   font-family: "Inter";
   font-style: normal;
@@ -5039,6 +5051,9 @@ select {
   text-decoration-line: underline;
   cursor: pointer;
   color: #ad475c;
+}
+.reviews-page .other-schools .show-more.collapsed {
+  display: none;
 }
 
 .reviews-page .promo {
@@ -6281,6 +6296,9 @@ select {
     font-size: 10px;
     line-height: 12px;
   }
+}
+.reviews-page .reviews .cards .card.collapsed {
+  display: none;
 }
 .reviews-page .reviews .buttons {
   justify-content: center;

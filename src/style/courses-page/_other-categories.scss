@@ -42,6 +42,9 @@
             @include for-750-px {
                 justify-self: flex-start;
             }
+            &.collapsed {
+                display: none;
+            }
         }
         &-title {
             grid-area: other-categories-title;
