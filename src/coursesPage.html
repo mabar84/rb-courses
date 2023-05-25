@@ -5,6 +5,280 @@
 	<body>
 		@@include('./_header.html')
 		<main class="main courses-page">
+			<div id="modal-comment" class="modal collapsed">
+				<div class="modal-bg"></div>
+				<div class="modal-window">
+					<div class="modal-header">
+						<p class="modal-name">Оставить комментарий</p>
+						<img
+							src="images/icons/IconClose.svg"
+							alt="X"
+							class="modal-close"
+						/>
+					</div>
+					<div class="modal-wrapper">
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="Имя*"
+						/>
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="E-mail*"
+						/>
+						<p class="modal-subtext">
+							Ваш адрес e-mail не будет опубликован
+						</p>
+						<textarea
+							class="modal-textarea"
+							placeholder="Комментарий"
+						></textarea>
+						<p class="modal-subtext">
+							*Обязательные поля для заполнений
+						</p>
+					</div>
+					<button class="button modal-button">
+						Оставить комментарий
+					</button>
+				</div>
+			</div>
+			<div id="modal-review" class="modal collapsed">
+				<div class="modal-bg"></div>
+				<div class="modal-window">
+					<div class="modal-header">
+						<p class="modal-name">Оставить отзыв</p>
+						<img
+							src="images/icons/IconClose.svg"
+							alt="X"
+							class="modal-close"
+						/>
+					</div>
+					<div class="modal-wrapper">
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="Название курса*"
+						/>
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="Имя*"
+						/>
+						<input
+							type="text"
+							class="modal-input"
+							placeholder="E-mail*"
+						/>
+						<p class="modal-subtext">
+							Ваш адрес e-mail не будет опубликован
+						</p>
+						<textarea
+							class="modal-textarea"
+							placeholder="Комментарий"
+						></textarea>
+						<p class="modal-subtext">
+							*Обязательные поля для заполнений
+						</p>
+
+						<div class="ratings">
+							<div class="rate-wrapper">
+								<p class="rate-title">Cтоимость*</p>
+								<div id="price" class="rate">
+									<input
+										type="radio"
+										class="star15"
+										id="star15"
+										name="rate1"
+										value="5"
+									/>
+									<label for="star15" title="text"></label>
+									<input
+										type="radio"
+										class="star14"
+										id="star14"
+										name="rate1"
+										value="4"
+									/>
+									<label for="star14" title="text"></label>
+									<input
+										type="radio"
+										class="star13"
+										id="star13"
+										name="rate1"
+										value="3"
+									/>
+									<label for="star13" title="text"></label>
+									<input
+										type="radio"
+										class="star12"
+										id="star12"
+										name="rate1"
+										value="2"
+									/>
+									<label for="star12" title="text"></label>
+									<input
+										type="radio"
+										class="star11"
+										id="star11"
+										name="rate1"
+										value="1"
+									/>
+									<label for="star11" title="text"></label>
+								</div>
+							</div>
+							<div class="rate-wrapper">
+								<p class="rate-title">Подача материала*</p>
+								<div id="explanation" class="rate">
+									<input
+										type="radio"
+										class="star25"
+										id="star25"
+										name="rate2"
+										value="5"
+									/>
+									<label for="star25" title="text"></label>
+									<input
+										type="radio"
+										class="star24"
+										id="star24"
+										name="rate2"
+										value="4"
+									/>
+									<label for="star24" title="text"></label>
+									<input
+										type="radio"
+										class="star23"
+										id="star23"
+										name="rate2"
+										value="3"
+									/>
+									<label for="star23" title="text"></label>
+									<input
+										type="radio"
+										class="star22"
+										id="star22"
+										name="rate2"
+										value="2"
+									/>
+									<label for="star22" title="text"></label>
+									<input
+										type="radio"
+										class="star21"
+										id="star21"
+										name="rate2"
+										value="1"
+									/>
+									<label for="star21" title="text"></label>
+								</div>
+							</div>
+							<div class="rate-wrapper">
+								<p class="rate-title">Программа обучения*</p>
+								<div id="program" class="rate">
+									<input
+										type="radio"
+										class="star35"
+										id="star35"
+										name="rate3"
+										value="5"
+									/>
+									<label for="star35" title="text"></label>
+									<input
+										type="radio"
+										class="star34"
+										id="star34"
+										name="rate3"
+										value="4"
+									/>
+									<label for="star34" title="text"></label>
+									<input
+										type="radio"
+										class="star33"
+										id="star33"
+										name="rate3"
+										value="3"
+									/>
+									<label for="star33" title="text"></label>
+									<input
+										type="radio"
+										class="star32"
+										id="star32"
+										name="rate3"
+										value="2"
+									/>
+									<label for="star32" title="text"></label>
+									<input
+										type="radio"
+										class="star31"
+										id="star31"
+										name="rate3"
+										value="1"
+									/>
+									<label for="star31" title="text"></label>
+								</div>
+							</div>
+							<div class="rate-wrapper">
+								<p class="rate-title">Уровень организации*</p>
+								<div id="organization" class="rate">
+									<input
+										type="radio"
+										class="star45"
+										id="star45"
+										name="rate4"
+										value="5"
+									/>
+									<label for="star45" title="text"></label>
+									<input
+										type="radio"
+										class="star44"
+										id="star44"
+										name="rate4"
+										value="4"
+									/>
+									<label for="star44" title="text"></label>
+									<input
+										type="radio"
+										class="star43"
+										id="star43"
+										name="rate4"
+										value="3"
+									/>
+									<label for="star43" title="text"></label>
+									<input
+										type="radio"
+										class="star42"
+										id="star42"
+										name="rate4"
+										value="2"
+									/>
+									<label for="star42" title="text"></label>
+									<input
+										type="radio"
+										class="star41"
+										id="star41"
+										name="rate4"
+										value="1"
+									/>
+									<label for="star41" title="text"></label>
+								</div>
+							</div>
+						</div>
+
+						<div class="modal-textareas">
+							<textarea
+								class="modal-textarea sign"
+								placeholder="Плюсы"
+							></textarea>
+							<textarea
+								class="modal-textarea sign"
+								placeholder="Минусы"
+							></textarea>
+						</div>
+					</div>
+					<button class="button modal-button">Оставить отзыв</button>
+				</div>
+			</div>
+
 			<section class="breadcrumb">
 				<div class="container">
 					<ul class="breadcrumb__list">
@@ -771,7 +1045,7 @@
 						</div>
 					</div>
 					<div class="buttons">
-						<button class="button add-review">
+						<button id="add-review" class="button add-review">
 							Оставить отзыв
 						</button>
 						<button class="button reverse show-more">
