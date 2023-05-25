@@ -28,6 +28,11 @@
                     width: 236px;
                     height: 364px;
                 }
+                @include for-750-px {
+                    width: 100%;
+                    max-height: 270px;
+                    height: min-content;
+                }
                 .top {
                     height: 92px;
                     display: flex;
@@ -35,10 +40,18 @@
                     justify-content: space-between;
                     padding: 20px;
                     border-bottom: 1px solid #b2aaaa;
+                    @include for-750-px {
+                        height: 72px;
+                        padding: 10px 20px;
+                    }
                     .logo {
                         width: 139px;
                         height: 29px;
                         object-fit: contain;
+                        @include for-1200-px {
+                            width: 102px;
+                            height: 22px;
+                        }
                     }
                     .wrapper {
                         display: flex;
@@ -76,6 +89,14 @@
                     padding: 20px;
                     height: 276px;
                     overflow-y: scroll;
+                    @include for-1200-px {
+                        height: 215px;
+                    }
+                    @include for-750-px {
+                        max-height: 161px;
+                        height: min-content;
+                        padding: 10px 20px;
+                    }
                     .school-name {
                         margin-bottom: 20px;
                         font-family: "Inter";
@@ -84,6 +105,10 @@
                         font-size: 20px;
                         line-height: 24px;
                         color: #000000;
+                        @include for-1200-px {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
                     }
                     .text {
                         font-family: "Inter";
@@ -92,6 +117,10 @@
                         font-size: 16px;
                         line-height: 150%;
                         color: #000000;
+                        @include for-1200-px {
+                            font-size: 12px;
+                            line-height: 140%;
+                        }
                     }
                 }
                 .bottom {
@@ -109,6 +138,10 @@
                     text-align: right;
                     text-decoration-line: underline;
                     color: #ad475c;
+                    @include for-750-px {
+                        height: 37px;
+                        padding: 10px 20px;
+                    }
                 }
                 &.collapsed {
                     display: none;
@@ -125,6 +158,10 @@
             text-decoration-line: underline;
             cursor: pointer;
             color: #ad475c;
+            @include for-1200-px {
+                font-size: 14px;
+                line-height: 17px;
+            }
             &.collapsed {
                 display: none;
             }

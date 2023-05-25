@@ -4956,6 +4956,13 @@ select {
     height: 364px;
   }
 }
+@media (max-width: 750px) {
+  .reviews-page .other-schools .cards .card {
+    width: 100%;
+    max-height: 270px;
+    height: min-content;
+  }
+}
 .reviews-page .other-schools .cards .card .top {
   height: 92px;
   display: flex;
@@ -4964,10 +4971,22 @@ select {
   padding: 20px;
   border-bottom: 1px solid #b2aaaa;
 }
+@media (max-width: 750px) {
+  .reviews-page .other-schools .cards .card .top {
+    height: 72px;
+    padding: 10px 20px;
+  }
+}
 .reviews-page .other-schools .cards .card .top .logo {
   width: 139px;
   height: 29px;
   object-fit: contain;
+}
+@media (max-width: 1200px) {
+  .reviews-page .other-schools .cards .card .top .logo {
+    width: 102px;
+    height: 22px;
+  }
 }
 .reviews-page .other-schools .cards .card .top .wrapper {
   display: flex;
@@ -5005,6 +5024,18 @@ select {
   height: 276px;
   overflow-y: scroll;
 }
+@media (max-width: 1200px) {
+  .reviews-page .other-schools .cards .card .middle {
+    height: 215px;
+  }
+}
+@media (max-width: 750px) {
+  .reviews-page .other-schools .cards .card .middle {
+    max-height: 161px;
+    height: min-content;
+    padding: 10px 20px;
+  }
+}
 .reviews-page .other-schools .cards .card .middle .school-name {
   margin-bottom: 20px;
   font-family: "Inter";
@@ -5014,6 +5045,12 @@ select {
   line-height: 24px;
   color: #000000;
 }
+@media (max-width: 1200px) {
+  .reviews-page .other-schools .cards .card .middle .school-name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .reviews-page .other-schools .cards .card .middle .text {
   font-family: "Inter";
   font-style: normal;
@@ -5021,6 +5058,12 @@ select {
   font-size: 16px;
   line-height: 150%;
   color: #000000;
+}
+@media (max-width: 1200px) {
+  .reviews-page .other-schools .cards .card .middle .text {
+    font-size: 12px;
+    line-height: 140%;
+  }
 }
 .reviews-page .other-schools .cards .card .bottom {
   height: 57px;
@@ -5038,6 +5081,12 @@ select {
   text-decoration-line: underline;
   color: #ad475c;
 }
+@media (max-width: 750px) {
+  .reviews-page .other-schools .cards .card .bottom {
+    height: 37px;
+    padding: 10px 20px;
+  }
+}
 .reviews-page .other-schools .cards .card.collapsed {
   display: none;
 }
@@ -5051,6 +5100,12 @@ select {
   text-decoration-line: underline;
   cursor: pointer;
   color: #ad475c;
+}
+@media (max-width: 1200px) {
+  .reviews-page .other-schools .show-more {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .reviews-page .other-schools .show-more.collapsed {
   display: none;
