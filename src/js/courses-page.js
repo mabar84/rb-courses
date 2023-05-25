@@ -21,7 +21,6 @@ showCommentsAll.forEach((show) => {
 		show.closest(".comments").classList.remove("collapsed");
 	});
 });
-
 hideCommentsAll.forEach((hide) => {
 	hide.addEventListener("click", () => {
 		hide.closest(".comments").classList.add("collapsed");

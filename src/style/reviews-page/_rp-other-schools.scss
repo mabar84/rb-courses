@@ -1,5 +1,5 @@
-.courses-page {
-    .other-courses {
+.reviews-page {
+    .other-schools {
         overflow: hidden;
         margin-bottom: 100px;
         @include for-1200-px {
@@ -9,78 +9,119 @@
             margin-bottom: 40px;
         }
         .cards {
+            margin-bottom: 40px;
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
             @include for-1200-px {
                 gap: 23px;
+                margin-bottom: 20px;
             }
-            @include for-530-px {
-                gap: 10px;
-                justify-content: center;
+            @include for-750-px {
+                margin-bottom: 10px;
             }
             .card {
-                padding: 20px;
-                width: 256px;
-                height: 194px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                width: 351px;
+                height: 425px;
                 border: 1px solid #b2aaaa;
                 @include for-1200-px {
-                    padding: 10px;
                     width: 236px;
-                    height: 174px;
+                    height: 364px;
                 }
-                @include for-530-px {
+                .top {
+                    height: 92px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     padding: 20px;
-                    width: 288px;
-                    height: 194px;
-                }
-                .course-name {
-                    font-family: "Inter";
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 20px;
-                    line-height: 24px;
-                    color: #000000;
-                    @include for-1200-px {
-                        margin-bottom: 14px;
-                        font-size: 18px;
-                        line-height: 22px;
+                    border-bottom: 1px solid #b2aaaa;
+                    .logo {
+                        width: 139px;
+                        height: 29px;
+                        object-fit: contain;
                     }
-                    @include for-530-px {
-                        margin-bottom: 10px;
+                    .wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .star-wrapper {
+                            display: flex;
+                            align-items: center;
+                            .star {
+                                width: 26px;
+                                height: 25px;
+                                margin-right: 2px;
+                            }
+                            .number {
+                                font-family: "Inter";
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 29px;
+                                color: #000000;
+                            }
+                        }
+                        .subnumber {
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #b2aaaa;
+                        }
+                    }
+                }
+                .middle {
+                    padding: 20px;
+                    height: 276px;
+                    overflow-y: scroll;
+                    .school-name {
+                        margin-bottom: 20px;
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 600;
                         font-size: 20px;
                         line-height: 24px;
+                        color: #000000;
                     }
-                }
-                .wrapper {
-                    margin-bottom: 30px;
-                    display: flex;
-                    justify-content: space-between;
-                    .time {
+                    .text {
                         font-family: "Inter";
                         font-style: normal;
                         font-weight: 400;
-                        font-size: 15px;
-                        line-height: 18px;
+                        font-size: 16px;
+                        line-height: 150%;
                         color: #000000;
                     }
-                    .price {
-                        font-family: "Inter";
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 16px;
-                        line-height: 19px;
-                        text-align: right;
-                        color: #ad475c;
-                    }
                 }
-                .button {
-                    width: max-content;
+                .bottom {
+                    height: 57px;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-top: 1px solid #b2aaaa;
+                    font-family: "Inter";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: right;
+                    text-decoration-line: underline;
+                    color: #ad475c;
                 }
             }
+        }
+        .show-more {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: right;
+            text-decoration-line: underline;
+            cursor: pointer;
+            color: #ad475c;
         }
     }
 }
