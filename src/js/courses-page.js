@@ -72,7 +72,6 @@ sortItems?.forEach((item) => {
 	});
 });
 
-console.log(sort);
 sort?.addEventListener("click", () => {
 	sort.closest(".sort-wrapper").classList.toggle("active");
 });
@@ -107,5 +106,20 @@ modalCloseAll?.forEach((item) => {
 	item.addEventListener("click", () => {
 		item.closest(".modal").classList.add("collapsed");
 		document.body.style.overflow = "auto";
+	});
+});
+
+//ratings
+const rates = document.querySelectorAll(".rate");
+rates.forEach((rate) => {
+	rate.addEventListener("click", function (e) {
+		e.preventDefault();
+		if (e.target.getAttribute("title") === "text") {
+			const name = "." + e.target.getAttribute("for");
+			rate.querySelector(name).checked = true;
+			const selectedRating = name[6];
+
+			console.log("block", rate.id, "has value ", selectedRating);
+		}
 	});
 });

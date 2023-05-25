@@ -4623,8 +4623,10 @@ select {
   z-index: 6;
 }
 .modal-window {
+  overflow-y: scroll;
+  max-height: 100vh;
   width: 945px;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
   position: fixed;
   top: 30px;
   left: 50%;
@@ -4639,7 +4641,7 @@ select {
 }
 @media (max-width: 640px) {
   .modal-window {
-    padding: 30px 20px;
+    padding: 30px 20px 0 20px;
     top: 0;
     width: 100%;
   }
@@ -4736,22 +4738,103 @@ select {
 }
 .modal-textarea.sign {
   height: 141px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 .modal-textareas {
   display: flex;
   gap: 20px;
 }
-@media (max-width: 640px) {
+@media (max-width: 833px) {
   .modal-textareas {
     flex-direction: column;
     gap: 13px;
   }
 }
+.modal .button {
+  margin-bottom: 30px;
+}
 @media (max-width: 640px) {
   .modal .button {
     width: 100%;
   }
+}
+
+.ratings {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 64px;
+}
+@media (max-width: 1000px) {
+  .ratings {
+    gap: 5px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 833px) {
+  .ratings {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.ratings .rate-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.ratings .rate-title {
+  margin-bottom: 11px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.ratings .rate {
+  align-self: start;
+}
+@media (max-width: 833px) {
+  .ratings .rate {
+    margin-left: -4px;
+  }
+}
+.ratings .rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.ratings .rate:not(:checked) > label {
+  float: right;
+  width: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #cdcdcd;
+}
+.ratings .rate:not(:checked) > label:before {
+  content: "★ ";
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+}
+.ratings .rate > input ~ label {
+  margin-left: 4px;
+  color: #efbc3a;
+}
+.ratings .rate > input:checked ~ label {
+  color: #efbc3a;
+}
+.ratings .rate:not(:checked) > label:hover,
+.ratings .rate:not(:checked) > label:hover ~ label {
+  color: #efbc3a;
+}
+.ratings .rate > input:checked + label:hover,
+.ratings .rate > input:checked + label:hover ~ label,
+.ratings .rate > input:checked ~ label:hover,
+.ratings .rate > input:checked ~ label:hover ~ label,
+.ratings .rate > label:hover ~ input:checked ~ label {
+  color: #efbc3a;
 }
 
 @media (max-width: 750px) {
