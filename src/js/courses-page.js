@@ -9,6 +9,35 @@ window.addEventListener("scroll", () => {
 	}
 });
 
+//
+//   anchors-links
+const anchorsLinks = document.querySelectorAll(".anchors-item");
+const headerStatic = document.querySelector(".header");
+const heading = document.querySelector(".heading");
+
+anchorsLinks?.forEach((link) => {
+	link.addEventListener("click", (event) => {
+		event.preventDefault();
+
+		const ID = link.getAttribute("href").substr(1);
+
+		let element = document.getElementById(ID);
+		let elementPosition = element.getBoundingClientRect().top;
+
+		let headerOffset = headerStatic.clientHeight;
+		let headingOffset = heading.clientHeight;
+
+		// let offsetPosition = elementPosition + window.pageYOffset;
+		let offsetPosition =
+			elementPosition + window.pageYOffset - headingOffset - headerOffset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
+	});
+});
+
 //reviews
 const showCommentsAll = document.querySelectorAll(".show-comments");
 const hideCommentsAll = document.querySelectorAll(".hide-comments");
@@ -102,19 +131,88 @@ sort?.addEventListener("click", () => {
 });
 
 //modal
-//add comment
-const addCommentAll = document.querySelectorAll(".add-comment");
+//ratings
+const rates = document.querySelectorAll(".rate");
+rates?.forEach((rate) => {
+	rate.addEventListener("click", function (e) {
+		e.preventDefault();
+		if (e.target.getAttribute("title") === "text") {
+			const name = "." + e.target.getAttribute("for");
+			rate.querySelector(name).checked = true;
+			const selectedRating = name[6];
 
+			console.log("block", rate.id, "has value ", selectedRating);
+			rate.closest(".rate-wrapper").classList.remove("empty");
+		}
+	});
+});
+
+//add comment
+const modalComment = document.getElementById("modal-comment");
+const addCommentAll = document.querySelectorAll(".add-comment");
 addCommentAll?.forEach((item) => {
 	item.addEventListener("click", () => {
-		document.getElementById("modal-comment")?.classList.remove("collapsed");
+		modalComment?.classList.remove("collapsed");
 		document.body.style.overflow = "hidden";
 	});
 });
 //add review
+const modalReview = document.getElementById("modal-review");
+
 document.getElementById("add-review")?.addEventListener("click", () => {
-	document.getElementById("modal-review")?.classList.remove("collapsed");
+	modalReview?.classList.remove("collapsed");
 	document.body.style.overflow = "hidden";
+});
+
+// modalComment errors
+const modalCommentInputs = modalComment.querySelectorAll(".required");
+const modalCommentButton = modalComment.querySelector(".button");
+
+modalCommentButton.addEventListener("click", () => {
+	let areFieldsFilled = true;
+	modalCommentInputs.forEach((input) => {
+		if (!input.value) {
+			input.classList.add("error");
+			areFieldsFilled = false;
+		}
+		input.addEventListener("input", () => {
+			input.classList.remove("error");
+		});
+	});
+	if (areFieldsFilled) {
+		modalComment.classList.add("collapsed");
+		document.body.style.overflow = "auto";
+		console.log("Комментарий оставлен");
+	}
+});
+
+// modalReview errors
+const modalReviewInputs = modalReview.querySelectorAll(".required");
+const modalReviewButton = modalReview.querySelector(".button");
+
+modalReviewButton.addEventListener("click", () => {
+	let areFieldsFilled = true;
+	const rates = modalReview.querySelectorAll(".rate");
+	const empryRates = modalReview.querySelectorAll(".empty");
+
+	rates.forEach((rate) => {
+		rate.closest(".rate-wrapper").classList.add("error");
+	});
+
+	modalReviewInputs.forEach((input) => {
+		if (!input.value) {
+			input.classList.add("error");
+			areFieldsFilled = false;
+		}
+		input.addEventListener("input", () => {
+			input.classList.remove("error");
+		});
+	});
+	if (areFieldsFilled && empryRates.length === 0) {
+		modalReview.classList.add("collapsed");
+		document.body.style.overflow = "auto";
+		console.log("Отзыв оставлен");
+	}
 });
 
 //close modal
@@ -131,49 +229,5 @@ modalCloseAll?.forEach((item) => {
 	item.addEventListener("click", () => {
 		item.closest(".modal").classList.add("collapsed");
 		document.body.style.overflow = "auto";
-	});
-});
-
-//ratings
-const rates = document.querySelectorAll(".rate");
-rates.forEach((rate) => {
-	rate.addEventListener("click", function (e) {
-		e.preventDefault();
-		if (e.target.getAttribute("title") === "text") {
-			const name = "." + e.target.getAttribute("for");
-			rate.querySelector(name).checked = true;
-			const selectedRating = name[6];
-
-			console.log("block", rate.id, "has value ", selectedRating);
-		}
-	});
-});
-
-//
-//   anchors-links
-const anchorsLinks = document.querySelectorAll(".anchors-item");
-const headerStatic = document.querySelector(".header");
-const heading = document.querySelector(".heading");
-
-anchorsLinks?.forEach((link) => {
-	link.addEventListener("click", (event) => {
-		event.preventDefault();
-
-		const ID = link.getAttribute("href").substr(1);
-
-		let element = document.getElementById(ID);
-		let elementPosition = element.getBoundingClientRect().top;
-
-		let headerOffset = headerStatic.clientHeight;
-		let headingOffset = heading.clientHeight;
-
-		// let offsetPosition = elementPosition + window.pageYOffset;
-		let offsetPosition =
-			elementPosition + window.pageYOffset - headingOffset - headerOffset;
-
-		window.scrollTo({
-			top: offsetPosition,
-			behavior: "smooth",
-		});
 	});
 });

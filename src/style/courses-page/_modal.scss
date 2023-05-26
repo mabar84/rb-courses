@@ -89,6 +89,9 @@
         &:focus-visible {
             border: 1px solid #b2aaaa;
         }
+        &.error {
+            border: 1px solid #ad475c;
+        }
     }
     &-subtext {
         margin-top: -10px;
@@ -112,6 +115,9 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
+        &.error {
+            border: 1px solid #ad475c;
+        }
         @include for-640-px {
             padding: 16px 10px;
         }
@@ -156,6 +162,10 @@
         .rate-wrapper {
             display: flex;
             flex-direction: column;
+            border: 1px solid transparent;
+            &.empty.error {
+                border: 1px solid #ad475c;
+            }
         }
         .rate-title {
             margin-bottom: 11px;
