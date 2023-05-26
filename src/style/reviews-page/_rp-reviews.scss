@@ -98,7 +98,7 @@
                                 order: 1;
                             }
                         }
-                        .ratings {
+                        .card-ratings {
                             @include for-725-px {
                                 margin-bottom: 6px;
                                 display: flex;
@@ -273,8 +273,17 @@
                         @include for-725-px {
                             margin-top: 0px;
                         }
-                        &.collapsed {
+                        .collapsed-review {
                             display: none;
+                        }
+                        &.collapsed {
+                            margin-top: 0;
+                            .collapsed-review {
+                                display: block;
+                            }
+                            .opened-review {
+                                display: none;
+                            }
                         }
                     }
                 }

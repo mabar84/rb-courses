@@ -59,10 +59,17 @@
                         min-width: 288px;
                         max-width: 288px;
                     }
+                    @include for-640-px {
+                        min-width: 100%;
+                        max-width: 100%;
+                    }
                     .item {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        @include for-640-px {
+                            width: 270px;
+                        }
                         .left {
                             display: flex;
                             align-items: center;

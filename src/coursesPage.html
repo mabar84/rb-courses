@@ -544,10 +544,7 @@
 					<button class="button">Узнать подробнее о курсе</button>
 				</div>
 
-				<div
-					id="reviews"
-					class="reviews container collapsed-cards-container"
-				>
+				<div id="reviews" class="reviews container">
 					<h2 class="title-h2 container">
 						Отзывы учеников курса Fullstack-разработчик на
 						JavaScript
@@ -563,7 +560,7 @@
 								/>
 								<div class="numbers">
 									<p class="date">06.05.2022</p>
-									<div class="ratings">
+									<div class="card-ratings">
 										<div class="wrapper">
 											<img
 												src="images/icons/cp-star.svg"
@@ -603,7 +600,7 @@
 								</h4>
 							</div>
 
-							<div class="text-content collapsed-cards-container">
+							<div class="text-content">
 								<p class="text-item">
 									В SkillFactory шел с четкой целью — хочу
 									стать айтишником. С самого начала я очень
@@ -615,15 +612,20 @@
 									всего курса целиком.
 								</p>
 								<p class="text-item">&nbsp;</p>
-								<p class="text-item collapsed">
+								<p class="text-item toggle collapsed">
 									В некотором унынии я провел пару месяцев и
 									не учился Далеко-далеко за словесными горами
 									в стране гласных и согласных живут, рыбные
 									тексты.
 								</p>
 
-								<span class="open-review show-more">
-									Развернуть отзыв
+								<span class="open-review">
+									<span class="opened-review"
+										>Развернуть отзыв</span
+									>
+									<span class="collapsed-review"
+										>Свернуть отзыв</span
+									>
 								</span>
 							</div>
 
@@ -685,7 +687,7 @@
 								/>
 								<div class="numbers">
 									<p class="date">11.02.2023</p>
-									<div class="ratings">
+									<div class="card-ratings">
 										<div class="wrapper">
 											<img
 												src="images/icons/cp-star.svg"
@@ -726,7 +728,7 @@
 								</h4>
 							</div>
 
-							<div class="text-content collapsed-cards-container">
+							<div class="text-content">
 								<p class="text-item">
 									В SkillFactory шел с четкой целью — хочу
 									стать айтишником. С самого начала я очень
@@ -738,15 +740,20 @@
 									всего курса целиком.
 								</p>
 								<p class="text-item">&nbsp;</p>
-								<p class="text-item collapsed">
+								<p class="text-item toggle collapsed">
 									В некотором унынии я провел пару месяцев и
 									не учился Далеко-далеко за словесными горами
 									в стране гласных и согласных живут, рыбные
 									тексты.
 								</p>
 
-								<span class="open-review show-more">
-									Развернуть отзыв
+								<span class="open-review">
+									<span class="opened-review"
+										>Развернуть отзыв</span
+									>
+									<span class="collapsed-review"
+										>Свернуть отзыв</span
+									>
 								</span>
 							</div>
 
@@ -808,7 +815,7 @@
 								/>
 								<div class="numbers">
 									<p class="date">06.05.2022</p>
-									<div class="ratings">
+									<div class="card-ratings">
 										<div class="wrapper">
 											<img
 												src="images/icons/cp-star.svg"
@@ -848,7 +855,7 @@
 								</h4>
 							</div>
 
-							<div class="text-content collapsed-cards-container">
+							<div class="text-content">
 								<p class="text-item">
 									В SkillFactory шла с четкой целью — хочу
 									стать айтишником. С самого начала я очень
@@ -860,15 +867,20 @@
 									всего курса целиком.
 								</p>
 								<p class="text-item">&nbsp;</p>
-								<p class="text-item collapsed">
+								<p class="text-item toggle collapsed">
 									В некотором унынии я провела пару месяцев и
 									не училась. Далеко-далеко за словесными
 									горами в стране гласных и согласных живут,
 									рыбные тексты.
 								</p>
 
-								<span class="open-review show-more">
-									Развернуть отзыв
+								<span class="open-review">
+									<span class="opened-review"
+										>Развернуть отзыв</span
+									>
+									<span class="collapsed-review"
+										>Свернуть отзыв</span
+									>
 								</span>
 							</div>
 
@@ -930,7 +942,7 @@
 								/>
 								<div class="numbers">
 									<p class="date">06.05.2022</p>
-									<div class="ratings">
+									<div class="card-ratings">
 										<div class="wrapper">
 											<img
 												src="images/icons/cp-star.svg"
@@ -970,7 +982,7 @@
 								</h4>
 							</div>
 
-							<div class="text-content collapsed-cards-container">
+							<div class="text-content">
 								<p class="text-item">
 									В SkillFactory шел с четкой целью — хочу
 									стать айтишником. С самого начала я очень
@@ -982,15 +994,20 @@
 									всего курса целиком.
 								</p>
 								<p class="text-item">&nbsp;</p>
-								<p class="text-item collapsed">
+								<p class="text-item toggle collapsed">
 									В некотором унынии я провел пару месяцев и
 									не учился Далеко-далеко за словесными горами
 									в стране гласных и согласных живут, рыбные
 									тексты.
 								</p>
 
-								<span class="open-review show-more">
-									Развернуть отзыв
+								<span class="open-review">
+									<span class="opened-review"
+										>Развернуть отзыв</span
+									>
+									<span class="collapsed-review"
+										>Свернуть отзыв</span
+									>
 								</span>
 							</div>
 
@@ -1048,7 +1065,7 @@
 						<button id="add-review" class="button add-review">
 							Оставить отзыв
 						</button>
-						<button class="button reverse show-more">
+						<button id="more-reviews" class="button reverse">
 							Еще отзывы
 						</button>
 					</div>
@@ -1171,13 +1188,14 @@
 					</button>
 				</div>
 
-				<div
-					class="other-categories container collapsed-cards-container"
-				>
+				<div class="other-categories container">
 					<h2 class="other-categories-title">
 						Другие категории курсов по программированию
 					</h2>
-					<span class="all-categories show-more">Все категории</span>
+					<span class="all-categories">
+						<span class="opened-all-categories">Все категории</span>
+						<span class="collapsed-all-categories">Скрыть</span>
+					</span>
 					<div class="categories">
 						<a class="categories-item" href="#"> Web-разработка </a>
 						<a class="categories-item" href="#">
@@ -1186,20 +1204,20 @@
 						<a class="categories-item" href="#">iOS разработка </a>
 						<a class="categories-item" href="#">QA тестирование </a>
 						<a class="categories-item" href="#">Разработка игр</a>
-						<a class="categories-item collapsed" href="#"
+						<a class="categories-item toggle collapsed" href="#"
 							>222Разработка игр</a
 						>
-						<a class="categories-item collapsed" href="#"
+						<a class="categories-item toggle collapsed" href="#"
 							>333Разработка игр</a
 						>
-						<a class="categories-item collapsed" href="#"
+						<a class="categories-item toggle collapsed" href="#"
 							>444Разработка игр</a
 						>
 					</div>
 				</div>
 			</section>
 		</main>
-		<footer class="footer">
+		<footer class="courses-page footer">
 			<div class="container">
 				<div class="footer__top">
 					<ul class="footer__menu">

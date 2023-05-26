@@ -7,6 +7,12 @@
         @include for-750-px {
             margin: 20px;
         }
+        @include for-640-px {
+            gap: 12px;
+        }
+        @include for-440-px {
+            gap: 5px;
+        }
         &-item {
             padding: 10px 18px;
             font-family: "Inter";
@@ -16,6 +22,14 @@
             line-height: 19px;
             color: #000000;
             border: 1px solid #b2aaaa;
+            @include for-640-px {
+                padding: 10px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+            @include for-440-px {
+                padding: 8px;
+            }
             &.active {
                 color: #ad475c;
                 border: 1px solid #ad475c;

@@ -2,11 +2,7 @@
 const stickyBanner = document.getElementById("sticky-banner");
 const windowInnerHeight = window.innerHeight;
 window.addEventListener("scroll", () => {
-	if (
-		window.pageYOffset > windowInnerHeight / 2 &&
-		window.pageYOffset <
-			document.body.offsetHeight - windowInnerHeight - 250
-	) {
+	if (window.pageYOffset > windowInnerHeight / 2) {
 		stickyBanner?.classList.add("sticky");
 	} else {
 		stickyBanner?.classList.remove("sticky");
@@ -27,24 +23,53 @@ hideCommentsAll?.forEach((hide) => {
 		hide.closest(".comments").classList.add("collapsed");
 	});
 });
-
-// show more
-const showMore = document.querySelectorAll(".show-more");
-
-showMore?.forEach((item) => {
+//
+const openReview = document.querySelectorAll(".open-review");
+openReview?.forEach((item) => {
 	item.addEventListener("click", () => {
-		const collapsedCardsContainer = item.closest(
-			".collapsed-cards-container"
-		);
-		const allCollapsedCards =
-			collapsedCardsContainer?.querySelectorAll(".collapsed");
-		allCollapsedCards?.forEach((el) => {
-			el.classList.remove("collapsed");
-		});
-		item.classList.add("collapsed");
+		item.closest(".text-content")
+			.querySelector(".toggle")
+			.classList.toggle("collapsed");
+
+		item.classList.toggle("collapsed");
+	});
+});
+//
+
+const moreReviews = document.getElementById("more-reviews");
+
+moreReviews?.addEventListener("click", () => {
+	const collapsedCardsContainer = moreReviews.closest("#reviews");
+	const allCollapsedCards =
+		collapsedCardsContainer?.querySelectorAll(".card.collapsed");
+	allCollapsedCards?.forEach((el) => {
+		el.classList.remove("collapsed");
 	});
 });
 
+//
+const allCategories = document.querySelector(".all-categories");
+allCategories?.addEventListener("click", () => {
+	allCategories
+		.closest(".other-categories")
+		.querySelectorAll(".toggle")
+		.forEach((item) => {
+			item.classList.toggle("collapsed");
+		});
+	allCategories.classList.toggle("collapsed");
+});
+
+//
+const showMore = document.querySelector(".show-more");
+showMore?.addEventListener("click", () => {
+	showMore
+		.closest(".other-schools")
+		.querySelectorAll(".toggle")
+		.forEach((item) => {
+			item.classList.toggle("collapsed");
+		});
+	showMore.classList.toggle("collapsed");
+});
 //sort
 const sort = document.getElementById("sort");
 const sortWrapper = document.querySelectorAll(".sort-wrapper");
@@ -121,5 +146,34 @@ rates.forEach((rate) => {
 
 			console.log("block", rate.id, "has value ", selectedRating);
 		}
+	});
+});
+
+//
+//   anchors-links
+const anchorsLinks = document.querySelectorAll(".anchors-item");
+const headerStatic = document.querySelector(".header");
+const heading = document.querySelector(".heading");
+
+anchorsLinks?.forEach((link) => {
+	link.addEventListener("click", (event) => {
+		event.preventDefault();
+
+		const ID = link.getAttribute("href").substr(1);
+
+		let element = document.getElementById(ID);
+		let elementPosition = element.getBoundingClientRect().top;
+
+		let headerOffset = headerStatic.clientHeight;
+		let headingOffset = heading.clientHeight;
+
+		// let offsetPosition = elementPosition + window.pageYOffset;
+		let offsetPosition =
+			elementPosition + window.pageYOffset - headingOffset - headerOffset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
 	});
 });

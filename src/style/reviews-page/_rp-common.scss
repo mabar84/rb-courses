@@ -2,6 +2,7 @@
     .breadcrumb__list {
         @include for-750-px {
             flex-wrap: wrap;
+            row-gap: 6px;
         }
         &-item {
             font-size: 16px;
@@ -25,7 +26,6 @@
                 overflow: hidden;
                 @include for-750-px {
                     padding-right: 0;
-                    margin-top: 6px;
                     text-overflow: initial;
                     white-space: normal;
                     width: auto;
@@ -44,11 +44,16 @@
         @include for-1200-px {
             margin-bottom: 40px;
         }
-        @include for-750-px {
+        @include for-640-px {
             margin-bottom: 30px;
             flex-direction: column;
             align-items: start;
             gap: 10px;
+        }
+        .button {
+            @include for-640-px {
+                width: 100%;
+            }
         }
         &::after {
             content: "";
@@ -93,6 +98,7 @@
         position: relative;
         @include for-1200-px {
             padding-right: 0;
+            padding-left: 0;
             margin-bottom: 40px;
             line-height: 140%;
         }

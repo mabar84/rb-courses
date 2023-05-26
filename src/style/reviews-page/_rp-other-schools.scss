@@ -162,8 +162,17 @@
                 font-size: 14px;
                 line-height: 17px;
             }
-            &.collapsed {
+            .collapsed-show-more {
                 display: none;
+            }
+            &.collapsed {
+                margin-top: 0;
+                .collapsed-show-more {
+                    display: block;
+                }
+                .opened-show-more {
+                    display: none;
+                }
             }
         }
     }

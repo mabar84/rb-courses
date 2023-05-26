@@ -118,6 +118,9 @@
             @include for-833-px {
                 padding: 20px 0 0;
             }
+            @include for-640-px {
+                flex-direction: column;
+            }
             &-item {
                 width: 270px;
                 @include for-1200-px {

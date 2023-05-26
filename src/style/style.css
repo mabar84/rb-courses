@@ -3269,6 +3269,16 @@ select {
     margin: 20px;
   }
 }
+@media (max-width: 640px) {
+  .courses-page .anchors {
+    gap: 12px;
+  }
+}
+@media (max-width: 440px) {
+  .courses-page .anchors {
+    gap: 5px;
+  }
+}
 .courses-page .anchors-item {
   padding: 10px 18px;
   font-family: "Inter";
@@ -3279,6 +3289,18 @@ select {
   color: #000000;
   border: 1px solid #b2aaaa;
 }
+@media (max-width: 640px) {
+  .courses-page .anchors-item {
+    padding: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 440px) {
+  .courses-page .anchors-item {
+    padding: 8px;
+  }
+}
 .courses-page .anchors-item.active {
   color: #ad475c;
   border: 1px solid #ad475c;
@@ -3287,6 +3309,7 @@ select {
 @media (max-width: 750px) {
   .courses-page .breadcrumb__list {
     flex-wrap: wrap;
+    row-gap: 6px;
   }
 }
 .courses-page .breadcrumb__list-item {
@@ -3318,7 +3341,6 @@ select {
 @media (max-width: 750px) {
   .courses-page .breadcrumb__list-item:last-child {
     padding-right: 0;
-    margin-top: 6px;
     text-overflow: initial;
     white-space: normal;
     width: auto;
@@ -3380,6 +3402,7 @@ select {
 @media (max-width: 1200px) {
   .courses-page .title-h2 {
     padding-right: 0;
+    padding-left: 0;
     margin-bottom: 40px;
     line-height: 140%;
   }
@@ -3486,6 +3509,14 @@ select {
   background: #ad475c;
   color: #ffffff;
 }
+.courses-page.footer {
+  padding-bottom: 90px;
+}
+@media (max-width: 750px) {
+  .courses-page.footer {
+    padding-bottom: 30px;
+  }
+}
 
 .courses-page .other-categories {
   margin-bottom: 100px;
@@ -3532,7 +3563,16 @@ select {
     justify-self: flex-start;
   }
 }
+.courses-page .other-categories .all-categories .collapsed-all-categories {
+  display: none;
+}
 .courses-page .other-categories .all-categories.collapsed {
+  margin-top: 0;
+}
+.courses-page .other-categories .all-categories.collapsed .collapsed-all-categories {
+  display: block;
+}
+.courses-page .other-categories .all-categories.collapsed .opened-all-categories {
   display: none;
 }
 .courses-page .other-categories-title {
@@ -3622,9 +3662,10 @@ select {
   }
 }
 .courses-page .other-courses .cards .card .course-name {
+  margin-bottom: 10px;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
@@ -3759,6 +3800,8 @@ select {
 .courses-page .promo-banner-discount .item {
   display: flex;
   align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .courses-page .promo-banner-discount .item img {
   margin-right: 10px;
@@ -3773,7 +3816,7 @@ select {
   line-height: 17px;
   color: #000000;
 }
-.courses-page .promo-banner-discount .item .text {
+.courses-page .promo-banner-discount .item .subtext {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -4123,7 +4166,7 @@ select {
   padding: 0px 70px 30px 20px;
   border: 1px solid #b2aaaa;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 120px 1fr;
   column-gap: 30px;
   grid-template-areas: "author names" "author text-content" "thumbs plus-minus" "thumbs add-comment";
 }
@@ -4198,23 +4241,23 @@ select {
   }
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author .numbers .ratings {
+  .courses-page .reviews .cards .card .author .numbers .card-ratings {
     margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 4px;
   }
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .wrapper {
+.courses-page .reviews .cards .card .author .numbers .card-ratings .wrapper {
   margin-bottom: 4px;
   display: flex;
   align-items: center;
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .wrapper .star {
+.courses-page .reviews .cards .card .author .numbers .card-ratings .wrapper .star {
   width: 27px;
   height: 26px;
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .wrapper .number {
+.courses-page .reviews .cards .card .author .numbers .card-ratings .wrapper .number {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -4222,7 +4265,7 @@ select {
   line-height: 29px;
   color: #000000;
 }
-.courses-page .reviews .cards .card .author .numbers .ratings .subnumber {
+.courses-page .reviews .cards .card .author .numbers .card-ratings .subnumber {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -4232,7 +4275,7 @@ select {
   text-align: center;
 }
 @media (max-width: 725px) {
-  .courses-page .reviews .cards .card .author .numbers .ratings .subnumber {
+  .courses-page .reviews .cards .card .author .numbers .card-ratings .subnumber {
     padding-bottom: 5px;
   }
 }
@@ -4385,7 +4428,16 @@ select {
     margin-top: 0px;
   }
 }
+.courses-page .reviews .cards .card .text-content .open-review .collapsed-review {
+  display: none;
+}
 .courses-page .reviews .cards .card .text-content .open-review.collapsed {
+  margin-top: 0;
+}
+.courses-page .reviews .cards .card .text-content .open-review.collapsed .collapsed-review {
+  display: block;
+}
+.courses-page .reviews .cards .card .text-content .open-review.collapsed .opened-review {
   display: none;
 }
 .courses-page .reviews .cards .card .plus-minus {
@@ -4503,9 +4555,10 @@ select {
 }
 
 .courses-page .sticky-banner {
+  display: none;
   box-sizing: border-box;
   margin: 0 auto 100px;
-  max-width: 1100px;
+  width: 1099px;
   padding: 30px 40px;
   background: #ffffff;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
@@ -4516,13 +4569,16 @@ select {
 }
 @media (max-width: 1200px) {
   .courses-page .sticky-banner {
-    margin: 0 40px 60px;
+    padding: 25px 15px;
+    width: calc(100vw - 80px);
+    margin: 0 auto 60px;
   }
 }
 @media (max-width: 750px) {
   .courses-page .sticky-banner {
+    width: 100vw;
     padding: 10px;
-    margin: 0 auto 40px;
+    margin: 0 0 40px;
   }
 }
 .courses-page .sticky-banner-title {
@@ -4760,29 +4816,29 @@ select {
   }
 }
 
-.ratings {
+.modal .ratings {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   gap: 64px;
 }
 @media (max-width: 1000px) {
-  .ratings {
+  .modal .ratings {
     gap: 5px;
     justify-content: space-between;
   }
 }
 @media (max-width: 833px) {
-  .ratings {
+  .modal .ratings {
     flex-direction: column;
     gap: 30px;
   }
 }
-.ratings .rate-wrapper {
+.modal .ratings .rate-wrapper {
   display: flex;
   flex-direction: column;
 }
-.ratings .rate-title {
+.modal .ratings .rate-title {
   margin-bottom: 11px;
   font-family: "Inter";
   font-style: normal;
@@ -4791,19 +4847,19 @@ select {
   line-height: 19px;
   color: #000000;
 }
-.ratings .rate {
+.modal .ratings .rate {
   align-self: start;
 }
 @media (max-width: 833px) {
-  .ratings .rate {
+  .modal .ratings .rate {
     margin-left: -4px;
   }
 }
-.ratings .rate:not(:checked) > input {
+.modal .ratings .rate:not(:checked) > input {
   position: absolute;
   top: -9999px;
 }
-.ratings .rate:not(:checked) > label {
+.modal .ratings .rate:not(:checked) > label {
   float: right;
   width: 24px;
   overflow: hidden;
@@ -4812,34 +4868,35 @@ select {
   font-size: 30px;
   color: #cdcdcd;
 }
-.ratings .rate:not(:checked) > label:before {
+.modal .ratings .rate:not(:checked) > label:before {
   content: "★ ";
   display: block;
   font-size: 24px;
   line-height: 24px;
 }
-.ratings .rate > input ~ label {
+.modal .ratings .rate > input ~ label {
   margin-left: 4px;
   color: #efbc3a;
 }
-.ratings .rate > input:checked ~ label {
+.modal .ratings .rate > input:checked ~ label {
   color: #efbc3a;
 }
-.ratings .rate:not(:checked) > label:hover,
-.ratings .rate:not(:checked) > label:hover ~ label {
+.modal .ratings .rate:not(:checked) > label:hover,
+.modal .ratings .rate:not(:checked) > label:hover ~ label {
   color: #efbc3a;
 }
-.ratings .rate > input:checked + label:hover,
-.ratings .rate > input:checked + label:hover ~ label,
-.ratings .rate > input:checked ~ label:hover,
-.ratings .rate > input:checked ~ label:hover ~ label,
-.ratings .rate > label:hover ~ input:checked ~ label {
+.modal .ratings .rate > input:checked + label:hover,
+.modal .ratings .rate > input:checked + label:hover ~ label,
+.modal .ratings .rate > input:checked ~ label:hover,
+.modal .ratings .rate > input:checked ~ label:hover ~ label,
+.modal .ratings .rate > label:hover ~ input:checked ~ label {
   color: #efbc3a;
 }
 
 @media (max-width: 750px) {
   .reviews-page .breadcrumb__list {
     flex-wrap: wrap;
+    row-gap: 6px;
   }
 }
 .reviews-page .breadcrumb__list-item {
@@ -4871,7 +4928,6 @@ select {
 @media (max-width: 750px) {
   .reviews-page .breadcrumb__list-item:last-child {
     padding-right: 0;
-    margin-top: 6px;
     text-overflow: initial;
     white-space: normal;
     width: auto;
@@ -4890,12 +4946,17 @@ select {
     margin-bottom: 40px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 640px) {
   .reviews-page .wrapper-h1 {
     margin-bottom: 30px;
     flex-direction: column;
     align-items: start;
     gap: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .reviews-page .wrapper-h1 .button {
+    width: 100%;
   }
 }
 .reviews-page .wrapper-h1::after {
@@ -4950,6 +5011,7 @@ select {
 @media (max-width: 1200px) {
   .reviews-page .title-h2 {
     padding-right: 0;
+    padding-left: 0;
     margin-bottom: 40px;
     line-height: 140%;
   }
@@ -5341,7 +5403,16 @@ select {
     line-height: 17px;
   }
 }
+.reviews-page .other-schools .show-more .collapsed-show-more {
+  display: none;
+}
 .reviews-page .other-schools .show-more.collapsed {
+  margin-top: 0;
+}
+.reviews-page .other-schools .show-more.collapsed .collapsed-show-more {
+  display: block;
+}
+.reviews-page .other-schools .show-more.collapsed .opened-show-more {
   display: none;
 }
 
@@ -5427,10 +5498,21 @@ select {
     max-width: 288px;
   }
 }
+@media (max-width: 640px) {
+  .reviews-page .promo .plus-minus .cards .ratings {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
 .reviews-page .promo .plus-minus .cards .ratings .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 640px) {
+  .reviews-page .promo .plus-minus .cards .ratings .item {
+    width: 270px;
+  }
 }
 .reviews-page .promo .plus-minus .cards .ratings .item .left {
   display: flex;
@@ -5739,6 +5821,11 @@ select {
 @media (max-width: 833px) {
   .reviews-page .school-banner .bars {
     padding: 20px 0 0;
+  }
+}
+@media (max-width: 640px) {
+  .reviews-page .school-banner .bars {
+    flex-direction: column;
   }
 }
 .reviews-page .school-banner .bars-item {
@@ -6217,23 +6304,23 @@ select {
   }
 }
 @media (max-width: 725px) {
-  .reviews-page .reviews .cards .card .author .numbers .ratings {
+  .reviews-page .reviews .cards .card .author .numbers .card-ratings {
     margin-bottom: 6px;
     display: flex;
     align-items: center;
     gap: 4px;
   }
 }
-.reviews-page .reviews .cards .card .author .numbers .ratings .wrapper {
+.reviews-page .reviews .cards .card .author .numbers .card-ratings .wrapper {
   margin-bottom: 4px;
   display: flex;
   align-items: center;
 }
-.reviews-page .reviews .cards .card .author .numbers .ratings .wrapper .star {
+.reviews-page .reviews .cards .card .author .numbers .card-ratings .wrapper .star {
   width: 27px;
   height: 26px;
 }
-.reviews-page .reviews .cards .card .author .numbers .ratings .wrapper .number {
+.reviews-page .reviews .cards .card .author .numbers .card-ratings .wrapper .number {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -6241,7 +6328,7 @@ select {
   line-height: 29px;
   color: #000000;
 }
-.reviews-page .reviews .cards .card .author .numbers .ratings .subnumber {
+.reviews-page .reviews .cards .card .author .numbers .card-ratings .subnumber {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -6251,7 +6338,7 @@ select {
   text-align: center;
 }
 @media (max-width: 725px) {
-  .reviews-page .reviews .cards .card .author .numbers .ratings .subnumber {
+  .reviews-page .reviews .cards .card .author .numbers .card-ratings .subnumber {
     padding-bottom: 5px;
   }
 }
@@ -6412,7 +6499,16 @@ select {
     margin-top: 0px;
   }
 }
+.reviews-page .reviews .cards .card .text-content .open-review .collapsed-review {
+  display: none;
+}
 .reviews-page .reviews .cards .card .text-content .open-review.collapsed {
+  margin-top: 0;
+}
+.reviews-page .reviews .cards .card .text-content .open-review.collapsed .collapsed-review {
+  display: block;
+}
+.reviews-page .reviews .cards .card .text-content .open-review.collapsed .opened-review {
   display: none;
 }
 .reviews-page .reviews .cards .card .plus-minus {

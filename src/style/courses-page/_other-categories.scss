@@ -42,8 +42,17 @@
             @include for-750-px {
                 justify-self: flex-start;
             }
-            &.collapsed {
+            .collapsed-all-categories {
                 display: none;
+            }
+            &.collapsed {
+                margin-top: 0;
+                .collapsed-all-categories {
+                    display: block;
+                }
+                .opened-all-categories {
+                    display: none;
+                }
             }
         }
         &-title {
