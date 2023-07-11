@@ -8,6 +8,356 @@
         @include for-750-px {
             margin-bottom: 40px;
         }
+        // .cards {
+        //     margin-bottom: 60px;
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: 30px;
+
+        //     @include for-1200-px {
+        //         gap: 20px;
+        //         margin-bottom: 40px;
+        //     }
+        //     @include for-750-px {
+        //         margin-bottom: 20px;
+        //     }
+        //     .card {
+        //         padding: 0px 70px 30px 20px;
+        //         border: 1px solid #b2aaaa;
+        //         display: grid;
+        //         grid-template-columns: 120px 1fr;
+        //         column-gap: 30px;
+        //         grid-template-areas:
+        //             "author names"
+        //             "author text-content"
+        //             "thumbs plus-minus"
+        //             "thumbs add-comment";
+        //         @include for-1200-px {
+        //             padding-right: 60px;
+        //         }
+        //         @include for-833-px {
+        //             padding-right: 20px;
+        //         }
+        //         @include for-725-px {
+        //             padding: 10px;
+        //             grid-template-columns: 96px 1fr;
+        //             column-gap: 0px;
+        //             grid-template-areas:
+        //                 "author author"
+        //                 "names names"
+        //                 "text-content text-content"
+        //                 "plus-minus plus-minus"
+        //                 "thumbs add-comment";
+        //         }
+        //         .author {
+        //             padding-top: 18px;
+        //             display: flex;
+        //             flex-direction: column;
+        //             align-items: center;
+        //             grid-area: author;
+        //             margin-bottom: 11px;
+        //             @include for-725-px {
+        //                 padding-top: 0;
+        //                 flex-direction: row;
+        //                 gap: 20px;
+        //             }
+        //             .avatar {
+        //                 margin-bottom: 10px;
+        //                 width: 100px;
+        //                 height: 100px;
+        //                 border-radius: 50%;
+        //                 object-fit: cover;
+        //                 @include for-833-px {
+        //                     width: 83px;
+        //                     height: 83px;
+        //                 }
+        //             }
+        //             .numbers {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 align-items: center;
+        //                 @include for-725-px {
+        //                     align-items: start;
+        //                 }
+        //                 .date {
+        //                     margin-bottom: 12px;
+        //                     font-family: "Inter";
+        //                     font-style: normal;
+        //                     font-weight: 400;
+        //                     font-size: 16px;
+        //                     line-height: 19px;
+        //                     color: #b2aaaa;
+        //                     @include for-725-px {
+        //                         order: 1;
+        //                     }
+        //                 }
+        //                 .card-ratings {
+        //                     @include for-725-px {
+        //                         margin-bottom: 6px;
+        //                         display: flex;
+        //                         align-items: center;
+        //                         gap: 4px;
+        //                     }
+        //                     .wrapper {
+        //                         margin-bottom: 4px;
+        //                         display: flex;
+        //                         align-items: center;
+        //                         .star {
+        //                             width: 27px;
+        //                             height: 26px;
+        //                         }
+        //                         .number {
+        //                             font-family: "Inter";
+        //                             font-style: normal;
+        //                             font-weight: 600;
+        //                             font-size: 24px;
+        //                             line-height: 29px;
+        //                             color: #000000;
+        //                         }
+        //                     }
+        //                     .subnumber {
+        //                         font-family: "Inter";
+        //                         font-style: normal;
+        //                         font-weight: 400;
+        //                         font-size: 16px;
+        //                         line-height: 19px;
+        //                         color: #b2aaaa;
+        //                         text-align: center;
+        //                         @include for-725-px {
+        //                             padding-bottom: 5px;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .thumbs {
+        //             grid-area: thumbs;
+        //             display: flex;
+        //             justify-content: center;
+        //             gap: 14px;
+        //             .image-wrapper {
+        //                 position: relative;
+        //                 cursor: pointer;
+        //                 .value {
+        //                     padding: 3px;
+        //                     display: flex;
+        //                     align-items: center;
+        //                     justify-content: center;
+        //                     position: absolute;
+        //                     width: 18px;
+        //                     height: 18px;
+        //                     top: -10px;
+        //                     right: -10px;
+        //                     background: #ad475c;
+        //                     border-radius: 50%;
+        //                     border: 2px solid #ffffff;
+        //                     font-family: "Inter";
+        //                     font-style: normal;
+        //                     font-weight: 800;
+        //                     font-size: 10px;
+        //                     line-height: 12px;
+        //                     color: #ffffff;
+        //                     &.grey {
+        //                         background: #b2aaaa;
+        //                     }
+        //                 }
+        //                 .image {
+        //                     width: 36px;
+        //                     height: 36px;
+        //                     object-fit: cover;
+        //                 }
+        //             }
+        //         }
+        //         .names {
+        //             grid-area: names;
+        //             display: flex;
+        //             align-items: center;
+        //             gap: 10px;
+        //             @include for-725-px {
+        //                 flex-direction: column;
+        //                 gap: 4px;
+        //                 align-items: start;
+        //                 margin-bottom: 15px;
+        //             }
+        //             .author-name {
+        //                 font-family: "Inter";
+        //                 font-style: normal;
+        //                 font-weight: 600;
+        //                 font-size: 20px;
+        //                 line-height: 24px;
+        //                 color: #000000;
+        //                 @include for-833-px {
+        //                     font-size: 18px;
+        //                     line-height: 22px;
+        //                 }
+        //             }
+        //             .course-name {
+        //                 font-family: "Inter";
+        //                 font-style: normal;
+        //                 font-weight: 400;
+        //                 font-size: 16px;
+        //                 line-height: 19px;
+        //                 color: #b2aaaa;
+        //                 @include for-833-px {
+        //                     font-size: 12px;
+        //                     line-height: 15px;
+        //                 }
+        //             }
+        //         }
+        //         .text-content {
+        //             grid-area: text-content;
+        //             @include for-725-px {
+        //                 margin-bottom: 20px;
+        //             }
+        //             .text-item {
+        //                 font-family: "Inter";
+        //                 font-style: normal;
+        //                 font-weight: 400;
+        //                 font-size: 16px;
+        //                 line-height: 140%;
+        //                 color: #000000;
+        //                 @include for-833-px {
+        //                     font-size: 12px;
+        //                 }
+        //                 &.collapsed {
+        //                     text-overflow: ellipsis;
+        //                     white-space: nowrap;
+        //                     width: 460px;
+        //                     overflow: hidden;
+        //                     @include for-833-px {
+        //                         width: 400px;
+        //                     }
+        //                     @include for-725-px {
+        //                         display: inline-block;
+        //                         width: 100%;
+        //                         white-space: normal;
+        //                         display: -webkit-box;
+        //                         -webkit-line-clamp: 2;
+        //                         -webkit-box-orient: vertical;
+        //                     }
+        //                 }
+        //             }
+        //             .open-review {
+        //                 width: max-content;
+        //                 margin-top: -22px;
+        //                 margin-left: auto;
+        //                 font-family: "Inter";
+        //                 font-style: normal;
+        //                 font-weight: 400;
+        //                 font-size: 14px;
+        //                 line-height: 17px;
+        //                 text-align: right;
+        //                 text-decoration-line: underline;
+        //                 color: #ad475c;
+        //                 cursor: pointer;
+        //                 display: block;
+        //                 @include for-833-px {
+        //                     font-size: 12px;
+        //                     line-height: 15px;
+        //                     margin-top: -17px;
+        //                 }
+        //                 @include for-725-px {
+        //                     margin-top: 0px;
+        //                 }
+        //                 .collapsed-review {
+        //                     display: none;
+        //                 }
+        //                 &.collapsed {
+        //                     margin-top: 0;
+        //                     .collapsed-review {
+        //                         display: block;
+        //                     }
+        //                     .opened-review {
+        //                         display: none;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .plus-minus {
+        //             grid-area: plus-minus;
+        //             margin-bottom: 20px;
+        //             display: flex;
+        //             gap: 20px;
+        //             @include for-725-px {
+        //                 flex-direction: column;
+        //                 gap: 10px;
+        //             }
+        //             .item {
+        //                 width: 420px;
+        //                 @include for-1200-px {
+        //                     width: 264px;
+        //                 }
+        //                 @include for-833-px {
+        //                     width: 100%;
+        //                 }
+        //                 .sign {
+        //                     margin-bottom: 14px;
+        //                     display: flex;
+        //                     align-items: center;
+        //                     gap: 10px;
+        //                     @include for-725-px {
+        //                         margin-bottom: 6px;
+        //                     }
+        //                     .image {
+        //                         width: 20px;
+        //                         height: 20px;
+        //                     }
+        //                     .word {
+        //                         font-family: "Inter";
+        //                         font-style: normal;
+        //                         font-weight: 600;
+        //                         font-size: 20px;
+        //                         line-height: 24px;
+        //                         display: flex;
+        //                         align-items: center;
+        //                         color: #67e599;
+        //                         @include for-833-px {
+        //                             font-size: 16px;
+        //                             line-height: 19px;
+        //                         }
+        //                         &.red {
+        //                             color: #e56767;
+        //                         }
+        //                     }
+        //                 }
+        //                 .text-item {
+        //                     margin-top: 9px;
+        //                     font-family: "Inter";
+        //                     font-style: normal;
+        //                     font-weight: 400;
+        //                     font-size: 14px;
+        //                     line-height: 17px;
+        //                     color: #000000;
+        //                     @include for-833-px {
+        //                         font-size: 12px;
+        //                         line-height: 15px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .add-comment {
+        //             grid-area: add-comment;
+        //             width: max-content;
+        //             font-family: "Inter";
+        //             font-style: normal;
+        //             font-weight: 400;
+        //             font-size: 14px;
+        //             line-height: 17px;
+        //             text-decoration-line: underline;
+        //             color: #ad475c;
+        //             cursor: pointer;
+        //             @include for-725-px {
+        //                 margin-left: 15px;
+        //                 display: flex;
+        //                 align-items: center;
+        //                 padding-bottom: 10px;
+        //             }
+        //         }
+        //         &.collapsed {
+        //             display: none;
+        //         }
+        //     }
+        // }
         .cards {
             margin-bottom: 60px;
             display: flex;
@@ -22,7 +372,7 @@
                 margin-bottom: 20px;
             }
             .card {
-                padding: 0px 70px 30px 20px;
+                // padding: 0px 70px 30px 20px;
                 border: 1px solid #b2aaaa;
                 display: grid;
                 grid-template-columns: 120px 1fr;
@@ -31,12 +381,14 @@
                     "author names"
                     "author text-content"
                     "thumbs plus-minus"
-                    "thumbs add-comment";
+                    "thumbs add-comment"
+                    "thumbs comments";
                 @include for-1200-px {
-                    padding-right: 60px;
+                    column-gap: 20px;
+                    // padding-right: 60px;
                 }
                 @include for-833-px {
-                    padding-right: 20px;
+                    // padding-right: 20px;
                 }
                 @include for-725-px {
                     padding: 10px;
@@ -47,15 +399,20 @@
                         "names names"
                         "text-content text-content"
                         "plus-minus plus-minus"
-                        "thumbs add-comment";
+                        "thumbs add-comment"
+                        "comments comments";
                 }
                 .author {
                     padding-top: 18px;
+                    padding-left: 20px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     grid-area: author;
                     margin-bottom: 11px;
+                    @include for-1200-px {
+                        padding-left: 0;
+                    }
                     @include for-725-px {
                         padding-top: 0;
                         flex-direction: row;
@@ -206,7 +563,14 @@
                 }
                 .text-content {
                     grid-area: text-content;
+                    padding-right: 70px;
+                    @include for-1200-px {
+                        padding-right: 20px;
+                    }
                     @include for-725-px {
+                        width: 100%;
+                        padding-right: 10px;
+
                         margin-bottom: 20px;
                     }
                     .text-item {
@@ -337,6 +701,7 @@
                 }
                 .add-comment {
                     grid-area: add-comment;
+                    margin-bottom: 20px;
                     width: max-content;
                     font-family: "Inter";
                     font-style: normal;
@@ -348,9 +713,131 @@
                     cursor: pointer;
                     @include for-725-px {
                         margin-left: 15px;
+                        margin-bottom: 0;
                         display: flex;
                         align-items: center;
                         padding-bottom: 10px;
+                    }
+                }
+
+                .comments {
+                    grid-area: comments;
+                    padding: 20px;
+                    background: #f7f7f7;
+                    @include for-725-px {
+                        margin-top: 20px;
+                    }
+                    &.collapsed {
+                        padding: 10px;
+                        .show-comments {
+                            display: block;
+                        }
+                        .comment {
+                            display: none;
+                        }
+                        .hide-comments {
+                            display: none;
+                        }
+                    }
+                    .show-comments {
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 140%;
+                        color: #000000;
+                        width: max-content;
+                        display: none;
+                        cursor: pointer;
+                        @include for-725-px {
+                            font-size: 12px;
+                        }
+                        .number {
+                            text-decoration-line: underline;
+                        }
+                        .text {
+                            text-decoration-line: underline;
+                        }
+                    }
+                    .comment {
+                        margin-bottom: 20px;
+                        display: flex;
+                        gap: 11px;
+                        @include for-1200-px {
+                            gap: 14px;
+                        }
+                        @include for-725-px {
+                            margin-bottom: 5px;
+                        }
+                        .avatar {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            @include for-1200-px {
+                                width: 34px;
+                                height: 34px;
+                            }
+                        }
+                        .top {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .item {
+                                margin-bottom: 11px;
+                                font-family: "Inter";
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #000000;
+                                @include for-1200-px {
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                }
+                                @include for-725-px {
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                }
+                            }
+                        }
+                        .text {
+                            &-item {
+                                font-family: "Inter";
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 150%;
+                                color: #000000;
+                                @include for-1200-px {
+                                    font-size: 12px;
+                                    line-height: 150%;
+                                }
+                                @include for-725-px {
+                                    font-size: 10px;
+                                    line-height: 150%;
+                                }
+                            }
+                        }
+                    }
+                    .hide-comments {
+                        width: max-content;
+                        margin-left: auto;
+                        font-family: "Inter";
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-decoration-line: underline;
+                        color: #ad475c;
+                        cursor: pointer;
+                        @include for-1200-px {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
+                        @include for-725-px {
+                            font-size: 10px;
+                            line-height: 12px;
+                        }
                     }
                 }
                 &.collapsed {
