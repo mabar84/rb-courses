@@ -4614,6 +4614,9 @@ select {
     height: 34px;
   }
 }
+.courses-page .reviews .cards .card .comments .comment .wrapper {
+  width: 100%;
+}
 .courses-page .reviews .cards .card .comments .comment .top {
   display: flex;
   align-items: center;
@@ -6836,6 +6839,9 @@ select {
     width: 34px;
     height: 34px;
   }
+}
+.reviews-page .reviews .cards .card .comments .comment .wrapper {
+  width: 100%;
 }
 .reviews-page .reviews .cards .card .comments .comment .top {
   display: flex;
