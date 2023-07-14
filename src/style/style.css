@@ -3847,7 +3847,6 @@ select {
 @media (max-width: 750px) {
   .courses-page .promo {
     margin-bottom: 40px;
-    row-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
   }
@@ -3862,7 +3861,7 @@ select {
 }
 @media (max-width: 750px) {
   .courses-page .promo .categories {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 .courses-page .promo .text-content {
@@ -3878,7 +3877,7 @@ select {
 @media (max-width: 750px) {
   .courses-page .promo .text-content {
     font-size: 16px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 .courses-page .promo .time-description {
@@ -3895,7 +3894,7 @@ select {
 }
 @media (max-width: 750px) {
   .courses-page .promo .time-description {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     column-gap: 50px;
     row-gap: 20px;
   }
@@ -3952,6 +3951,7 @@ select {
 @media (max-width: 750px) {
   .courses-page .promo .text-description {
     gap: 20px;
+    margin-bottom: 20px;
   }
 }
 .courses-page .promo .text-description .item {
