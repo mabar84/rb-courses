@@ -3,7 +3,7 @@
         margin-bottom: 100px;
         display: grid;
         column-gap: 60px;
-        row-gap: 40px;
+        // row-gap: 40px;
         grid-template-columns: 1fr 366px;
         grid-template-areas:
             "categories promo-banner"
@@ -24,13 +24,21 @@
             margin-bottom: 40px;
             row-gap: 20px;
             grid-template-columns: 1fr;
-
             grid-template-areas:
                 "categories"
                 "text-content"
                 "time-description"
                 "text-description"
                 "promo-banner";
+        }
+        .categories {
+            margin-bottom: 20px;
+            @include for-1200-px {
+                margin-bottom: 40px;
+            }
+            @include for-750-px {
+                margin-bottom: 0;
+            }
         }
         .text-content {
             grid-area: text-content;
@@ -40,11 +48,14 @@
             font-size: 24px;
             line-height: 140.02%;
             color: #000000;
+            margin-bottom: 20px;
             @include for-750-px {
                 font-size: 16px;
+                margin-bottom: 0;
             }
         }
         .time-description {
+            margin-bottom: 20px;
             grid-area: time-description;
             flex-wrap: wrap;
             display: flex;
@@ -53,6 +64,7 @@
                 gap: 24px;
             }
             @include for-750-px {
+                margin-bottom: 0;
                 column-gap: 50px;
                 row-gap: 20px;
             }

@@ -3833,7 +3833,6 @@ select {
   margin-bottom: 100px;
   display: grid;
   column-gap: 60px;
-  row-gap: 40px;
   grid-template-columns: 1fr 366px;
   grid-template-areas: "categories promo-banner" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
 }
@@ -3853,6 +3852,19 @@ select {
     grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
   }
 }
+.courses-page .promo .categories {
+  margin-bottom: 20px;
+}
+@media (max-width: 1200px) {
+  .courses-page .promo .categories {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .courses-page .promo .categories {
+    margin-bottom: 0;
+  }
+}
 .courses-page .promo .text-content {
   grid-area: text-content;
   font-family: "Inter";
@@ -3861,13 +3873,16 @@ select {
   font-size: 24px;
   line-height: 140.02%;
   color: #000000;
+  margin-bottom: 20px;
 }
 @media (max-width: 750px) {
   .courses-page .promo .text-content {
     font-size: 16px;
+    margin-bottom: 0;
   }
 }
 .courses-page .promo .time-description {
+  margin-bottom: 20px;
   grid-area: time-description;
   flex-wrap: wrap;
   display: flex;
@@ -3880,6 +3895,7 @@ select {
 }
 @media (max-width: 750px) {
   .courses-page .promo .time-description {
+    margin-bottom: 0;
     column-gap: 50px;
     row-gap: 20px;
   }

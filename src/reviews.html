@@ -1,1529 +1,966 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('./__head.html', {'title': 'RB Reviews'})
-
-	<body>
-		@@include('./_header.html')
-		<main class="reviews__main reviews-page">
-			<div id="modal-comment" class="modal collapsed">
-				<div class="modal-bg"></div>
-				<div class="modal-window">
-					<div class="modal-header">
-						<p class="modal-name">Оставить комментарий</p>
-						<img
-							src="images/icons/IconClose.svg"
-							alt="X"
-							class="modal-close"
-						/>
-					</div>
-					<div class="modal-wrapper">
-						<input
-							type="text"
-							class="modal-input required"
-							placeholder="Имя*"
-						/>
-						<input
-							type="text"
-							class="modal-input required"
-							placeholder="E-mail*"
-						/>
-						<p class="modal-subtext">
-							Ваш адрес e-mail не будет опубликован
-						</p>
-						<textarea
-							class="modal-textarea required"
-							placeholder="Комментарий"
-						></textarea>
-						<p class="modal-subtext">
-							*Обязательные поля для заполнений
-						</p>
-					</div>
-					<button class="button modal-button">
-						Оставить комментарий
-					</button>
-				</div>
-			</div>
-			<div id="modal-review" class="modal collapsed">
-				<div class="modal-bg"></div>
-				<div class="modal-window">
-					<div class="modal-header">
-						<p class="modal-name">Оставить отзыв</p>
-						<img
-							src="images/icons/IconClose.svg"
-							alt="X"
-							class="modal-close"
-						/>
-					</div>
-					<div class="modal-wrapper">
-						<input
-							type="text"
-							class="modal-input required"
-							placeholder="Название курса*"
-						/>
-						<input
-							type="text"
-							class="modal-input required"
-							placeholder="Имя*"
-						/>
-						<input
-							type="text"
-							class="modal-input required"
-							placeholder="E-mail*"
-						/>
-						<p class="modal-subtext">
-							Ваш адрес e-mail не будет опубликован
-						</p>
-						<textarea
-							class="modal-textarea required"
-							placeholder="Комментарий"
-						></textarea>
-						<p class="modal-subtext">
-							*Обязательные поля для заполнений
-						</p>
-
-						<div class="ratings">
-							<div class="rate-wrapper empty">
-								<p class="rate-title">Cтоимость*</p>
-								<div id="price" class="rate">
-									<input
-										type="radio"
-										class="star15"
-										id="star15"
-										name="rate1"
-										value="5"
-									/>
-									<label for="star15" title="text"></label>
-									<input
-										type="radio"
-										class="star14"
-										id="star14"
-										name="rate1"
-										value="4"
-									/>
-									<label for="star14" title="text"></label>
-									<input
-										type="radio"
-										class="star13"
-										id="star13"
-										name="rate1"
-										value="3"
-									/>
-									<label for="star13" title="text"></label>
-									<input
-										type="radio"
-										class="star12"
-										id="star12"
-										name="rate1"
-										value="2"
-									/>
-									<label for="star12" title="text"></label>
-									<input
-										type="radio"
-										class="star11"
-										id="star11"
-										name="rate1"
-										value="1"
-									/>
-									<label for="star11" title="text"></label>
-								</div>
-							</div>
-							<div class="rate-wrapper empty">
-								<p class="rate-title">Подача материала*</p>
-								<div id="explanation" class="rate">
-									<input
-										type="radio"
-										class="star25"
-										id="star25"
-										name="rate2"
-										value="5"
-									/>
-									<label for="star25" title="text"></label>
-									<input
-										type="radio"
-										class="star24"
-										id="star24"
-										name="rate2"
-										value="4"
-									/>
-									<label for="star24" title="text"></label>
-									<input
-										type="radio"
-										class="star23"
-										id="star23"
-										name="rate2"
-										value="3"
-									/>
-									<label for="star23" title="text"></label>
-									<input
-										type="radio"
-										class="star22"
-										id="star22"
-										name="rate2"
-										value="2"
-									/>
-									<label for="star22" title="text"></label>
-									<input
-										type="radio"
-										class="star21"
-										id="star21"
-										name="rate2"
-										value="1"
-									/>
-									<label for="star21" title="text"></label>
-								</div>
-							</div>
-							<div class="rate-wrapper empty">
-								<p class="rate-title">Программа обучения*</p>
-								<div id="program" class="rate">
-									<input
-										type="radio"
-										class="star35"
-										id="star35"
-										name="rate3"
-										value="5"
-									/>
-									<label for="star35" title="text"></label>
-									<input
-										type="radio"
-										class="star34"
-										id="star34"
-										name="rate3"
-										value="4"
-									/>
-									<label for="star34" title="text"></label>
-									<input
-										type="radio"
-										class="star33"
-										id="star33"
-										name="rate3"
-										value="3"
-									/>
-									<label for="star33" title="text"></label>
-									<input
-										type="radio"
-										class="star32"
-										id="star32"
-										name="rate3"
-										value="2"
-									/>
-									<label for="star32" title="text"></label>
-									<input
-										type="radio"
-										class="star31"
-										id="star31"
-										name="rate3"
-										value="1"
-									/>
-									<label for="star31" title="text"></label>
-								</div>
-							</div>
-							<div class="rate-wrapper empty">
-								<p class="rate-title">Уровень организации*</p>
-								<div id="organization" class="rate">
-									<input
-										type="radio"
-										class="star45"
-										id="star45"
-										name="rate4"
-										value="5"
-									/>
-									<label for="star45" title="text"></label>
-									<input
-										type="radio"
-										class="star44"
-										id="star44"
-										name="rate4"
-										value="4"
-									/>
-									<label for="star44" title="text"></label>
-									<input
-										type="radio"
-										class="star43"
-										id="star43"
-										name="rate4"
-										value="3"
-									/>
-									<label for="star43" title="text"></label>
-									<input
-										type="radio"
-										class="star42"
-										id="star42"
-										name="rate4"
-										value="2"
-									/>
-									<label for="star42" title="text"></label>
-									<input
-										type="radio"
-										class="star41"
-										id="star41"
-										name="rate4"
-										value="1"
-									/>
-									<label for="star41" title="text"></label>
-								</div>
-							</div>
-						</div>
-
-						<div class="modal-textareas">
-							<textarea
-								class="modal-textarea sign"
-								placeholder="Плюсы"
-							></textarea>
-							<textarea
-								class="modal-textarea sign"
-								placeholder="Минусы"
-							></textarea>
-						</div>
-					</div>
-					<button class="button modal-button">Оставить отзыв</button>
-				</div>
-			</div>
-
-			<section class="breadcrumb">
-				<div class="container">
-					<ul class="breadcrumb__list">
-						<li class="breadcrumb__list-item">
-							<a class="breadcrumb__list-link" href="#">
-								Главная
-							</a>
-						</li>
-						<li class="breadcrumb__list-item">
-							<a class="breadcrumb__list-link" href="#">
-								SkillFactory
-							</a>
-						</li>
-						<li class="breadcrumb__list-item">
-							<a class="breadcrumb__list-link" href="#">
-								ОТзывы SkillFactory
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="page">
-				<div class="wrapper-h1 container">
-					<h1 class="title-h1">Отзывы SkillFactory</h1>
-					<button class="button">Сайт школы</button>
-				</div>
-
-				<div class="promo container">
-					<div class="text-content">
-						Школа является частью образовательной экосистемы Mail.ru
-						Group. Обучают цифровым профессиям с нуля учеников
-						любого возраста и без технического опыта,
-						специализируются на программировании, разработке,
-						аналитике данных.
-					</div>
-
-					<div class="school-banner">
-						<div class="head">
-							<img
-								src="images/head.svg"
-								alt="logo"
-								class="school-logo"
-							/>
-							<div class="wrapper">
-								<img
-									src="images/icons/cp-star.svg"
-									alt="star"
-									class="star"
-								/>
-								<span class="number">4.9</span>
-								<span class="subnumber">(5.0)</span>
-							</div>
-							<p class="quantity">122 отзыва</p>
-						</div>
-						<div class="bars">
-							<div class="bars-item">
-								<div class="bars-item-header">
-									<p class="text">Стоимость</p>
-									<p class="value">4.5</p>
-								</div>
-								<div class="diagram">
-									<div class="diagram value"></div>
-								</div>
-							</div>
-							<div class="bars-item">
-								<div class="bars-item-header">
-									<p class="text">Подача материала</p>
-									<p class="value">4.5</p>
-								</div>
-								<div class="diagram">
-									<div class="diagram value"></div>
-								</div>
-							</div>
-							<div class="bars-item">
-								<div class="bars-item-header">
-									<p class="text">Программа обучения</p>
-									<p class="value">4.5</p>
-								</div>
-								<div class="diagram">
-									<div class="diagram value"></div>
-								</div>
-							</div>
-							<div class="bars-item">
-								<div class="bars-item-header">
-									<p class="text">Уровень организации</p>
-									<p class="value">4.5</p>
-								</div>
-								<div class="diagram">
-									<div class="diagram value"></div>
-								</div>
-							</div>
-						</div>
-						<div class="links">
-							<a href="#" class="links-item">Промокоды</a>
-							<a href="#" class="links-item">Все курсы</a>
-						</div>
-					</div>
-					<div class="plus-minus">
-						<h3 class="title-h3">Плюсы и минусы SkillFactory</h3>
-
-						<div class="cards">
-							<div class="ratings">
-								<div class="item">
-									<div class="left">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<p class="number">5</p>
-										<p class="quantity">(120)</p>
-									</div>
-									<div class="right">
-										<div class="diagram">
-											<div
-												class="diagram value value-5"
-											></div>
-										</div>
-										<p class="value">90%</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="left">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<p class="number">4</p>
-										<p class="quantity">(10)</p>
-									</div>
-									<div class="right">
-										<div class="diagram">
-											<div
-												class="diagram value value-4"
-											></div>
-										</div>
-										<p class="value">8%</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="left">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<p class="number">3</p>
-										<p class="quantity">(1)</p>
-									</div>
-									<div class="right">
-										<div class="diagram">
-											<div
-												class="diagram value value-3"
-											></div>
-										</div>
-										<p class="value">1%</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="left">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<p class="number">2</p>
-										<p class="quantity">(0)</p>
-									</div>
-									<div class="right">
-										<div class="diagram">
-											<div
-												class="diagram value value-2"
-											></div>
-										</div>
-										<p class="value">0%</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="left">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<p class="number">1</p>
-										<p class="quantity">(1)</p>
-									</div>
-									<div class="right">
-										<div class="diagram">
-											<div
-												class="diagram value value-1"
-											></div>
-										</div>
-										<p class="value">1%</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="items">
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/plus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word">Плюсы</p>
-									</div>
-									<p class="text">
-										Опытные преподаватели. Много практики.
-										Гибкая систем оплаты. Можно получить
-										скидку на обучение. На
-										онлайн-конференциях есть чат, чтобы
-										задавать вопросы спикеру
-									</p>
-								</div>
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/minus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word red">Минусы</p>
-									</div>
-									<p class="text">
-										Слишком затянуто по времени. Сделайте
-										набор для тех у кого нулевые знания.
-										Большие группы. Могут пропустить вопрос.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="reviews" class="reviews container">
-					<h3 class="title-h2 container">
-						Отзывы выпускников о курсах SkillFactory
-					</h3>
-
-					<ul class="list-wrapper">
-						<li>
-							<a href="#" class="list-item active">Все</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Маркетинг</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Аналитика</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Разработка</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Дизайн</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Менеджмент</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Программирование</a>
-						</li>
-						<li>
-							<a href="#" class="list-item">Детям</a>
-						</li>
-					</ul>
-
-					<div class="mobile-flex">
-						<ul class="sort-wrapper">
-							<li id="sort" class="word">
-								Cортировать
-
-								<img
-									src="images/icons/icon-arrow-down.svg"
-									alt="V"
-									class="arrow"
-								/>
-							</li>
-							<li>
-								<a href="#" class="sort-item active"
-									>Сначала новые</a
-								>
-							</li>
-							<li>
-								<a href="#" class="sort-item">Популярные</a>
-							</li>
-							<li>
-								<a href="#" class="sort-item">Положительные</a>
-							</li>
-							<li>
-								<a href="#" class="sort-item">Отрицательные</a>
-							</li>
-						</ul>
-						<p class="sortby"></p>
-					</div>
-
-					<div class="cards">
-						<div class="card">
-							<div class="author">
-								<img
-									src="images/avatar.png"
-									alt="star"
-									class="avatar"
-								/>
-								<div class="numbers">
-									<p class="date">06.05.2022</p>
-									<div class="card-ratings">
-										<div class="wrapper">
-											<img
-												src="images/icons/cp-star.svg"
-												alt="star"
-												class="star"
-											/>
-											<p class="number">4.9</p>
-										</div>
-
-										<p class="subnumber">из (5.0)</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="thumbs">
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Like.svg"
-										alt="like"
-										class="image"
-									/>
-									<span class="value">4</span>
-								</div>
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Deslike.svg"
-										alt="dislike"
-										class="image"
-									/>
-								</div>
-							</div>
-
-							<div class="names">
-								<p class="author-name">Александр</p>
-								<h4 class="course-name">
-									курс “Профессия Fullstack-разработчик”
-								</h4>
-							</div>
-
-							<div class="text-content">
-								<p class="text-item">
-									В SkillFactory шел с четкой целью — хочу
-									стать айтишником. С самого начала я очень
-									усердно занимался и даже шел впереди
-									основного графика. Сложность модулей со
-									временем нарастала, а вот мое усердие
-									поослабло. Меня начали терзать сомнения
-									насчет того, не погорячился ли я с покупкой
-									всего курса целиком.
-								</p>
-								<p class="text-item">&nbsp;</p>
-								<p class="text-item toggle collapsed">
-									В некотором унынии я провел пару месяцев и
-									не учился Далеко-далеко за словесными горами
-									в стране гласных и согласных живут, рыбные
-									тексты.
-								</p>
-
-								<span class="open-review">
-									<span class="opened-review"
-										>Развернуть отзыв</span
-									>
-									<span class="collapsed-review"
-										>Свернуть отзыв</span
-									>
-								</span>
-							</div>
-
-							<div class="plus-minus">
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/plus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word">Плюсы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Опытные преподаватели. Много
-											практики. Гибкая систем оплаты.
-										</p>
-										<p class="text-item">
-											Можно получить скидку на обучение.
-										</p>
-										<p class="text-item">
-											На онлайн-конференциях есть чат,
-											чтобы задавать вопросы спикеру
-										</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/minus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word red">Минусы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Слишком затянуто по времени.
-											Сделайте набор для тех у кого
-											нулевые знания.
-										</p>
-										<p class="text-item">
-											Большие группы. Могут пропустить
-											вопрос.
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<p class="add-comment">Прокомментировать</p>
-
-							<div class="comments collapsed">
-								<p class="show-comments">
-									<span class="arrow">&#8594;</span>
-									<span class="number"
-										>3
-										<span class="text"> комментария </span>
-									</span>
-								</p>
-
-								<div class="comment">
-									<img
-										src="images/avatar.png"
-										alt="avatar"
-										class="avatar"
-									/>
-									<div class="wrapper">
-										<div class="top">
-											<p class="item">Георгий1</p>
-											<p class="item">24.04.2022</p>
-										</div>
-										<div class="text">
-											<p class="text-item">
-												В SkillFactory шел с четкой
-												целью — хочу стать айтишником. С
-												самого начала я очень усердно
-												занимался и даже шел впереди
-												основного графика. Сложность
-												модулей со временем нарастала, а
-												вот мое усердие поослабло. Меня
-												начали терзать сомнения насчет
-												того, не погорячился ли я с
-												покупкой всего курса целиком.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="comment">
-									<img
-										src="images/avatar.png"
-										alt="avatar"
-										class="avatar"
-									/>
-									<div class="wrapper">
-										<div class="top">
-											<p class="item">Георгий2</p>
-											<p class="item">24.04.2022</p>
-										</div>
-										<div class="text">
-											<p class="text-item">
-												В SkillFactory шел с четкой
-												целью — хочу стать айтишником. С
-												самого начала я очень усердно
-												занимался и даже шел впереди
-												основного графика. Сложность
-												модулей со временем нарастала, а
-												вот мое усердие поослабло. Меня
-												начали терзать сомнения насчет
-												того, не погорячился ли я с
-												покупкой всего курса целиком.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<div class="comment">
-									<img
-										src="images/avatar.png"
-										alt="avatar"
-										class="avatar"
-									/>
-									<div class="wrapper">
-										<div class="top">
-											<p class="item">Георгий3</p>
-											<p class="item">24.04.2022</p>
-										</div>
-										<div class="text">
-											<p class="text-item">
-												В SkillFactory шел с четкой
-												целью — хочу стать айтишником. С
-												самого начала я очень усердно
-												занимался и даже шел впереди
-												основного графика. Сложность
-												модулей со временем нарастала, а
-												вот мое усердие поослабло. Меня
-												начали терзать сомнения насчет
-												того, не погорячился ли я с
-												покупкой всего курса целиком.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<p class="hide-comments">Скрыть комментарии</p>
-							</div>
-						</div>
-						<div class="card">
-							<div class="author">
-								<img
-									src="images/avatar.png"
-									alt="star"
-									class="avatar"
-								/>
-								<div class="numbers">
-									<p class="date">11.02.2023</p>
-									<div class="card-ratings">
-										<div class="wrapper">
-											<img
-												src="images/icons/cp-star.svg"
-												alt="star"
-												class="star"
-											/>
-											<p class="number">4.9</p>
-										</div>
-
-										<p class="subnumber">из (5.0)</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="thumbs">
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Like.svg"
-										alt="like"
-										class="image"
-									/>
-									<span class="value">12</span>
-								</div>
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Deslike.svg"
-										alt="dislike"
-										class="image"
-									/>
-									<span class="value grey">2</span>
-								</div>
-							</div>
-
-							<div class="names">
-								<p class="author-name">Иван</p>
-								<h4 class="course-name">
-									курс “Профессия Fullstack-разработчик”
-								</h4>
-							</div>
-
-							<div class="text-content">
-								<p class="text-item">
-									В SkillFactory шел с четкой целью — хочу
-									стать айтишником. С самого начала я очень
-									усердно занимался и даже шел впереди
-									основного графика. Сложность модулей со
-									временем нарастала, а вот мое усердие
-									поослабло. Меня начали терзать сомнения
-									насчет того, не погорячился ли я с покупкой
-									всего курса целиком.
-								</p>
-								<p class="text-item">&nbsp;</p>
-								<p class="text-item toggle collapsed">
-									В некотором унынии я провел пару месяцев и
-									не учился Далеко-далеко за словесными горами
-									в стране гласных и согласных живут, рыбные
-									тексты.
-								</p>
-
-								<span class="open-review">
-									<span class="opened-review"
-										>Развернуть отзыв</span
-									>
-									<span class="collapsed-review"
-										>Свернуть отзыв</span
-									>
-								</span>
-							</div>
-
-							<div class="plus-minus">
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/plus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word">Плюсы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Опытные преподаватели. Много
-											практики. Гибкая систем оплаты.
-										</p>
-										<p class="text-item">
-											Можно получить скидку на обучение.
-										</p>
-										<p class="text-item">
-											На онлайн-конференциях есть чат,
-											чтобы задавать вопросы спикеру
-										</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/minus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word red">Минусы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Слишком затянуто по времени.
-											Сделайте набор для тех у кого
-											нулевые знания.
-										</p>
-										<p class="text-item">
-											Большие группы. Могут пропустить
-											вопрос.
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<p class="add-comment">Прокомментировать</p>
-
-							<div class="comments">
-								<p class="show-comments">
-									<span class="arrow">&#8594;</span>
-									<span class="number"
-										>1
-										<span class="text"> комментарий </span>
-									</span>
-								</p>
-
-								<div class="comment">
-									<img
-										src="images/avatar.png"
-										alt="avatar"
-										class="avatar"
-									/>
-									<div class="wrapper">
-										<div class="top">
-											<p class="item">Георгий</p>
-											<p class="item">24.04.2022</p>
-										</div>
-										<div class="text">
-											<p class="text-item">
-												В SkillFactory шел с четкой
-												целью — хочу стать айтишником. С
-												самого начала я очень усердно
-												занимался и даже шел впереди
-												основного графика. Сложность
-												модулей со временем нарастала, а
-												вот мое усердие поослабло. Меня
-												начали терзать сомнения насчет
-												того, не погорячился ли я с
-												покупкой всего курса целиком.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<p class="hide-comments">Скрыть комментарии</p>
-							</div>
-						</div>
-						<div class="card">
-							<div class="author">
-								<img
-									src="images/avatar.png"
-									alt="star"
-									class="avatar"
-								/>
-								<div class="numbers">
-									<p class="date">06.05.2022</p>
-									<div class="card-ratings">
-										<div class="wrapper">
-											<img
-												src="images/icons/cp-star.svg"
-												alt="star"
-												class="star"
-											/>
-											<p class="number">4.9</p>
-										</div>
-
-										<p class="subnumber">из (5.0)</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="thumbs">
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Like.svg"
-										alt="like"
-										class="image"
-									/>
-									<span class="value">8</span>
-								</div>
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Deslike.svg"
-										alt="dislike"
-										class="image"
-									/>
-								</div>
-							</div>
-
-							<div class="names">
-								<p class="author-name">Дарья</p>
-								<h4 class="course-name">
-									курс “Профессия Fullstack-разработчик”
-								</h4>
-							</div>
-
-							<div class="text-content">
-								<p class="text-item">
-									В SkillFactory шла с четкой целью — хочу
-									стать айтишником. С самого начала я очень
-									усердно занималась и даже шла впереди
-									основного графика. Сложность модулей со
-									временем нарастала, а вот мое усердие
-									поослабло. Меня начали терзать сомнения
-									насчет того, не погорячилась ли я с покупкой
-									всего курса целиком.
-								</p>
-								<p class="text-item">&nbsp;</p>
-								<p class="text-item toggle collapsed">
-									В некотором унынии я провела пару месяцев и
-									не училась. Далеко-далеко за словесными
-									горами в стране гласных и согласных живут,
-									рыбные тексты.
-								</p>
-
-								<span class="open-review">
-									<span class="opened-review"
-										>Развернуть отзыв</span
-									>
-									<span class="collapsed-review"
-										>Свернуть отзыв</span
-									>
-								</span>
-							</div>
-
-							<div class="plus-minus">
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/plus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word">Плюсы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Опытные преподаватели. Много
-											практики. Гибкая систем оплаты.
-										</p>
-										<p class="text-item">
-											Можно получить скидку на обучение.
-										</p>
-										<p class="text-item">
-											На онлайн-конференциях есть чат,
-											чтобы задавать вопросы спикеру
-										</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/minus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word red">Минусы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Слишком затянуто по времени.
-											Сделайте набор для тех у кого
-											нулевые знания.
-										</p>
-										<p class="text-item">
-											Большие группы. Могут пропустить
-											вопрос.
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<p class="add-comment">Прокомментировать</p>
-						</div>
-						<div class="card collapsed">
-							<div class="author">
-								<img
-									src="images/avatar.png"
-									alt="star"
-									class="avatar"
-								/>
-								<div class="numbers">
-									<p class="date">11.02.2023</p>
-									<div class="card-ratings">
-										<div class="wrapper">
-											<img
-												src="images/icons/cp-star.svg"
-												alt="star"
-												class="star"
-											/>
-											<p class="number">4.9</p>
-										</div>
-
-										<p class="subnumber">из (5.0)</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="thumbs">
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Like.svg"
-										alt="like"
-										class="image"
-									/>
-									<span class="value">12</span>
-								</div>
-								<div class="image-wrapper">
-									<img
-										src="images/icons/Deslike.svg"
-										alt="dislike"
-										class="image"
-									/>
-									<span class="value grey">2</span>
-								</div>
-							</div>
-
-							<div class="names">
-								<p class="author-name">Иван</p>
-								<h4 class="course-name">
-									курс “Профессия Fullstack-разработчик”
-								</h4>
-							</div>
-
-							<div class="text-content">
-								<p class="text-item">
-									В SkillFactory шел с четкой целью — хочу
-									стать айтишником. С самого начала я очень
-									усердно занимался и даже шел впереди
-									основного графика. Сложность модулей со
-									временем нарастала, а вот мое усердие
-									поослабло. Меня начали терзать сомнения
-									насчет того, не погорячился ли я с покупкой
-									всего курса целиком.
-								</p>
-								<p class="text-item">&nbsp;</p>
-								<p class="text-item toggle collapsed">
-									В некотором унынии я провел пару месяцев и
-									не учился Далеко-далеко за словесными горами
-									в стране гласных и согласных живут, рыбные
-									тексты.
-								</p>
-
-								<span class="open-review">
-									<span class="opened-review"
-										>Развернуть отзыв</span
-									>
-									<span class="collapsed-review"
-										>Свернуть отзыв</span
-									>
-								</span>
-							</div>
-
-							<div class="plus-minus">
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/plus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word">Плюсы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Опытные преподаватели. Много
-											практики. Гибкая систем оплаты.
-										</p>
-										<p class="text-item">
-											Можно получить скидку на обучение.
-										</p>
-										<p class="text-item">
-											На онлайн-конференциях есть чат,
-											чтобы задавать вопросы спикеру
-										</p>
-									</div>
-								</div>
-								<div class="item">
-									<div class="sign">
-										<img
-											src="images/icons/minus.svg"
-											alt="plus"
-											class="image"
-										/>
-										<p class="word red">Минусы</p>
-									</div>
-									<div class="text">
-										<p class="text-item">
-											Слишком затянуто по времени.
-											Сделайте набор для тех у кого
-											нулевые знания.
-										</p>
-										<p class="text-item">
-											Большие группы. Могут пропустить
-											вопрос.
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<p class="add-comment">Прокомментировать</p>
-
-							<div class="comments">
-								<p class="show-comments">
-									<span class="arrow">&#8594;</span>
-									<span class="number"
-										>1
-										<span class="text"> комментарий </span>
-									</span>
-								</p>
-
-								<div class="comment">
-									<img
-										src="images/avatar.png"
-										alt="avatar"
-										class="avatar"
-									/>
-									<div class="wrapper">
-										<div class="top">
-											<p class="item">Георгий</p>
-											<p class="item">24.04.2022</p>
-										</div>
-										<div class="text">
-											<p class="text-item">
-												В SkillFactory шел с четкой
-												целью — хочу стать айтишником. С
-												самого начала я очень усердно
-												занимался и даже шел впереди
-												основного графика. Сложность
-												модулей со временем нарастала, а
-												вот мое усердие поослабло. Меня
-												начали терзать сомнения насчет
-												того, не погорячился ли я с
-												покупкой всего курса целиком.
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<p class="hide-comments">Скрыть комментарии</p>
-							</div>
-						</div>
-					</div>
-					<div class="buttons">
-						<button id="add-review" class="button">
-							Оставить отзыв
-						</button>
-						<button id="more-reviews" class="button reverse">
-							Еще отзывы
-						</button>
-					</div>
-				</div>
-
-				<div id="promocode" class="promocode">
-					<p class="from">от&nbsp;Skillfactory</p>
-					<p class="text">промокод</p>
-					<p class="text second">на&nbsp;скидку</p>
-					<button class="get">Получить</button>
-					<img
-						src="images/icons/percent.svg"
-						alt="%"
-						class="percent"
-					/>
-				</div>
-
-				<div class="other-schools container">
-					<h3 class="title-h2">Отзывы о других школах</h3>
-
-					<div class="cards">
-						<div class="card">
-							<a href="#" class="top">
-								<img
-									src="images/LogoSchool.png"
-									alt="logo"
-									class="school-logo"
-								/>
-								<div class="wrapper">
-									<div class="star-wrapper">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<span class="number">4.9</span>
-									</div>
-
-									<span class="subnumber">из (5.0)</span>
-								</div>
-							</a>
-
-							<div class="middle">
-								<h4 class="school-name">
-									<a href="#"> Онлайн-школа Skillbox </a>
-								</h4>
-								<p class="text">
-									Одна из самых масштабных онлайн-школ,
-									большой выбор образовательных программ.
-									Преподаватели школы — профессионалы в своей
-									области. Заинтересованы в получении
-									актуальных знаний и трудоустройстве
-									выпускников.
-								</p>
-							</div>
-							<div class="bottom">
-								<a href="#">456 отзывов</a>
-								<a href="#">Промокод</a>
-							</div>
-						</div>
-						<div class="card">
-							<a href="#" class="top">
-								<img
-									src="images/LogoSchool.png"
-									alt="logo"
-									class="school-logo"
-								/>
-								<div class="wrapper">
-									<div class="star-wrapper">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<span class="number">4.9</span>
-									</div>
-
-									<span class="subnumber">из (5.0)</span>
-								</div>
-							</a>
-
-							<div class="middle">
-								<h4 class="school-name">
-									<a href="#"> Онлайн-школа Skillbox </a>
-								</h4>
-								<p class="text">
-									Одна из самых масштабных онлайн-школ,
-									большой выбор образовательных программ.
-									Преподаватели школы — профессионалы в своей
-									области. Заинтересованы в получении
-									актуальных знаний и трудоустройстве
-									выпускников.
-								</p>
-							</div>
-							<div class="bottom">
-								<a href="#">456 отзывов</a>
-								<a href="#">Промокод</a>
-							</div>
-						</div>
-						<div class="card">
-							<a href="#" class="top">
-								<img
-									src="images/LogoSchool.png"
-									alt="logo"
-									class="school-logo"
-								/>
-								<div class="wrapper">
-									<div class="star-wrapper">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<span class="number">4.9</span>
-									</div>
-
-									<span class="subnumber">из (5.0)</span>
-								</div>
-							</a>
-
-							<div class="middle">
-								<h4 class="school-name">
-									<a href="#"> Онлайн-школа Skillbox </a>
-								</h4>
-								<p class="text">
-									Одна из самых масштабных онлайн-школ,
-									большой выбор образовательных программ.
-									Преподаватели школы — профессионалы в своей
-									области. Заинтересованы в получении
-									актуальных знаний и трудоустройстве
-									выпускников.
-								</p>
-							</div>
-							<div class="bottom">
-								<a href="#">456 отзывов</a>
-								<a href="#">Промокод</a>
-							</div>
-						</div>
-						<div class="card toggle collapsed">
-							<a href="#" class="top">
-								<img
-									src="images/LogoSchool.png"
-									alt="logo"
-									class="school-logo"
-								/>
-								<div class="wrapper">
-									<div class="star-wrapper">
-										<img
-											src="images/icons/cp-star.svg"
-											alt="star"
-											class="star"
-										/>
-										<span class="number">4.9</span>
-									</div>
-
-									<span class="subnumber">из (5.0)</span>
-								</div>
-							</a>
-
-							<div class="middle">
-								<h4 class="school-name">
-									<a href="#"> Онлайн-школа Skillbox </a>
-								</h4>
-								<p class="text">
-									Одна из самых масштабных онлайн-школ,
-									большой выбор образовательных программ.
-									Преподаватели школы — профессионалы в своей
-									области. Заинтересованы в получении
-									актуальных знаний и трудоустройстве
-									выпускников.
-								</p>
-							</div>
-							<div class="bottom">
-								<a href="#">456 отзывов</a>
-								<a href="#">Промокод</a>
-							</div>
-						</div>
-					</div>
-
-					<p class="show-more">
-						<span class="opened-show-more">Показать еще</span>
-						<span class="collapsed-show-more">Скрыть</span>
-					</p>
-				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__top">
-					<ul class="footer__menu">
-						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="#">О наc</a>
-						</li>
-						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="#">Контакты</a>
-						</li>
-						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="#">
-								Отзывы о школах</a
-							>
-						</li>
-					</ul>
-					<ul class="footer__social">
-						<li class="footer__menu-item">
-							<a href="" class="footer__social-item telegram"></a>
-						</li>
-						<li class="footer__menu-item">
-							<a
-								href=""
-								class="footer__social-item vkontakte"
-							></a>
-						</li>
-						<li class="footer__menu-item">
-							<a href="" class="footer__social-item twitter"> </a>
-						</li>
-						<li class="footer__menu-item">
-							<a href="" class="footer__social-item yandex"></a>
-						</li>
-						<li class="footer__menu-item">
-							<a
-								href=""
-								class="footer__social-item odnoklassniki"
-							></a>
-						</li>
-						<li class="footer__menu-item">
-							<a href="" class="footer__social-item tiktok"> </a>
-						</li>
-						<li class="footer__menu-item">
-							<a href="" class="footer__social-item viber"> </a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer__caption">
-					<p class="footer__caption-text">
-						Данные предоставлены партнером
-						<a
-							class="caption__link"
-							href="https://coursator.online/"
-							>coursator.online</a
-						>
-					</p>
-				</div>
-				<div class="footer__bottom">
-					<div class="footer__copyright">© 2022 coursator.online</div>
-					<a class="footer__text" href=""
-						>Политика конфиденциальности</a
-					>
-					<a class="footer__text" href=""
-						>Пользовательское соглашение</a
-					>
-				</div>
-			</div>
-		</footer>
-		@@include('./__scripts.html')
-		<script src="./js/courses-page.js"></script>
-	</body>
+  @@include('./__head.html', {'title': 'RB Reviews'})
+
+  <body>
+    @@include('./_header.html')
+    <main class="reviews__main reviews-page">
+      <div id="modal-comment" class="modal collapsed">
+        <div class="modal-bg"></div>
+        <div class="modal-window">
+          <div class="modal-header">
+            <p class="modal-name">Оставить комментарий</p>
+            <img src="images/icons/IconClose.svg" alt="X" class="modal-close" />
+          </div>
+          <div class="modal-wrapper">
+            <input type="text" class="modal-input required" placeholder="Имя*" />
+            <input type="text" class="modal-input required" placeholder="E-mail*" />
+            <p class="modal-subtext">Ваш адрес e-mail не будет опубликован</p>
+            <textarea class="modal-textarea required" placeholder="Комментарий"></textarea>
+            <p class="modal-subtext">*Обязательные поля для заполнений</p>
+          </div>
+          <button class="button modal-button">Оставить комментарий</button>
+        </div>
+      </div>
+      <div id="modal-review" class="modal collapsed">
+        <div class="modal-bg"></div>
+        <div class="modal-window">
+          <div class="modal-header">
+            <p class="modal-name">Оставить отзыв</p>
+            <img src="images/icons/IconClose.svg" alt="X" class="modal-close" />
+          </div>
+          <div class="modal-wrapper">
+            <div class="custom-select custom-select-course disabled">
+              <img src="./images/arrow-down.svg" alt="↓" class="arrow" />
+              <div class="select-selected">Выберите курс</div>
+              <div class="select-items">
+                <div class="select-item" data-value="1">Аналитика</div>
+                <div class="select-item" data-value="2">Бизнес и финансы</div>
+                <div class="select-item" data-value="3">Детям</div>
+                <div class="select-item" data-value="4">Дизайн</div>
+                <div class="select-item" data-value="5">Иностранные языки</div>
+                <div class="select-item" data-value="6">Маркетинг</div>
+                <div class="select-item" data-value="7">Кройки и шитья</div>
+                <div class="select-item" data-value="8">Валют</div>
+                <div class="select-item" data-value="9">Успешного успеха</div>
+              </div>
+            </div>
+
+            <input type="text" class="modal-input required" placeholder="Название курса*" />
+            <input type="text" class="modal-input required" placeholder="Имя*" />
+            <input type="text" class="modal-input required" placeholder="E-mail*" />
+            <p class="modal-subtext">Ваш адрес e-mail не будет опубликован</p>
+            <textarea class="modal-textarea required" placeholder="Комментарий"></textarea>
+            <p class="modal-subtext">*Обязательные поля для заполнений</p>
+
+            <div class="ratings">
+              <div class="rate-wrapper empty">
+                <p class="rate-title">Cтоимость*</p>
+                <div id="price" class="rate">
+                  <input type="radio" class="star15" id="star15" name="rate1" value="5" />
+                  <label for="star15" title="text"></label>
+                  <input type="radio" class="star14" id="star14" name="rate1" value="4" />
+                  <label for="star14" title="text"></label>
+                  <input type="radio" class="star13" id="star13" name="rate1" value="3" />
+                  <label for="star13" title="text"></label>
+                  <input type="radio" class="star12" id="star12" name="rate1" value="2" />
+                  <label for="star12" title="text"></label>
+                  <input type="radio" class="star11" id="star11" name="rate1" value="1" />
+                  <label for="star11" title="text"></label>
+                </div>
+              </div>
+              <div class="rate-wrapper empty">
+                <p class="rate-title">Подача материала*</p>
+                <div id="explanation" class="rate">
+                  <input type="radio" class="star25" id="star25" name="rate2" value="5" />
+                  <label for="star25" title="text"></label>
+                  <input type="radio" class="star24" id="star24" name="rate2" value="4" />
+                  <label for="star24" title="text"></label>
+                  <input type="radio" class="star23" id="star23" name="rate2" value="3" />
+                  <label for="star23" title="text"></label>
+                  <input type="radio" class="star22" id="star22" name="rate2" value="2" />
+                  <label for="star22" title="text"></label>
+                  <input type="radio" class="star21" id="star21" name="rate2" value="1" />
+                  <label for="star21" title="text"></label>
+                </div>
+              </div>
+              <div class="rate-wrapper empty">
+                <p class="rate-title">Программа обучения*</p>
+                <div id="program" class="rate">
+                  <input type="radio" class="star35" id="star35" name="rate3" value="5" />
+                  <label for="star35" title="text"></label>
+                  <input type="radio" class="star34" id="star34" name="rate3" value="4" />
+                  <label for="star34" title="text"></label>
+                  <input type="radio" class="star33" id="star33" name="rate3" value="3" />
+                  <label for="star33" title="text"></label>
+                  <input type="radio" class="star32" id="star32" name="rate3" value="2" />
+                  <label for="star32" title="text"></label>
+                  <input type="radio" class="star31" id="star31" name="rate3" value="1" />
+                  <label for="star31" title="text"></label>
+                </div>
+              </div>
+              <div class="rate-wrapper empty">
+                <p class="rate-title">Уровень организации*</p>
+                <div id="organization" class="rate">
+                  <input type="radio" class="star45" id="star45" name="rate4" value="5" />
+                  <label for="star45" title="text"></label>
+                  <input type="radio" class="star44" id="star44" name="rate4" value="4" />
+                  <label for="star44" title="text"></label>
+                  <input type="radio" class="star43" id="star43" name="rate4" value="3" />
+                  <label for="star43" title="text"></label>
+                  <input type="radio" class="star42" id="star42" name="rate4" value="2" />
+                  <label for="star42" title="text"></label>
+                  <input type="radio" class="star41" id="star41" name="rate4" value="1" />
+                  <label for="star41" title="text"></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-textareas">
+              <textarea class="modal-textarea sign" placeholder="Плюсы"></textarea>
+              <textarea class="modal-textarea sign" placeholder="Минусы"></textarea>
+            </div>
+          </div>
+          <button class="button modal-button">Оставить отзыв</button>
+        </div>
+      </div>
+
+      <section class="breadcrumb">
+        <div class="container">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__list-item">
+              <a class="breadcrumb__list-link" href="#"> Главная </a>
+            </li>
+            <li class="breadcrumb__list-item">
+              <a class="breadcrumb__list-link" href="#"> SkillFactory </a>
+            </li>
+            <li class="breadcrumb__list-item">
+              <a class="breadcrumb__list-link" href="#"> ОТзывы SkillFactory </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="page">
+        <div class="wrapper-h1 container">
+          <h1 class="title-h1">Отзывы SkillFactory</h1>
+          <button class="button">Сайт школы</button>
+        </div>
+
+        <div class="promo container">
+          <div class="text-content">
+            Школа является частью образовательной экосистемы Mail.ru Group. Обучают цифровым профессиям с нуля учеников любого возраста и без технического
+            опыта, специализируются на программировании, разработке, аналитике данных.
+          </div>
+
+          <div class="school-banner">
+            <div class="head">
+              <img src="images/head.svg" alt="logo" class="school-logo" />
+              <div class="wrapper">
+                <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                <span class="number">4.9</span>
+                <span class="subnumber">(5.0)</span>
+              </div>
+              <p class="quantity">122 отзыва</p>
+            </div>
+            <div class="bars">
+              <div class="bars-item">
+                <div class="bars-item-header">
+                  <p class="text">Стоимость</p>
+                  <p class="value">4.5</p>
+                </div>
+                <div class="diagram">
+                  <div class="diagram value"></div>
+                </div>
+              </div>
+              <div class="bars-item">
+                <div class="bars-item-header">
+                  <p class="text">Подача материала</p>
+                  <p class="value">4.5</p>
+                </div>
+                <div class="diagram">
+                  <div class="diagram value"></div>
+                </div>
+              </div>
+              <div class="bars-item">
+                <div class="bars-item-header">
+                  <p class="text">Программа обучения</p>
+                  <p class="value">4.5</p>
+                </div>
+                <div class="diagram">
+                  <div class="diagram value"></div>
+                </div>
+              </div>
+              <div class="bars-item">
+                <div class="bars-item-header">
+                  <p class="text">Уровень организации</p>
+                  <p class="value">4.5</p>
+                </div>
+                <div class="diagram">
+                  <div class="diagram value"></div>
+                </div>
+              </div>
+            </div>
+            <div class="links">
+              <a href="#" class="links-item">Промокоды</a>
+              <a href="#" class="links-item">Все курсы</a>
+            </div>
+          </div>
+          <div class="plus-minus">
+            <h3 class="title-h3">Плюсы и минусы SkillFactory</h3>
+
+            <div class="cards">
+              <div class="ratings">
+                <div class="item">
+                  <div class="left">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <p class="number">5</p>
+                    <p class="quantity">(120)</p>
+                  </div>
+                  <div class="right">
+                    <div class="diagram">
+                      <div class="diagram value value-5"></div>
+                    </div>
+                    <p class="value">90%</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="left">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <p class="number">4</p>
+                    <p class="quantity">(10)</p>
+                  </div>
+                  <div class="right">
+                    <div class="diagram">
+                      <div class="diagram value value-4"></div>
+                    </div>
+                    <p class="value">8%</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="left">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <p class="number">3</p>
+                    <p class="quantity">(1)</p>
+                  </div>
+                  <div class="right">
+                    <div class="diagram">
+                      <div class="diagram value value-3"></div>
+                    </div>
+                    <p class="value">1%</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="left">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <p class="number">2</p>
+                    <p class="quantity">(0)</p>
+                  </div>
+                  <div class="right">
+                    <div class="diagram">
+                      <div class="diagram value value-2"></div>
+                    </div>
+                    <p class="value">0%</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="left">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <p class="number">1</p>
+                    <p class="quantity">(1)</p>
+                  </div>
+                  <div class="right">
+                    <div class="diagram">
+                      <div class="diagram value value-1"></div>
+                    </div>
+                    <p class="value">1%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="items">
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/plus.svg" alt="plus" class="image" />
+                    <p class="word">Плюсы</p>
+                  </div>
+                  <p class="text">
+                    Опытные преподаватели. Много практики. Гибкая систем оплаты. Можно получить скидку на обучение. На онлайн-конференциях есть чат, чтобы
+                    задавать вопросы спикеру
+                  </p>
+                </div>
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/minus.svg" alt="plus" class="image" />
+                    <p class="word red">Минусы</p>
+                  </div>
+                  <p class="text">Слишком затянуто по времени. Сделайте набор для тех у кого нулевые знания. Большие группы. Могут пропустить вопрос.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="reviews" class="reviews container">
+          <h3 class="title-h2 container">Отзывы выпускников о курсах SkillFactory</h3>
+
+          <ul class="list-wrapper">
+            <li>
+              <a href="#" class="list-item active">Все</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Маркетинг</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Аналитика</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Разработка</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Дизайн</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Менеджмент</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Программирование</a>
+            </li>
+            <li>
+              <a href="#" class="list-item">Детям</a>
+            </li>
+          </ul>
+
+          <div class="mobile-flex">
+            <ul class="sort-wrapper">
+              <li id="sort" class="word">
+                Cортировать
+
+                <img src="images/icons/icon-arrow-down.svg" alt="V" class="arrow" />
+              </li>
+              <li>
+                <a href="#" class="sort-item active">Сначала новые</a>
+              </li>
+              <li>
+                <a href="#" class="sort-item">Популярные</a>
+              </li>
+              <li>
+                <a href="#" class="sort-item">Положительные</a>
+              </li>
+              <li>
+                <a href="#" class="sort-item">Отрицательные</a>
+              </li>
+            </ul>
+            <p class="sortby"></p>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <div class="author">
+                <img src="images/avatar.png" alt="star" class="avatar" />
+                <div class="numbers">
+                  <p class="date">06.05.2022</p>
+                  <div class="card-ratings">
+                    <div class="wrapper">
+                      <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                      <p class="number">4.9</p>
+                    </div>
+
+                    <p class="subnumber">из (5.0)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="thumbs">
+                <div class="image-wrapper">
+                  <img src="images/icons/Like.svg" alt="like" class="image" />
+                  <span class="value">4</span>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/icons/Deslike.svg" alt="dislike" class="image" />
+                </div>
+              </div>
+
+              <div class="names">
+                <p class="author-name">Александр</p>
+                <h4 class="course-name">курс “Профессия Fullstack-разработчик”</h4>
+              </div>
+
+              <div class="text-content">
+                <p class="text-item">
+                  В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного графика.
+                  Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился ли я с покупкой
+                  всего курса целиком.
+                </p>
+                <p class="text-item">&nbsp;</p>
+                <p class="text-item toggle collapsed">
+                  В некотором унынии я провел пару месяцев и не учился Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.
+                </p>
+
+                <span class="open-review">
+                  <span class="opened-review">Развернуть отзыв</span>
+                  <span class="collapsed-review">Свернуть отзыв</span>
+                </span>
+              </div>
+
+              <div class="plus-minus">
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/plus.svg" alt="plus" class="image" />
+                    <p class="word">Плюсы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Опытные преподаватели. Много практики. Гибкая систем оплаты.</p>
+                    <p class="text-item">Можно получить скидку на обучение.</p>
+                    <p class="text-item">На онлайн-конференциях есть чат, чтобы задавать вопросы спикеру</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/minus.svg" alt="plus" class="image" />
+                    <p class="word red">Минусы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Слишком затянуто по времени. Сделайте набор для тех у кого нулевые знания.</p>
+                    <p class="text-item">Большие группы. Могут пропустить вопрос.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="add-comment">Прокомментировать</p>
+
+              <div class="comments collapsed">
+                <p class="show-comments">
+                  <span class="arrow">&#8594;</span>
+                  <span class="number"
+                    >3
+                    <span class="text"> комментария </span>
+                  </span>
+                </p>
+
+                <div class="comment">
+                  <img src="images/avatar.png" alt="avatar" class="avatar" />
+                  <div class="wrapper">
+                    <div class="top">
+                      <p class="item">Георгий1</p>
+                      <p class="item">24.04.2022</p>
+                    </div>
+                    <div class="text">
+                      <p class="text-item">
+                        В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного
+                        графика. Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился
+                        ли я с покупкой всего курса целиком.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comment">
+                  <img src="images/avatar.png" alt="avatar" class="avatar" />
+                  <div class="wrapper">
+                    <div class="top">
+                      <p class="item">Георгий2</p>
+                      <p class="item">24.04.2022</p>
+                    </div>
+                    <div class="text">
+                      <p class="text-item">
+                        В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного
+                        графика. Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился
+                        ли я с покупкой всего курса целиком.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comment">
+                  <img src="images/avatar.png" alt="avatar" class="avatar" />
+                  <div class="wrapper">
+                    <div class="top">
+                      <p class="item">Георгий3</p>
+                      <p class="item">24.04.2022</p>
+                    </div>
+                    <div class="text">
+                      <p class="text-item">
+                        В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного
+                        графика. Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился
+                        ли я с покупкой всего курса целиком.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="hide-comments">Скрыть комментарии</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="author">
+                <img src="images/avatar.png" alt="star" class="avatar" />
+                <div class="numbers">
+                  <p class="date">11.02.2023</p>
+                  <div class="card-ratings">
+                    <div class="wrapper">
+                      <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                      <p class="number">4.9</p>
+                    </div>
+
+                    <p class="subnumber">из (5.0)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="thumbs">
+                <div class="image-wrapper">
+                  <img src="images/icons/Like.svg" alt="like" class="image" />
+                  <span class="value">12</span>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/icons/Deslike.svg" alt="dislike" class="image" />
+                  <span class="value grey">2</span>
+                </div>
+              </div>
+
+              <div class="names">
+                <p class="author-name">Иван</p>
+                <h4 class="course-name">курс “Профессия Fullstack-разработчик”</h4>
+              </div>
+
+              <div class="text-content">
+                <p class="text-item">
+                  В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного графика.
+                  Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился ли я с покупкой
+                  всего курса целиком.
+                </p>
+                <p class="text-item">&nbsp;</p>
+                <p class="text-item toggle collapsed">
+                  В некотором унынии я провел пару месяцев и не учился Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.
+                </p>
+
+                <span class="open-review">
+                  <span class="opened-review">Развернуть отзыв</span>
+                  <span class="collapsed-review">Свернуть отзыв</span>
+                </span>
+              </div>
+
+              <div class="plus-minus">
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/plus.svg" alt="plus" class="image" />
+                    <p class="word">Плюсы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Опытные преподаватели. Много практики. Гибкая систем оплаты.</p>
+                    <p class="text-item">Можно получить скидку на обучение.</p>
+                    <p class="text-item">На онлайн-конференциях есть чат, чтобы задавать вопросы спикеру</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/minus.svg" alt="plus" class="image" />
+                    <p class="word red">Минусы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Слишком затянуто по времени. Сделайте набор для тех у кого нулевые знания.</p>
+                    <p class="text-item">Большие группы. Могут пропустить вопрос.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="add-comment">Прокомментировать</p>
+
+              <div class="comments">
+                <p class="show-comments">
+                  <span class="arrow">&#8594;</span>
+                  <span class="number"
+                    >1
+                    <span class="text"> комментарий </span>
+                  </span>
+                </p>
+
+                <div class="comment">
+                  <img src="images/avatar.png" alt="avatar" class="avatar" />
+                  <div class="wrapper">
+                    <div class="top">
+                      <p class="item">Георгий</p>
+                      <p class="item">24.04.2022</p>
+                    </div>
+                    <div class="text">
+                      <p class="text-item">
+                        В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного
+                        графика. Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился
+                        ли я с покупкой всего курса целиком.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="hide-comments">Скрыть комментарии</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="author">
+                <img src="images/avatar.png" alt="star" class="avatar" />
+                <div class="numbers">
+                  <p class="date">06.05.2022</p>
+                  <div class="card-ratings">
+                    <div class="wrapper">
+                      <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                      <p class="number">4.9</p>
+                    </div>
+
+                    <p class="subnumber">из (5.0)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="thumbs">
+                <div class="image-wrapper">
+                  <img src="images/icons/Like.svg" alt="like" class="image" />
+                  <span class="value">8</span>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/icons/Deslike.svg" alt="dislike" class="image" />
+                </div>
+              </div>
+
+              <div class="names">
+                <p class="author-name">Дарья</p>
+                <h4 class="course-name">курс “Профессия Fullstack-разработчик”</h4>
+              </div>
+
+              <div class="text-content">
+                <p class="text-item">
+                  В SkillFactory шла с четкой целью — хочу стать айтишником. С самого начала я очень усердно занималась и даже шла впереди основного графика.
+                  Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячилась ли я с
+                  покупкой всего курса целиком.
+                </p>
+                <p class="text-item">&nbsp;</p>
+                <p class="text-item toggle collapsed">
+                  В некотором унынии я провела пару месяцев и не училась. Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.
+                </p>
+
+                <span class="open-review">
+                  <span class="opened-review">Развернуть отзыв</span>
+                  <span class="collapsed-review">Свернуть отзыв</span>
+                </span>
+              </div>
+
+              <div class="plus-minus">
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/plus.svg" alt="plus" class="image" />
+                    <p class="word">Плюсы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Опытные преподаватели. Много практики. Гибкая систем оплаты.</p>
+                    <p class="text-item">Можно получить скидку на обучение.</p>
+                    <p class="text-item">На онлайн-конференциях есть чат, чтобы задавать вопросы спикеру</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/minus.svg" alt="plus" class="image" />
+                    <p class="word red">Минусы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Слишком затянуто по времени. Сделайте набор для тех у кого нулевые знания.</p>
+                    <p class="text-item">Большие группы. Могут пропустить вопрос.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="add-comment">Прокомментировать</p>
+            </div>
+            <div class="card collapsed">
+              <div class="author">
+                <img src="images/avatar.png" alt="star" class="avatar" />
+                <div class="numbers">
+                  <p class="date">11.02.2023</p>
+                  <div class="card-ratings">
+                    <div class="wrapper">
+                      <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                      <p class="number">4.9</p>
+                    </div>
+
+                    <p class="subnumber">из (5.0)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="thumbs">
+                <div class="image-wrapper">
+                  <img src="images/icons/Like.svg" alt="like" class="image" />
+                  <span class="value">12</span>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/icons/Deslike.svg" alt="dislike" class="image" />
+                  <span class="value grey">2</span>
+                </div>
+              </div>
+
+              <div class="names">
+                <p class="author-name">Иван</p>
+                <h4 class="course-name">курс “Профессия Fullstack-разработчик”</h4>
+              </div>
+
+              <div class="text-content">
+                <p class="text-item">
+                  В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного графика.
+                  Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился ли я с покупкой
+                  всего курса целиком.
+                </p>
+                <p class="text-item">&nbsp;</p>
+                <p class="text-item toggle collapsed">
+                  В некотором унынии я провел пару месяцев и не учился Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты.
+                </p>
+
+                <span class="open-review">
+                  <span class="opened-review">Развернуть отзыв</span>
+                  <span class="collapsed-review">Свернуть отзыв</span>
+                </span>
+              </div>
+
+              <div class="plus-minus">
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/plus.svg" alt="plus" class="image" />
+                    <p class="word">Плюсы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Опытные преподаватели. Много практики. Гибкая систем оплаты.</p>
+                    <p class="text-item">Можно получить скидку на обучение.</p>
+                    <p class="text-item">На онлайн-конференциях есть чат, чтобы задавать вопросы спикеру</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="sign">
+                    <img src="images/icons/minus.svg" alt="plus" class="image" />
+                    <p class="word red">Минусы</p>
+                  </div>
+                  <div class="text">
+                    <p class="text-item">Слишком затянуто по времени. Сделайте набор для тех у кого нулевые знания.</p>
+                    <p class="text-item">Большие группы. Могут пропустить вопрос.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="add-comment">Прокомментировать</p>
+
+              <div class="comments">
+                <p class="show-comments">
+                  <span class="arrow">&#8594;</span>
+                  <span class="number"
+                    >1
+                    <span class="text"> комментарий </span>
+                  </span>
+                </p>
+
+                <div class="comment">
+                  <img src="images/avatar.png" alt="avatar" class="avatar" />
+                  <div class="wrapper">
+                    <div class="top">
+                      <p class="item">Георгий</p>
+                      <p class="item">24.04.2022</p>
+                    </div>
+                    <div class="text">
+                      <p class="text-item">
+                        В SkillFactory шел с четкой целью — хочу стать айтишником. С самого начала я очень усердно занимался и даже шел впереди основного
+                        графика. Сложность модулей со временем нарастала, а вот мое усердие поослабло. Меня начали терзать сомнения насчет того, не погорячился
+                        ли я с покупкой всего курса целиком.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="hide-comments">Скрыть комментарии</p>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="add-review" class="button">Оставить отзыв</button>
+            <button id="more-reviews" class="button reverse">Еще отзывы</button>
+          </div>
+        </div>
+
+        <div id="promocode" class="promocode">
+          <p class="from">от&nbsp;Skillfactory</p>
+          <p class="text">промокод</p>
+          <p class="text second">на&nbsp;скидку</p>
+          <button class="get">Получить</button>
+          <img src="images/icons/percent.svg" alt="%" class="percent" />
+        </div>
+
+        <div class="other-schools container">
+          <h3 class="title-h2">Отзывы о других школах</h3>
+
+          <div class="cards">
+            <div class="card">
+              <a href="#" class="top">
+                <img src="images/LogoSchool.png" alt="logo" class="school-logo" />
+                <div class="wrapper">
+                  <div class="star-wrapper">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <span class="number">4.9</span>
+                  </div>
+
+                  <span class="subnumber">из (5.0)</span>
+                </div>
+              </a>
+
+              <div class="middle">
+                <h4 class="school-name">
+                  <a href="#"> Онлайн-школа Skillbox </a>
+                </h4>
+                <p class="text">
+                  Одна из самых масштабных онлайн-школ, большой выбор образовательных программ. Преподаватели школы — профессионалы в своей области.
+                  Заинтересованы в получении актуальных знаний и трудоустройстве выпускников.
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">456 отзывов</a>
+                <a href="#">Промокод</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="top">
+                <img src="images/LogoSchool.png" alt="logo" class="school-logo" />
+                <div class="wrapper">
+                  <div class="star-wrapper">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <span class="number">4.9</span>
+                  </div>
+
+                  <span class="subnumber">из (5.0)</span>
+                </div>
+              </a>
+
+              <div class="middle">
+                <h4 class="school-name">
+                  <a href="#"> Онлайн-школа Skillbox </a>
+                </h4>
+                <p class="text">
+                  Одна из самых масштабных онлайн-школ, большой выбор образовательных программ. Преподаватели школы — профессионалы в своей области.
+                  Заинтересованы в получении актуальных знаний и трудоустройстве выпускников.
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">456 отзывов</a>
+                <a href="#">Промокод</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="top">
+                <img src="images/LogoSchool.png" alt="logo" class="school-logo" />
+                <div class="wrapper">
+                  <div class="star-wrapper">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <span class="number">4.9</span>
+                  </div>
+
+                  <span class="subnumber">из (5.0)</span>
+                </div>
+              </a>
+
+              <div class="middle">
+                <h4 class="school-name">
+                  <a href="#"> Онлайн-школа Skillbox </a>
+                </h4>
+                <p class="text">
+                  Одна из самых масштабных онлайн-школ, большой выбор образовательных программ. Преподаватели школы — профессионалы в своей области.
+                  Заинтересованы в получении актуальных знаний и трудоустройстве выпускников.
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">456 отзывов</a>
+                <a href="#">Промокод</a>
+              </div>
+            </div>
+            <div class="card toggle collapsed">
+              <a href="#" class="top">
+                <img src="images/LogoSchool.png" alt="logo" class="school-logo" />
+                <div class="wrapper">
+                  <div class="star-wrapper">
+                    <img src="images/icons/cp-star.svg" alt="star" class="star" />
+                    <span class="number">4.9</span>
+                  </div>
+
+                  <span class="subnumber">из (5.0)</span>
+                </div>
+              </a>
+
+              <div class="middle">
+                <h4 class="school-name">
+                  <a href="#"> Онлайн-школа Skillbox </a>
+                </h4>
+                <p class="text">
+                  Одна из самых масштабных онлайн-школ, большой выбор образовательных программ. Преподаватели школы — профессионалы в своей области.
+                  Заинтересованы в получении актуальных знаний и трудоустройстве выпускников.
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">456 отзывов</a>
+                <a href="#">Промокод</a>
+              </div>
+            </div>
+          </div>
+
+          <p class="show-more">
+            <span class="opened-show-more">Показать еще</span>
+            <span class="collapsed-show-more">Скрыть</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">О наc</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Контакты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#"> Отзывы о школах</a>
+            </li>
+          </ul>
+          <ul class="footer__social">
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item telegram"></a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item vkontakte"></a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item twitter"> </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item yandex"></a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item odnoklassniki"></a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item tiktok"> </a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="" class="footer__social-item viber"> </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__caption">
+          <p class="footer__caption-text">
+            Данные предоставлены партнером
+            <a class="caption__link" href="https://coursator.online/">coursator.online</a>
+          </p>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copyright">© 2022 coursator.online</div>
+          <a class="footer__text" href="">Политика конфиденциальности</a>
+          <a class="footer__text" href="">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </footer>
+    @@include('./__scripts.html')
+    <script src="./js/courses-page.js"></script>
+  </body>
 </html>
