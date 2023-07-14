@@ -9,7 +9,6 @@
     font-size: 16px;
     line-height: 19px;
     cursor: pointer;
-
     color: #b2aaaa;
     .arrow {
         position: absolute;
@@ -37,20 +36,48 @@
         padding: 20px 18px 0;
         display: none;
         position: absolute;
-        max-height: 215px;
+        max-height: 240px;
         overflow-y: auto;
         font-size: 16px;
         color: #000000;
         background-color: #ffffff;
         z-index: 1;
+        padding-top: 0;
     }
     .select-item {
         display: block;
         padding: 5px 0;
         cursor: pointer;
+        &.hidden {
+            display: none;
+        }
     }
     .select-item:hover {
         background-color: #b2aaaa;
+    }
+    .search-input-wrapper {
+        display: none;
+        position: relative;
+        width: 100%;
+        &::before {
+            content: "";
+            background-image: url(../images/icons/search.svg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            cursor: pointer;
+            pointer-events: all;
+            z-index: 3;
+        }
+        .search-input {
+            padding-left: 50px;
+            margin-bottom: 0;
+        }
     }
     &.open .select-items {
         display: block;
@@ -62,7 +89,11 @@
     &.open .select-selected {
         color: #263238;
     }
-}
-.custom-select-course {
-    margin-bottom: 0px;
+    &.open .search-input-wrapper {
+        display: block;
+        z-index: 2;
+    }
+    .custom-select-course {
+        margin-bottom: 0px;
+    }
 }

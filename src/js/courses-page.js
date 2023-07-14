@@ -232,14 +232,10 @@ modalCloseAll?.forEach((item) => {
 const customSelectCourse = document.querySelector(".custom-select-course");
 const selectSelectedCourse = customSelectCourse.querySelector(".select-selected");
 const selectItems = customSelectCourse.querySelectorAll(".select-item");
-
-console.log(selectItems);
-// const courseSearch = document.querySelector("#course-search");
+const searchInput = customSelectCourse.querySelector(".search-input");
 
 selectSelectedCourse.addEventListener("click", () => {
-  console.log("Yo");
-  //   courseSearch.classList.toggle("hidden");
-  !customSelectCourse.classList.contains("disabled") && customSelectCourse.classList.toggle("open");
+  customSelectCourse.classList.toggle("open");
 });
 
 selectItems.forEach((el) => {
@@ -253,6 +249,26 @@ document.addEventListener("click", (e) => {
   const isClickInsideCourse = customSelectCourse.contains(e.target);
   if (!isClickInsideCourse) {
     customSelectCourse.classList.remove("open");
-    // courseSearch.classList.add("hidden");
   }
 });
+
+// search filter
+if (searchInput) {
+  function filterList() {
+    let filter = searchInput.value.toUpperCase();
+
+    for (let i = 0; i < selectItems.length; i++) {
+      let text = selectItems[i].textContent.toUpperCase();
+      // let parent = selectItems[i].closest(".account-services-item");
+
+      if (text.indexOf(filter) > -1) {
+        // parent.classList.remove("filter-hidden");
+        selectItems[i].classList.remove("hidden");
+      } else {
+        // parent.classList.add("filter-hidden");
+        selectItems[i].classList.add("hidden");
+      }
+    }
+  }
+  searchInput.addEventListener("input", filterList);
+}
