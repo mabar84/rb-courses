@@ -136,7 +136,6 @@ $(document).on("click", ".js-courses-all", function (e) {
 });
 
 const promoTextContent = document.querySelector(".promo .text-content");
-console.log(promoTextContent);
 if (promoTextContent && promoTextContent.textContent === "") {
   promoTextContent.style.marginBottom = "0";
 }

@@ -57,7 +57,9 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-  transition: border-bottom-color 0.3s, opacity 0.3s;
+  transition:
+    border-bottom-color 0.3s,
+    opacity 0.3s;
 }
 a:focus,
 a:hover,
@@ -1241,3 +1243,4 @@ input[type="submit"] {
 @import "reviews-page/scroll-list-and-sorting";
 @import "reviews-page/rp-promocode";
 @import "reviews-page/rp-reviews";
+@import "reviews-page/custom-select";

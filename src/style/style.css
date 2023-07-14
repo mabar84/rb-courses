@@ -6948,3 +6948,72 @@ select {
     flex-direction: column;
   }
 }
+
+.custom-select {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  color: #263238;
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+  color: #b2aaaa;
+}
+.custom-select .arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 20px;
+  pointer-events: none;
+}
+.custom-select .select-selected {
+  width: 100%;
+  min-height: 62px;
+  margin-bottom: 20px;
+  padding: 16px 50px 16px 20px;
+  line-height: 19px;
+  font-size: 16px;
+  display: inline-block;
+  border: 1px solid #b2aaaa;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+.custom-select .select-items {
+  width: 100%;
+  padding: 20px 18px 0;
+  display: none;
+  position: absolute;
+  max-height: 215px;
+  overflow-y: auto;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.custom-select .select-item {
+  display: block;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.custom-select .select-item:hover {
+  background-color: #b2aaaa;
+}
+.custom-select.open .select-items {
+  display: block;
+  z-index: 2;
+}
+.custom-select.open .arrow {
+  transform: rotate(180deg);
+}
+.custom-select.open .select-selected {
+  color: #263238;
+}
+
+.custom-select-course {
+  margin-bottom: 0px;
+}
