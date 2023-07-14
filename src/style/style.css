@@ -3715,6 +3715,7 @@ select {
   width: 286px;
   padding: 18px 30px;
   border: 1px solid #b2aaaa;
+  height: min-content;
 }
 @media (max-width: 750px) {
   .courses-page .promo-banner {

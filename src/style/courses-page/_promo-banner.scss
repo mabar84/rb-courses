@@ -4,6 +4,7 @@
         width: 286px;
         padding: 18px 30px;
         border: 1px solid #b2aaaa;
+        height: min-content;
         @include for-750-px {
             margin: 0 auto;
         }
