@@ -230,45 +230,48 @@ modalCloseAll?.forEach((item) => {
 
 // customSelectCourse
 const customSelectCourse = document.querySelector(".custom-select-course");
-const selectSelectedCourse = customSelectCourse.querySelector(".select-selected");
-const selectItems = customSelectCourse.querySelectorAll(".select-item");
-const searchInput = customSelectCourse.querySelector(".search-input");
 
-selectSelectedCourse.addEventListener("click", () => {
-  customSelectCourse.classList.toggle("open");
-});
+if (customSelectCourse) {
+  const selectSelectedCourse = customSelectCourse.querySelector(".select-selected");
+  const selectItems = customSelectCourse.querySelectorAll(".select-item");
+  const searchInput = customSelectCourse.querySelector(".search-input");
 
-selectItems.forEach((el) => {
-  el.addEventListener("click", () => {
-    selectSelectedCourse.textContent = el.textContent;
-    customSelectCourse.classList.remove("open");
+  selectSelectedCourse.addEventListener("click", () => {
+    customSelectCourse.classList.toggle("open");
   });
-});
 
-document.addEventListener("click", (e) => {
-  const isClickInsideCourse = customSelectCourse.contains(e.target);
-  if (!isClickInsideCourse) {
-    customSelectCourse.classList.remove("open");
-  }
-});
+  selectItems.forEach((el) => {
+    el.addEventListener("click", () => {
+      selectSelectedCourse.textContent = el.textContent;
+      customSelectCourse.classList.remove("open");
+    });
+  });
 
-// search filter
-if (searchInput) {
-  function filterList() {
-    let filter = searchInput.value.toUpperCase();
+  document.addEventListener("click", (e) => {
+    const isClickInsideCourse = customSelectCourse?.contains(e.target);
+    if (!isClickInsideCourse) {
+      customSelectCourse.classList.remove("open");
+    }
+  });
 
-    for (let i = 0; i < selectItems.length; i++) {
-      let text = selectItems[i].textContent.toUpperCase();
-      // let parent = selectItems[i].closest(".account-services-item");
+  // search filter
+  if (searchInput) {
+    function filterList() {
+      let filter = searchInput.value.toUpperCase();
 
-      if (text.indexOf(filter) > -1) {
-        // parent.classList.remove("filter-hidden");
-        selectItems[i].classList.remove("hidden");
-      } else {
-        // parent.classList.add("filter-hidden");
-        selectItems[i].classList.add("hidden");
+      for (let i = 0; i < selectItems.length; i++) {
+        let text = selectItems[i].textContent.toUpperCase();
+        // let parent = selectItems[i].closest(".account-services-item");
+
+        if (text.indexOf(filter) > -1) {
+          // parent.classList.remove("filter-hidden");
+          selectItems[i].classList.remove("hidden");
+        } else {
+          // parent.classList.add("filter-hidden");
+          selectItems[i].classList.add("hidden");
+        }
       }
     }
+    searchInput.addEventListener("input", filterList);
   }
-  searchInput.addEventListener("input", filterList);
 }

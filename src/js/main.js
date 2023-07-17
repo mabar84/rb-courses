@@ -135,9 +135,14 @@ $(document).on("click", ".js-courses-all", function (e) {
   }
 });
 
-const promoTextContent = document.querySelector(".promo .text-content");
-if (promoTextContent && promoTextContent.textContent === "") {
-  promoTextContent.style.marginBottom = "0";
+const infoBlock = document.querySelector(".info-block");
+if (infoBlock) {
+  const infoBlockItems = infoBlock.querySelectorAll(".info-block_item");
+  infoBlockItems.forEach((item) => {
+    if (item.textContent === "") {
+      item.style.marginBottom = "0";
+    }
+  });
 }
 /*
 

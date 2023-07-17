@@ -3834,22 +3834,25 @@ select {
   display: grid;
   column-gap: 60px;
   grid-template-columns: 1fr 366px;
-  grid-template-areas: "categories promo-banner" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
+  grid-template-areas: "categories promo-banner" "info-block promo-banner" "info-block promo-banner";
 }
 @media (max-width: 1200px) {
   .courses-page .promo {
     margin-bottom: 60px;
     grid-template-columns: 1fr 311px;
     column-gap: 12px;
-    grid-template-areas: "categories categories" "text-content promo-banner" "time-description promo-banner" "text-description promo-banner";
+    grid-template-areas: "categories categories" "info-block promo-banner";
   }
 }
 @media (max-width: 750px) {
   .courses-page .promo {
     margin-bottom: 40px;
     grid-template-columns: 1fr;
-    grid-template-areas: "categories" "text-content" "time-description" "text-description" "promo-banner";
+    grid-template-areas: "categories" "info-block" "promo-banner";
   }
+}
+.courses-page .promo .info-block {
+  grid-template-areas: info-block;
 }
 .courses-page .promo .categories {
   margin-bottom: 20px;
@@ -3865,7 +3868,6 @@ select {
   }
 }
 .courses-page .promo .text-content {
-  grid-area: text-content;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -3881,7 +3883,6 @@ select {
 }
 .courses-page .promo .time-description {
   margin-bottom: 20px;
-  grid-area: time-description;
   flex-wrap: wrap;
   display: flex;
   gap: 30px;
